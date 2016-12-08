@@ -209,6 +209,7 @@ namespace DD.CBU.Compute.Api.Client
             Reports = new ReportAccessor(WebApi);
             Tagging = new TaggingAccessor(WebApi);
             ConsistencyGroups = new ConsistencyGroupAccessor(WebApi);
+            Server = new Server20.ServerAccessor(WebApi);
 		}
 
 		#endregion
@@ -371,6 +372,11 @@ namespace DD.CBU.Compute.Api.Client
         /// Gets the Consistency Groups.
         /// </summary>
         public IConsistencyGroupAccessor ConsistencyGroups { get; private set; }
+
+        /// <summary>
+        /// Get Server
+        /// </summary>
+        public Interfaces.Server20.IServerAccessor Server { get; private set; }
 
         #endregion Instance data
 

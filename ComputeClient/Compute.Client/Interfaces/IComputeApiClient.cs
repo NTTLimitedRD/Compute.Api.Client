@@ -81,5 +81,10 @@ namespace DD.CBU.Compute.Api.Client.Interfaces
         /// Gets the Consistency groups.
         /// </summary>
         IConsistencyGroupAccessor ConsistencyGroups { get; }
+
+        /// <summary>
+        /// Get Server
+        /// </summary>
+        Server20.IServerAccessor Server { get; }
     }
 }
