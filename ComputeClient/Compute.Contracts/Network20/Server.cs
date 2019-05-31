@@ -1769,13 +1769,12 @@ namespace DD.CBU.Compute.Api.Contracts.Network20
     }
 
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:didata.com:api:cloud:types")]
-    [System.Xml.Serialization.XmlRootAttribute("reconfigureServer", Namespace = "urn:didata.com:api:cloud:types",
-        IsNullable = false)]
+    [System.Xml.Serialization.XmlRootAttribute("reconfigureServer", Namespace = "urn:didata.com:api:cloud:types", IsNullable = false)]
     public partial class ReconfigureServerType
     {
 
@@ -1793,8 +1792,7 @@ namespace DD.CBU.Compute.Api.Contracts.Network20
 
         private bool coresPerSocketFieldSpecified;
 
-        /// <remarks/>
-        public AdvancedVirtualizationSettingsType advancedVirtualizationSettings;
+        private AdvancedVirtualizationSettingsType advancedVirtualizationSettingsField;
 
         private string idField;
 
@@ -1848,6 +1846,13 @@ namespace DD.CBU.Compute.Api.Contracts.Network20
         {
             get { return this.coresPerSocketFieldSpecified; }
             set { this.coresPerSocketFieldSpecified = value; }
+        }
+
+        /// <remarks/>
+        public AdvancedVirtualizationSettingsType advancedVirtualizationSettings
+        {
+            get { return this.advancedVirtualizationSettingsField; }
+            set { this.advancedVirtualizationSettingsField = value; }
         }
 
         /// <remarks/>
