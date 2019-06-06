@@ -65,9 +65,9 @@
         /// </summary>
         /// <param name="id">The Consistency group id.</param>
         /// <returns>The selected <see cref="ConsistencyGroupType"/></returns>
-        public async Task<ConsistencyGroupType> GetConsistencyGroup(System.Guid id)
+        public async Task<ConsistencyGroupDetailType> GetConsistencyGroup(System.Guid id)
         {
-            return await _apiClient.GetAsync<ConsistencyGroupType>(ApiUris.GetConsistencyGroup(_apiClient.OrganizationId, id));
+            return await _apiClient.GetAsync<ConsistencyGroupDetailType>(ApiUris.GetConsistencyGroup(_apiClient.OrganizationId, id));
         }
 
         /// <summary>
