@@ -131,6 +131,7 @@
     <Compile Include="Network20\Tag.cs" />
     <Compile Include="Requests\Network20\FirewallRuleStatisticsListOptions.cs" />
     <Compile Include="Requests\Network20\SnatExclusionListOptions.cs" />
+    <Compile Include="Requests\Server20\HistoricalServerConfigurationListOptions.cs" />
     <Compile Include="Server\CopyServerType.cs" />
     <Compile Include="Organization\SetTwoFactorAuthentication.cs" />
     <Compile Include="Organization\TwoFactorAuthentication.cs" />
@@ -316,6 +317,8 @@
     <Compile Include="Server\EditSnapshotServiceScriptsType.cs" />
     <Compile Include="Server\ExpandDiskType.cs" />
     <Compile Include="Server\ChangeSnapshotServicePlanType.cs" />
+    <Compile Include="Server\HistoricalServerConfigurations.cs" />
+    <Compile Include="Server\HistoricalServerConfigurationType.cs" />
     <Compile Include="Server\MachineSpecificationType.cs" />
     <Compile Include="Server\MachineStatusType.cs" />
     <Compile Include="Server\NewAntiAffinityRule.cs" />
@@ -357,6 +360,7 @@
     <Compile Include="Server\ProgressStatusType.cs" />
     <Compile Include="Server\Server.cs" />
     <Compile Include="Server\ServerBackupType.cs" />
+    <Compile Include="Server\ServerConfigurationType.cs" />
     <Compile Include="Server\ServerImagesWithState.cs" />
     <Compile Include="Server\ServerImageType.cs" />
     <Compile Include="Server\ServerImageWithStateType.cs" />

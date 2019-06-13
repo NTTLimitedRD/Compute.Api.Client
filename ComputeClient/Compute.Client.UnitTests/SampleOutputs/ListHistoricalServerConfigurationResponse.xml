@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<historicalServerConfigurations xmlns="urn:didata.com:api:cloud:types" pageNumber="1" pageCount="4" totalCount="4" pageSize="250">
+    <historicalServerConfiguration serverId="127ac602-1f59-815d-9126-22f256417dc2" datacenterId="DATACENTER_ID" startTime="2019-02-06T09:45:02.227Z">
+        <cluster id="Cluster-01-id" name="Cluster-01"/>
+        <cpu count="2" speed="STANDARD" coresPerSocket="1"/>
+        <memoryGb>1</memoryGb>
+        <advancedVirtualizationSetting name="nestedHardwareVirtualization" value="true"/>
+        <advancedVirtualizationSetting name="cpuLatencySensitivity" value="HIGH"/>
+        <advancedVirtualizationSetting name="numaAutosize" value="true"/>
+        <advancedVirtualizationSetting name="enableHostInfoToVmTools" value="true"/>
+        <scsiController busNumber="0" id="bd7e6517-12fc-43ff-86c0-6b617f5649b6" adapterType="BUS_LOGIC" state="NORMAL">
+            <disk scsiId="0" id="9d99bb9e-baeb-4e7e-9f4a-3f40be970f81" sizeGb="10" speed="STANDARD" driveType="DISK" state="NORMAL"/>
+            <disk scsiId="3" id="3219df0d-701e-4ae4-8954-c6aa29b8c6ee" sizeGb="3" speed="STANDARD" driveType="DISK" state="NORMAL"/>
+            <disk scsiId="4" id="ea7f174a-92e0-4466-9394-f43797d3a0a7" sizeGb="3" speed="PROVISIONEDIOPS" iops="203" driveType="DISK" state="NORMAL"/>
+        </scsiController>
+        <ideController channel="0" id="ee000ad6-3129-4c04-a175-661510ab7976" adapterType="IDE" state="NORMAL">
+            <disk slot="0" id="b2e6d8fe-2b49-4de0-9ff3-1106a9be9830" sizeGb="3" speed="PROVISIONEDIOPS" iops="333" driveType="DISK" state="NORMAL"/>
+            <disk slot="1" id="1c32cf88-da6b-432f-9bee-fd4241aa6159" sizeGb="3" speed="PROVISIONEDIOPS" iops="333" driveType="DISK" state="NORMAL"/>
+        </ideController>
+        <ideController channel="1" id="30b1e3ce-75cb-4df2-a9d5-ca3850550fe2" adapterType="IDE" state="NORMAL">
+            <device slot="0" id="7e08ec7f-00e6-4d68-9a2c-0539e19b5542" type="DEVICE" sizeGb="0" driveType="DEVICE" state="NORMAL"/>
+        </ideController>
+        <floppy id="436f7594-7012-4e2d-8113-657c832383cd" driveNumber="0" sizeGb="0" state="NORMAL"/>
+        <networkInfo networkDomainId="71021ef9-9c42-4af5-b525-a5c6bf0472fb" networkDomainName="Network Domain Name">
+            <primaryNic id="6ae07976-66eb-4fac-95e6-dfa4ee5451b9" privateIpv4="10.0.0.9" ipv6="2607:f480:1111:1214:2673:7a77:de6a:dd7d" vlanId="f58fe7f7-ef09-4bdd-b70d-14f85be278d6" vlanName="vlan name" networkAdapter="E1000" connected="true" key="4000" state="NORMAL"/>
+        </networkInfo>
+        <guest osCustomization="false">
+            <operatingSystem id="CENTOS664" displayName="CENTOS6/64" family="UNIX"/>
+        </guest>
+        <virtualHardwareVersion>vmx-08</virtualHardwareVersion>
+        <name>test-server-1</name>
+    </historicalServerConfiguration>
+    <historicalServerConfiguration serverId="127ac602-1f59-815d-9126-22f256417dc2" datacenterId="DATACENTER_ID" startTime="2019-03-06T09:44:31.702Z" endTime="2019-06-06T09:45:02.227Z">
+        <cluster id="Cluster-02-id" name="Cluster-02"/>
+        <cpu count="4" speed="STANDARD" coresPerSocket="2"/>
+        <memoryGb>1</memoryGb>
+        <advancedVirtualizationSetting name="nestedHardwareVirtualization" value="true"/>
+        <advancedVirtualizationSetting name="cpuLatencySensitivity" value="HIGH"/>
+        <advancedVirtualizationSetting name="numaAutosize" value="true"/>
+        <advancedVirtualizationSetting name="enableHostInfoToVmTools" value="true"/>
+        <scsiController busNumber="0" id="bd7e6517-12fc-43ff-86c0-6b617f5649b6" adapterType="BUS_LOGIC" state="NORMAL">
+            <disk scsiId="0" id="9d99bb9e-baeb-4e7e-9f4a-3f40be970f81" sizeGb="10" speed="STANDARD" driveType="DISK" state="NORMAL"/>
+            <disk scsiId="3" id="3219df0d-701e-4ae4-8954-c6aa29b8c6ee" sizeGb="3" speed="STANDARD" driveType="DISK" state="NORMAL"/>
+            <disk scsiId="4" id="ea7f174a-92e0-4466-9394-f43797d3a0a7" sizeGb="3" speed="PROVISIONEDIOPS" iops="203" driveType="DISK" state="NORMAL"/>
+        </scsiController>
+        <ideController channel="0" id="ee000ad6-3129-4c04-a175-661510ab7976" adapterType="IDE" state="NORMAL">
+            <disk slot="0" id="b2e6d8fe-2b49-4de0-9ff3-1106a9be9830" sizeGb="3" speed="PROVISIONEDIOPS" iops="333" driveType="DISK" state="NORMAL"/>
+            <disk slot="1" id="1c32cf88-da6b-432f-9bee-fd4241aa6159" sizeGb="3" speed="PROVISIONEDIOPS" iops="333" driveType="DISK" state="NORMAL"/>
+        </ideController>
+        <ideController channel="1" id="30b1e3ce-75cb-4df2-a9d5-ca3850550fe2" adapterType="IDE" state="NORMAL">
+            <device slot="0" id="7e08ec7f-00e6-4d68-9a2c-0539e19b5542" type="DEVICE" sizeGb="0" driveType="DEVICE" state="NORMAL"/>
+        </ideController>
+        <floppy id="436f7594-7012-4e2d-8113-657c832383cd" driveNumber="0" sizeGb="0" state="NORMAL"/>
+        <networkInfo networkDomainId="71021ef9-9c42-4af5-b525-a5c6bf0472fb" networkDomainName="Network Domain Name">
+            <primaryNic id="6ae07976-66eb-4fac-95e6-dfa4ee5451b9" privateIpv4="10.0.0.9" ipv6="2607:f480:1111:1214:2673:7a77:de6a:dd7d" vlanId="f58fe7f7-ef09-4bdd-b70d-14f85be278d6" vlanName="vlan name" networkAdapter="E1000" connected="true" key="4000" state="NORMAL"/>
+        </networkInfo>
+        <guest osCustomization="false">
+            <operatingSystem id="CENTOS664" displayName="CENTOS6/64" family="UNIX"/>
+        </guest>
+        <virtualHardwareVersion>vmx-08</virtualHardwareVersion>
+        <name>test-server-2</name>
+    </historicalServerConfiguration>
+    <historicalServerConfiguration serverId="127ac602-1f59-815d-9126-22f256417dc2" datacenterId="DATACENTER_ID" startTime="2019-04-06T09:43:31.721Z" endTime="2019-06-06T09:44:31.702Z">
+        <cluster id="Cluster-03-id" name="Cluster-03"/>
+        <cpu count="6" speed="STANDARD" coresPerSocket="3"/>
+        <memoryGb>2</memoryGb>
+        <advancedVirtualizationSetting name="nestedHardwareVirtualization" value="true"/>
+        <advancedVirtualizationSetting name="cpuLatencySensitivity" value="HIGH"/>
+        <advancedVirtualizationSetting name="numaAutosize" value="true"/>
+        <advancedVirtualizationSetting name="enableHostInfoToVmTools" value="true"/>
+        <scsiController busNumber="0" id="bd7e6517-12fc-43ff-86c0-6b617f5649b6" adapterType="BUS_LOGIC" state="NORMAL">
+            <disk scsiId="0" id="9d99bb9e-baeb-4e7e-9f4a-3f40be970f81" sizeGb="10" speed="STANDARD" driveType="DISK" state="NORMAL"/>
+            <disk scsiId="3" id="3219df0d-701e-4ae4-8954-c6aa29b8c6ee" sizeGb="3" speed="STANDARD" driveType="DISK" state="NORMAL"/>
+            <disk scsiId="4" id="ea7f174a-92e0-4466-9394-f43797d3a0a7" sizeGb="3" speed="PROVISIONEDIOPS" iops="203" driveType="DISK" state="NORMAL"/>
+        </scsiController>
+        <ideController channel="0" id="ee000ad6-3129-4c04-a175-661510ab7976" adapterType="IDE" state="NORMAL">
+            <disk slot="0" id="b2e6d8fe-2b49-4de0-9ff3-1106a9be9830" sizeGb="3" speed="PROVISIONEDIOPS" iops="333" driveType="DISK" state="NORMAL"/>
+            <disk slot="1" id="1c32cf88-da6b-432f-9bee-fd4241aa6159" sizeGb="3" speed="PROVISIONEDIOPS" iops="333" driveType="DISK" state="NORMAL"/>
+        </ideController>
+        <ideController channel="1" id="30b1e3ce-75cb-4df2-a9d5-ca3850550fe2" adapterType="IDE" state="NORMAL">
+            <device slot="0" id="7e08ec7f-00e6-4d68-9a2c-0539e19b5542" type="DEVICE" sizeGb="0" driveType="DEVICE" state="NORMAL"/>
+        </ideController>
+        <floppy id="436f7594-7012-4e2d-8113-657c832383cd" driveNumber="0" sizeGb="0" state="NORMAL"/>
+        <networkInfo networkDomainId="71021ef9-9c42-4af5-b525-a5c6bf0472fb" networkDomainName="Network Domain Name">
+            <primaryNic id="6ae07976-66eb-4fac-95e6-dfa4ee5451b9" privateIpv4="10.0.0.9" ipv6="2607:f480:1111:1214:2673:7a77:de6a:dd7d" vlanId="f58fe7f7-ef09-4bdd-b70d-14f85be278d6" vlanName="vlan name" networkAdapter="E1000" connected="true" key="4000" state="NORMAL"/>
+        </networkInfo>
+        <guest osCustomization="false">
+            <operatingSystem id="CENTOS664" displayName="CENTOS6/64" family="UNIX"/>
+        </guest>
+        <virtualHardwareVersion>vmx-08</virtualHardwareVersion>
+        <name>test-server-3</name>
+    </historicalServerConfiguration>
+    <historicalServerConfiguration serverId="127ac602-1f59-815d-9126-22f256417dc2" datacenterId="DATACENTER_ID" startTime="2019-05-22T08:27:32.676Z" endTime="2019-06-06T09:43:31.721Z">
+        <cluster id="Cluster-04-id" name="Cluster-04"/>
+        <cpu count="12" speed="STANDARD" coresPerSocket="6"/>
+        <memoryGb>1</memoryGb>
+        <advancedVirtualizationSetting name="nestedHardwareVirtualization" value="true"/>
+        <advancedVirtualizationSetting name="cpuLatencySensitivity" value="HIGH"/>
+        <advancedVirtualizationSetting name="numaAutosize" value="true"/>
+        <advancedVirtualizationSetting name="enableHostInfoToVmTools" value="true"/>
+        <scsiController busNumber="0" id="bd7e6517-12fc-43ff-86c0-6b617f5649b6" adapterType="BUS_LOGIC" state="NORMAL">
+            <disk scsiId="0" id="9d99bb9e-baeb-4e7e-9f4a-3f40be970f81" sizeGb="10" speed="STANDARD" driveType="DISK" state="NORMAL"/>
+            <disk scsiId="3" id="3219df0d-701e-4ae4-8954-c6aa29b8c6ee" sizeGb="3" speed="STANDARD" driveType="DISK" state="NORMAL"/>
+            <disk scsiId="4" id="ea7f174a-92e0-4466-9394-f43797d3a0a7" sizeGb="3" speed="PROVISIONEDIOPS" iops="203" driveType="DISK" state="NORMAL"/>
+        </scsiController>
+        <ideController channel="0" id="ee000ad6-3129-4c04-a175-661510ab7976" adapterType="IDE" state="NORMAL">
+            <disk slot="0" id="b2e6d8fe-2b49-4de0-9ff3-1106a9be9830" sizeGb="3" speed="PROVISIONEDIOPS" iops="333" driveType="DISK" state="NORMAL"/>
+            <disk slot="1" id="1c32cf88-da6b-432f-9bee-fd4241aa6159" sizeGb="3" speed="PROVISIONEDIOPS" iops="333" driveType="DISK" state="NORMAL"/>
+        </ideController>
+        <ideController channel="1" id="30b1e3ce-75cb-4df2-a9d5-ca3850550fe2" adapterType="IDE" state="NORMAL">
+            <device slot="0" id="7e08ec7f-00e6-4d68-9a2c-0539e19b5542" type="DEVICE" sizeGb="0" driveType="DEVICE" state="NORMAL"/>
+        </ideController>
+        <floppy id="436f7594-7012-4e2d-8113-657c832383cd" driveNumber="0" sizeGb="0" state="NORMAL"/>
+        <networkInfo networkDomainId="71021ef9-9c42-4af5-b525-a5c6bf0472fb" networkDomainName="Network Domain Name">
+            <primaryNic id="6ae07976-66eb-4fac-95e6-dfa4ee5451b9" privateIpv4="10.0.0.9" ipv6="2607:f480:1111:1214:2673:7a77:de6a:dd7d" vlanId="f58fe7f7-ef09-4bdd-b70d-14f85be278d6" vlanName="vlan name" networkAdapter="E1000" connected="true" key="4000" state="NORMAL"/>
+        </networkInfo>
+        <guest osCustomization="false">
+            <operatingSystem id="CENTOS664" displayName="CENTOS6/64" family="UNIX"/>
+        </guest>
+        <virtualHardwareVersion>vmx-08</virtualHardwareVersion>
+        <name>test-server-4</name>
+    </historicalServerConfiguration>
+</historicalServerConfigurations>
