@@ -635,5 +635,39 @@ namespace DD.CBU.Compute.Api.Client.Server20
 		{
 			return await _apiClient.PostAsync<CreateDrsTargetServerType, ResponseType>(ApiUris.CreateDrsTargetServer(_apiClient.OrganizationId), createDrsTargetServer);
 		}
+
+        /// <summary>The list historical server configurations for mcp 2 deployed servers.</summary>
+        /// <param name="serverId">The server Id</param>
+        /// <param name="filteringOptions">The filtering options.</param>
+        /// <returns>The <see cref="Task"/>.</returns>
+        public async Task <IEnumerable<HistoricalServerConfigurationType>> ListHistoricalServerConfigurations(Guid serverId, HistoricalServerConfigurationListOptions filteringOptions = null) {
+            var response = await ListHistoricalServerConfigurationsPaginated(serverId, filteringOptions, null);
+            return response.items;
+        }
+
+        /// <summary>The list historical server configurations for  mcp 2 deployed servers.</summary>
+        /// <param name="serverId">The server Id</param>
+        /// <param name="filteringOptions">The filtering options.</param>
+        /// <param name="pagingOptions">The paging options.</param>
+        /// <returns>The <see cref="Task"/>.</returns>
+        public async Task <PagedResponse<HistoricalServerConfigurationType>> ListHistoricalServerConfigurationsPaginated(Guid serverId, HistoricalServerConfigurationListOptions filteringOptions = null, IPageableRequest pagingOptions = null) {
+
+            if (serverId == Guid.Empty) {
+                throw new ArgumentNullException("serverId");
+            }
+
+            var listHistoricalServerConfigurationsUrl =
+                ApiUris.ListHistoricalServerConfigurations(_apiClient.OrganizationId, serverId);
+
+            var response = await _apiClient.GetAsync < historicalServerConfigurations > (listHistoricalServerConfigurationsUrl, pagingOptions, filteringOptions);
+
+            return new PagedResponse <HistoricalServerConfigurationType> {
+                items = response.historicalServerConfiguration,
+                totalCount = response.totalCountSpecified ? response.totalCount: (int ? ) null,
+                pageCount = response.pageCountSpecified ? response.pageCount: (int ? ) null,
+                pageNumber = response.pageNumberSpecified ? response.pageNumber: (int ? ) null,
+                pageSize = response.pageSizeSpecified ? response.pageSize: (int ? ) null
+            };
+        }
 	}
 }

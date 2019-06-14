@@ -1,5 +1,5 @@
 ﻿using System.Data;
-using System.Text; 
+using System.Text;
 
 namespace DD.CBU.Compute.Api.Client
 {
@@ -118,18 +118,18 @@ namespace DD.CBU.Compute.Api.Client
             return new Uri(string.Format(MCP2_9_PREFIX + "{0}/snapshot/createSnapshotPreviewServer", orgId), UriKind.Relative);
         }
 
-		/// <summary>The path (relative to the base API URL) to Create Replicated Snapshot Preview Server.</summary>
-		/// <param name="orgId">The org Id.</param>
-		/// <returns>The <see cref="Uri"/>.</returns>
-		public static Uri CreateReplicatedSnapshotPreviewServer(Guid orgId)
-		{
-			return new Uri(string.Format(MCP2_9_PREFIX + "{0}/snapshot/createReplicatedSnapshotPreviewServer", orgId), UriKind.Relative);
-		}
+        /// <summary>The path (relative to the base API URL) to Create Replicated Snapshot Preview Server.</summary>
+        /// <param name="orgId">The org Id.</param>
+        /// <returns>The <see cref="Uri"/>.</returns>
+        public static Uri CreateReplicatedSnapshotPreviewServer(Guid orgId)
+        {
+            return new Uri(string.Format(MCP2_9_PREFIX + "{0}/snapshot/createReplicatedSnapshotPreviewServer", orgId), UriKind.Relative);
+        }
 
-		/// <summary>The path (relative to the base API URL) to Migrate Snapshot Preview Server.</summary>
-		/// <param name="orgId">The org Id.</param>
-		/// <returns>The <see cref="Uri"/>.</returns>
-		public static Uri MigrateSnapShotPreviewServer(Guid orgId)
+        /// <summary>The path (relative to the base API URL) to Migrate Snapshot Preview Server.</summary>
+        /// <param name="orgId">The org Id.</param>
+        /// <returns>The <see cref="Uri"/>.</returns>
+        public static Uri MigrateSnapShotPreviewServer(Guid orgId)
         {
             return new Uri(string.Format(MCP2_9_PREFIX + "{0}/snapshot/migrateSnapshotPreviewServer", orgId), UriKind.Relative);
         }
@@ -195,21 +195,21 @@ namespace DD.CBU.Compute.Api.Client
             return new Uri(string.Format(MCP2_9_PREFIX + "{0}/network/networkDomain", orgId), UriKind.Relative);
         }
 
-		/// <summary>The static route.</summary>
-		/// <param name="orgId">The org id.</param>
-		/// <returns>The <see cref="Uri"/>.</returns>
-		public static Uri StaticRoutes(Guid orgId)
-		{
-			return new Uri(string.Format(MCP2_9_PREFIX + "{0}/network/staticRoute", orgId), UriKind.Relative);
-		}
+        /// <summary>The static route.</summary>
+        /// <param name="orgId">The org id.</param>
+        /// <returns>The <see cref="Uri"/>.</returns>
+        public static Uri StaticRoutes(Guid orgId)
+        {
+            return new Uri(string.Format(MCP2_9_PREFIX + "{0}/network/staticRoute", orgId), UriKind.Relative);
+        }
 
-		/// <summary>Create static route.</summary>
-		/// <param name="orgId">The org id.</param>
-		/// <returns>The <see cref="Uri"/>.</returns>
-		public static Uri CreateStaticRoute(Guid orgId)
-		{
-			return new Uri(string.Format(MCP2_9_PREFIX + "{0}/network/createStaticRoute", orgId), UriKind.Relative);
-		}
+        /// <summary>Create static route.</summary>
+        /// <param name="orgId">The org id.</param>
+        /// <returns>The <see cref="Uri"/>.</returns>
+        public static Uri CreateStaticRoute(Guid orgId)
+        {
+            return new Uri(string.Format(MCP2_9_PREFIX + "{0}/network/createStaticRoute", orgId), UriKind.Relative);
+        }
 
         /// <summary>Delte static route.</summary>
         /// <param name="orgId">The org id.</param>
@@ -856,20 +856,20 @@ namespace DD.CBU.Compute.Api.Client
         /// <returns>The URL.</returns>
         public static Uri GetFirewallRulesStatistics(Guid orgId)
         {
-	        return new Uri(string.Format(MCP2_9_PREFIX + "{0}/network/firewallRuleStatistics", orgId), UriKind.Relative);
+            return new Uri(string.Format(MCP2_9_PREFIX + "{0}/network/firewallRuleStatistics", orgId), UriKind.Relative);
         }
 
-		#endregion
+        #endregion
 
-		#region VLAN
+        #region VLAN
 
-		/// <summary>The get Virtual LAN.</summary>
-		/// <param name="orgId">The org id.</param>
-		/// <param name="id">The id.</param>
-		/// <param name="vlanName">The  Virtual LAN name.</param>
-		/// <param name="networkDomainId">The network domain id.</param>
-		/// <returns>The <see cref="Uri"/>.</returns>
-		public static Uri GetVlan(Guid orgId, Guid id, string vlanName, Guid networkDomainId)
+        /// <summary>The get Virtual LAN.</summary>
+        /// <param name="orgId">The org id.</param>
+        /// <param name="id">The id.</param>
+        /// <param name="vlanName">The  Virtual LAN name.</param>
+        /// <param name="networkDomainId">The network domain id.</param>
+        /// <returns>The <see cref="Uri"/>.</returns>
+        public static Uri GetVlan(Guid orgId, Guid id, string vlanName, Guid networkDomainId)
         {
             var queryParameters = new List<string>();
             if (id != Guid.Empty)
@@ -2617,18 +2617,18 @@ namespace DD.CBU.Compute.Api.Client
             return new Uri(string.Format(MCP2_9_PREFIX + "{0}/snapshot/enableSnapshotService", orgId), UriKind.Relative);
         }
 
-		/// <summary>Returns the relative URI of the REST request for enable snapshot replication.</summary>
-		/// <param name="orgId">The organization id.</param>
-		/// <returns>The <see cref="Uri"/>.</returns>
-		public static Uri EnableSnapshotReplication(Guid orgId)
-		{
-			return new Uri(string.Format(MCP2_9_PREFIX + "{0}/snapshot/enableReplication", orgId), UriKind.Relative);
-		}
+        /// <summary>Returns the relative URI of the REST request for enable snapshot replication.</summary>
+        /// <param name="orgId">The organization id.</param>
+        /// <returns>The <see cref="Uri"/>.</returns>
+        public static Uri EnableSnapshotReplication(Guid orgId)
+        {
+            return new Uri(string.Format(MCP2_9_PREFIX + "{0}/snapshot/enableReplication", orgId), UriKind.Relative);
+        }
 
-		/// <summary>Returns the relative URI of the REST request for change snapshot service plan.</summary>
-		/// <param name="orgId">The organization id.</param>
-		/// <returns>The <see cref="Uri"/>.</returns>
-		public static Uri ChangeSnapshotServicePlan(Guid orgId)
+        /// <summary>Returns the relative URI of the REST request for change snapshot service plan.</summary>
+        /// <param name="orgId">The organization id.</param>
+        /// <returns>The <see cref="Uri"/>.</returns>
+        public static Uri ChangeSnapshotServicePlan(Guid orgId)
         {
             return new Uri(string.Format(MCP2_9_PREFIX + "{0}/snapshot/changeSnapshotServicePlan", orgId), UriKind.Relative);
         }
@@ -2886,7 +2886,7 @@ namespace DD.CBU.Compute.Api.Client
         /// <param name="orgId">	The organization Id. </param>
         /// <returns>The <see cref="Uri"/>.</returns>
         public static Uri RestoreFromSnapshot(Guid orgId)
-        { 
+        {
             return new Uri(string.Format(MCP2_9_PREFIX + "{0}/snapshot/restoreFromSnapshot", orgId), UriKind.Relative);
         }
 
@@ -2988,21 +2988,21 @@ namespace DD.CBU.Compute.Api.Client
             return new Uri($"{MCP2_9_PREFIX}/{orgId}/organization/setVpnAccess", UriKind.Relative);
         }
 
-		/// <summary>The snat exclusion.</summary>
-		/// <param name="orgId">The org id.</param>
-		/// <returns>The <see cref="Uri"/>.</returns>
-		public static Uri SnatExclusions(Guid orgId)
-		{
-			return new Uri(string.Format(MCP2_9_PREFIX + "{0}/network/snatExclusion", orgId), UriKind.Relative);
-		}
+        /// <summary>The snat exclusion.</summary>
+        /// <param name="orgId">The org id.</param>
+        /// <returns>The <see cref="Uri"/>.</returns>
+        public static Uri SnatExclusions(Guid orgId)
+        {
+            return new Uri(string.Format(MCP2_9_PREFIX + "{0}/network/snatExclusion", orgId), UriKind.Relative);
+        }
 
-		/// <summary>Restores snat exclusions.</summary>
-		/// <param name="orgId">The org id.</param>
-		/// <returns>The <see cref="Uri"/>.</returns>
-		public static Uri RestoreSnatExclusions(Guid orgId)
-		{
-			return new Uri(string.Format(MCP2_9_PREFIX + "{0}/network/restoreSnatExclusions", orgId), UriKind.Relative);
-		}
+        /// <summary>Restores snat exclusions.</summary>
+        /// <param name="orgId">The org id.</param>
+        /// <returns>The <see cref="Uri"/>.</returns>
+        public static Uri RestoreSnatExclusions(Guid orgId)
+        {
+            return new Uri(string.Format(MCP2_9_PREFIX + "{0}/network/restoreSnatExclusions", orgId), UriKind.Relative);
+        }
 
         /// <summary>Remove snat exclusions.</summary>
 		/// <param name="orgId">The org id.</param>
@@ -3019,21 +3019,30 @@ namespace DD.CBU.Compute.Api.Client
         {
             return new Uri(string.Format(MCP2_9_PREFIX + "{0}/network/addSnatExclusion", orgId), UriKind.Relative);
         }
-		/// <summary>Duo Status</summary>
-		/// <param name="orgId">The org id.</param>
-		/// <param name="userName">User Name.</param>
-		/// <returns>The <see cref="Uri"/>.</returns>
-		public static Uri GetDuoStatus(Guid orgId, string userName)
-		{
-			return new Uri(string.Format(MCP2_9_PREFIX + "{0}/user/duoStatus/{1}", orgId, userName), UriKind.Relative);
-		}
+        /// <summary>Duo Status</summary>
+        /// <param name="orgId">The org id.</param>
+        /// <param name="userName">User Name.</param>
+        /// <returns>The <see cref="Uri"/>.</returns>
+        public static Uri GetDuoStatus(Guid orgId, string userName)
+        {
+            return new Uri(string.Format(MCP2_9_PREFIX + "{0}/user/duoStatus/{1}", orgId, userName), UriKind.Relative);
+        }
 
-		/// <summary>Returns the relative URI of the REST request for Create Drs Target Server.</summary>
-		/// <param name="orgId">The organization id.</param>
-		/// <returns>The <see cref="Uri"/>.</returns>
-		public static Uri CreateDrsTargetServer(Guid orgId)
-		{
-			return new Uri(string.Format(MCP2_9_PREFIX + "{0}/consistencyGroup/createDrsTargetServer", orgId), UriKind.Relative);
-		}
-	}
+        /// <summary>Returns the relative URI of the REST request for Create Drs Target Server.</summary>
+        /// <param name="orgId">The organization id.</param>
+        /// <returns>The <see cref="Uri"/>.</returns>
+        public static Uri CreateDrsTargetServer(Guid orgId)
+        {
+            return new Uri(string.Format(MCP2_9_PREFIX + "{0}/consistencyGroup/createDrsTargetServer", orgId), UriKind.Relative);
+        }
+
+        /// <summary>Returns the relative URI of the REST request for getting the List of Historical Server Configurations for MCP 2 servers. </summary>
+        /// <param name="orgId">The organization Id. </param>
+        /// <param name="serverId">	The Server Id. </param>
+        /// <returns>The <see cref="Uri"/>.</returns>
+        public static Uri ListHistoricalServerConfigurations(Guid orgId, Guid serverId)
+        {
+            return new Uri(string.Format(MCP2_10_PREFIX + "{0}/server/historicalServerConfiguration?serverId={1}", orgId, serverId), UriKind.Relative);
+        }
+    }
 }
