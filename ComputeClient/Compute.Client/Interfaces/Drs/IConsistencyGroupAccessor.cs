@@ -34,7 +34,14 @@
         /// </summary>
         /// <param name="id">The Consistency group id.</param>
         /// <returns>The selected <see cref="ConsistencyGroupType"/></returns>
-        Task<ConsistencyGroupDetailType> GetConsistencyGroup(System.Guid id);
+        Task<ConsistencyGroupType> GetConsistencyGroup(System.Guid id);
+
+        /// <summary>
+        /// The Get Consistency Group Detail method.
+        /// </summary>
+        /// <param name="id">The Consistency group id.</param>
+        /// <returns>The selected <see cref="ConsistencyGroupType"/></returns>
+        Task<ConsistencyGroupDetailType> GetConsistencyGroupDetail(System.Guid id);
 
         /// <summary>
         /// The Create Consistency Group
