@@ -58,7 +58,7 @@
                 pageNumber = response.pageNumberSpecified ? response.pageNumber : (int?)null,
                 pageSize = response.pageSizeSpecified ? response.pageSize : (int?)null
             };
-        }
+        } 
 
         /// <summary>
         /// The Get Consistency Group detail method.
