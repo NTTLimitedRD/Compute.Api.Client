@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<response requestId="na/2014-04-14T13:37:20/62f06368-c3fb-11e3-b29c-001517c4643e" xmlns="urn:didata.com:api:cloud:types" >
+	<operation>DELETE_DRS_RE_IP_ADDRESS_RULES</operation>
+	<responseCode>OK</responseCode>
+	<message>Re-IP Address Rules have been deleted.</message>
+</response>

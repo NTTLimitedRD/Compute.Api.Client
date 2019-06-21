@@ -163,5 +163,13 @@ namespace Compute.Client.UnitTests
 
             Assert.AreEqual(ApiUris.MCP2_10_PREFIX + _orgId + "/server/historicalServerConfiguration?serverId=" + serverId, uri.OriginalString);
         }
-    }
+
+		[TestMethod]
+		public void DeleteDrsReIpAddressRules()
+		{
+			var uri = ApiUris.DeleteDrsReIpAddressRules(_orgId);
+
+			Assert.AreEqual(ApiUris.MCP2_10_PREFIX + _orgId + "/consistencyGroup/deleteDrsReIpAddressRules", uri.OriginalString);
+		}
+	}
 }
