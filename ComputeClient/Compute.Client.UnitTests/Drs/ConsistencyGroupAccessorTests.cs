@@ -18,7 +18,6 @@ namespace Compute.Client.UnitTests.Drs
 		[TestMethod]
 		public async Task GetConsistencyGroups_ReturnsResponse()
 		{
-			requestsAndResponses.Add(ApiUris.MyAccount, RequestFileResponseType.AsGoodResponse("GetMyAccountDetails.xml"));
 			requestsAndResponses.Add(ApiUris.GetConsistencyGroups(accountId), RequestFileResponseType.AsGoodResponse("GetConsistencyGroupsResponse.xml"));
 
 			var client = GetWebApiClient();
@@ -64,16 +63,16 @@ namespace Compute.Client.UnitTests.Drs
 		[TestMethod]
 		public async Task GetConsistencyGroups_PaginatedResponse()
 		{
-			PageableRequest pagingOptions = new DD.CBU.Compute.Api.Contracts.Requests.PageableRequest();
-			pagingOptions.PageSize = 3;
-			pagingOptions.PageNumber = 1;
-			pagingOptions.Order = "sourceDataCenterId";
+			var pagingOptions = new DD.CBU.Compute.Api.Contracts.Requests.PageableRequest
+			{
+				PageSize = 3,
+				PageNumber = 1,
+				Order = "sourceDataCenterId"
+			};
 
-			Uri baseUri = ApiUris.GetConsistencyGroups(accountId);
-			var paramUri = new Uri(String.Concat(baseUri.ToString(), "?pageSize=3&pageNumber=1&orderBy=sourceDataCenterId"), UriKind.Relative);
-
-			requestsAndResponses.Add(ApiUris.MyAccount, RequestFileResponseType.AsGoodResponse("GetMyAccountDetails.xml"));
-			requestsAndResponses.Add(paramUri, RequestFileResponseType.AsGoodResponse("GetConsistencyGroupsPaginatedResponse.xml"));
+			var baseUriBuilder = new UriBuilder(ApiUris.GetConsistencyGroups(accountId).ToString());
+			baseUriBuilder.Query = "pageSize=3&pageNumber=1&orderBy=sourceDataCenterId";
+			requestsAndResponses.Add(new Uri(baseUriBuilder.Host + baseUriBuilder.Uri.PathAndQuery, UriKind.Relative), RequestFileResponseType.AsGoodResponse("GetConsistencyGroupsPaginatedResponse.xml"));
 
 			var client = GetWebApiClient();
 			var accessor = new ConsistencyGroupAccessor(client);
@@ -93,8 +92,7 @@ namespace Compute.Client.UnitTests.Drs
 		[TestMethod]
 		public async Task GetConsistencyGroup_ReturnsResponse()
 		{
-			Guid consistencyGroupId = Guid.Parse("720ca33a-77bf-4d1f-8974-10ee6ec93034");
-			requestsAndResponses.Add(ApiUris.MyAccount, RequestFileResponseType.AsGoodResponse("GetMyAccountDetails.xml"));
+			var consistencyGroupId = Guid.Parse("720ca33a-77bf-4d1f-8974-10ee6ec93034");
 			requestsAndResponses.Add(ApiUris.GetConsistencyGroup(accountId, consistencyGroupId), RequestFileResponseType.AsGoodResponse("GetConsistencyGroupResponse.xml"));
 
 			var client = GetWebApiClient();
@@ -134,7 +132,6 @@ namespace Compute.Client.UnitTests.Drs
 		[TestMethod]
 		public async Task CreateConsistencyGroup_ReturnsResponse()
 		{
-			requestsAndResponses.Add(ApiUris.MyAccount, RequestFileResponseType.AsGoodResponse("GetMyAccountDetails.xml"));
 			requestsAndResponses.Add(ApiUris.CreateConsistencyGroups(accountId), RequestFileResponseType.AsGoodResponse("CreateConsistencyGroupResponse.xml"));
 
 			var consistencyGroupType = new CreateConsistencyGroupType();
@@ -152,14 +149,12 @@ namespace Compute.Client.UnitTests.Drs
 		[TestMethod]
 		public async Task GetConsistencyGroupSnapshots_Returns()
 		{
-			Uri baseUri = ApiUris.GetConsistencyGroupSnapshots(accountId);
-			var paramUri = new Uri(String.Concat(baseUri.ToString(), "?consistencyGroupId=3389ffe8-c3fc-11e3-b29c-001517c4643e"), UriKind.Relative);
-
-			requestsAndResponses.Add(ApiUris.MyAccount, RequestFileResponseType.AsGoodResponse("GetMyAccountDetails.xml"));
-			requestsAndResponses.Add(paramUri, RequestFileResponseType.AsGoodResponse("GetConsistencyGroupSnapshotsResponse.xml"));
+			var baseUriBuilder = new UriBuilder(ApiUris.GetConsistencyGroupSnapshots(accountId).ToString());
+			baseUriBuilder.Query = "consistencyGroupId=3389ffe8-c3fc-11e3-b29c-001517c4643e";
+			requestsAndResponses.Add(new Uri(baseUriBuilder.Host + baseUriBuilder.Uri.PathAndQuery, UriKind.Relative), RequestFileResponseType.AsGoodResponse("GetConsistencyGroupSnapshotsResponse.xml"));
 
 			var filteringOptions = new ConsistencyGroupSnapshotListOptions();
-			Filter filter = new Filter();
+			var filter = new Filter();
 			filter.Field = "consistencyGroupId";
 			filter.Operator = FilterOperator.Equals;
 			filter.Value = "3389ffe8-c3fc-11e3-b29c-001517c4643e";
@@ -180,7 +175,6 @@ namespace Compute.Client.UnitTests.Drs
 		[TestMethod]
 		public async Task StopPreviewSnapshot_Returns()
 		{
-			requestsAndResponses.Add(ApiUris.MyAccount, RequestFileResponseType.AsGoodResponse("GetMyAccountDetails.xml"));
 			requestsAndResponses.Add(ApiUris.StopPreviewSnapshot(accountId), RequestFileResponseType.AsGoodResponse("StopPreviewSnapshotResponse.xml"));
 
 			var stopPreviewSnapshotType = new StopPreviewSnapshotType();
@@ -197,7 +191,6 @@ namespace Compute.Client.UnitTests.Drs
 		[TestMethod]
 		public async Task StartPreviewSnapshot_ReturnsSuccess()
 		{
-			requestsAndResponses.Add(ApiUris.MyAccount, RequestFileResponseType.AsGoodResponse("GetMyAccountDetails.xml"));
 			requestsAndResponses.Add(ApiUris.StartPreviewSnapshot(accountId), RequestFileResponseType.AsGoodResponse("StartPreviewSnapshotResponse.xml"));
 
 			var startPreviewSnapshotType = new StartPreviewSnapshotType();
@@ -214,7 +207,6 @@ namespace Compute.Client.UnitTests.Drs
 		[TestMethod]
 		public async Task DeleteConsistencyGroup_ReturnsResponse()
 		{
-			requestsAndResponses.Add(ApiUris.MyAccount, RequestFileResponseType.AsGoodResponse("GetMyAccountDetails.xml"));
 			requestsAndResponses.Add(ApiUris.DeleteConsistencyGroup(accountId), RequestFileResponseType.AsGoodResponse("DeleteConsistencyGroupResponse.xml"));
 
 			var deleteConsistencyGroupType = new DeleteConsistencyGroupType();
@@ -231,7 +223,6 @@ namespace Compute.Client.UnitTests.Drs
 		[TestMethod]
 		public async Task CleanConsistencyGroup_ReturnsResponse()
 		{
-			requestsAndResponses.Add(ApiUris.MyAccount, RequestFileResponseType.AsGoodResponse("GetMyAccountDetails.xml"));
 			requestsAndResponses.Add(ApiUris.CleanConsistencyGroup(accountId), RequestFileResponseType.AsGoodResponse("CleanConsistencyGroupResponse.xml"));
 
 			var cleanConsistencyGroupType = new CleanConsistencyGroupType();
@@ -248,7 +239,6 @@ namespace Compute.Client.UnitTests.Drs
 		[TestMethod]
 		public async Task InitiateFailover_ReturnsResponse()
 		{
-			requestsAndResponses.Add(ApiUris.MyAccount, RequestFileResponseType.AsGoodResponse("GetMyAccountDetails.xml"));
 			requestsAndResponses.Add(ApiUris.InitiateFailover(accountId), RequestFileResponseType.AsGoodResponse("InitiateFailoverResponse.xml"));
 
 			var initiateFailoverType = new InitiateFailoverType();
@@ -265,7 +255,6 @@ namespace Compute.Client.UnitTests.Drs
 		[TestMethod]
 		public async Task ExpandJournal_ReturnsResponse()
 		{
-			requestsAndResponses.Add(ApiUris.MyAccount, RequestFileResponseType.AsGoodResponse("GetMyAccountDetails.xml"));
 			requestsAndResponses.Add(ApiUris.ExpandJournal(accountId), RequestFileResponseType.AsGoodResponse("ExpandJournalResponse.xml"));
 
 			var expandJournalType = new ExpandJournalType();
@@ -283,7 +272,6 @@ namespace Compute.Client.UnitTests.Drs
 		[TestMethod]
 		public async Task DeleteDrsReIpAddressRules_ReturnsResponse()
 		{
-			requestsAndResponses.Add(ApiUris.MyAccount, RequestFileResponseType.AsGoodResponse("GetMyAccountDetails.xml"));
 			requestsAndResponses.Add(ApiUris.DeleteDrsReIpAddressRules(accountId), RequestFileResponseType.AsGoodResponse("DeleteReIpAddressRulesResponse.xml"));
 
 			var drsServerPairIdType = new DrsServerPairIdType();
