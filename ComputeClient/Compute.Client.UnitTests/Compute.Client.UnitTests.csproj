@@ -75,6 +75,7 @@
     <Compile Include="AssemblyInfo.cs" />
     <Compile Include="BaseApiClientTestFixture.cs" />
     <Compile Include="Backup\BackupAccessorTests.cs" />
+    <Compile Include="Drs\ConsistencyGroupAccessorTests.cs" />
     <Compile Include="Network20\NatRuleAccessorTests.cs" />
     <Compile Include="Network20\IpAddressAccessorTests.cs" />
     <Compile Include="Network20\FirewallRuleAccessorTests.cs" />
@@ -109,13 +110,21 @@
     <Content Include="SampleOutputs\AddPublicIpBlockResponse.xml" />
     <Content Include="SampleOutputs\AddPoolMemberResponse.xml" />
     <Content Include="SampleOutputs\ChangeServerMonitoringPlanResponse.xml" />
+    <Content Include="SampleOutputs\CleanConsistencyGroupResponse.xml" />
     <Content Include="SampleOutputs\CleanServerResponse.xml" />
+    <Content Include="SampleOutputs\CreateConsistencyGroupResponse.xml" />
     <Content Include="SampleOutputs\CreatePoolResponse.xml" />
+    <Content Include="SampleOutputs\DeleteConsistencyGroupResponse.xml" />
     <Content Include="SampleOutputs\DeleteFirewallRuleResponse.xml" />
+    <Content Include="SampleOutputs\DeleteReIpAddressRulesResponse.xml" />
     <Content Include="SampleOutputs\DeployServerResponse.xml" />
+    <Content Include="SampleOutputs\GetConsistencyGroupResponse.xml" />
+    <Content Include="SampleOutputs\GetConsistencyGroupSnapshotsResponse.xml" />
+    <Content Include="SampleOutputs\GetConsistencyGroupsPaginatedResponse.xml" />
     <Content Include="SampleOutputs\GetMyUserDetails.xml">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="SampleOutputs\InitiateFailoverResponse.xml" />
     <Content Include="SampleOutputs\ListHistoricalServerConfigurationResponse.xml" />
     <Content Include="SampleOutputs\ListServersResponse.xml" />
     <Content Include="SampleOutputs\NotifyNicIpChangeResponse.xml" />
@@ -128,7 +137,11 @@
     <Content Include="SampleOutputs\DeleteServerResponse.xml" />
     <Content Include="SampleOutputs\DisableServerMonitoringResponse.xml" />
     <Content Include="SampleOutputs\EnableServerMonitoringResponse.xml" />
+    <Content Include="SampleOutputs\StartPreviewSnapshotResponse.xml" />
     <Content Include="SampleOutputs\UpdateVmwareToolsResponse.xml" />
+    <Content Include="SampleOutputs\GetConsistencyGroupsResponse.xml" />
+    <Content Include="SampleOutputs\StopPreviewSnapshotResponse.xml" />
+    <Content Include="SampleOutputs\ExpandJournalResponse.xml" />
     <None Include="SampleOutputs\GetMonitoringUsageReportResponse.csv" />
     <Content Include="SampleOutputs\GetAntiAffinityRulesResponse.xml" />
     <Content Include="SampleOutputs\ListDefaultHealthMonitorsResponse.xml" />

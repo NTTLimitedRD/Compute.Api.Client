@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<consistencyGroupSnapshots xmlns="urn:didata.com:api:cloud:types" totalCount="6" journalUsageGb="0.34" protectionWindow="P0Y0M7DT23H6M18.944S" predictedProtectionWindow="P8Y0M11DT6H4M17.487S">
+	<snapshot id="870146" createTime="2019-06-21T08:24:55.944-04:00" sizeKb="0"/>
+	<snapshot id="870141" createTime="2019-06-21T08:24:52.906-04:00" sizeKb="40"/>
+	<snapshot id="869200" createTime="2019-06-21T08:15:17.730-04:00" sizeKb="54"/>
+	<snapshot id="867920" createTime="2019-06-21T08:02:13.221-04:00" sizeKb="54"/>
+	<snapshot id="866640" createTime="2019-06-21T07:49:11.098-04:00" sizeKb="54"/>
+	<snapshot id="865361" createTime="2019-06-21T07:36:08.608-04:00" sizeKb="54"/>
+</consistencyGroupSnapshots>

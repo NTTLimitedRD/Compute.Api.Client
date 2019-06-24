@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<response requestId="dev_20170331T160144646+0100_59bf1b4b-60b1-4fef-8f1e-97365eb003a5" xmlns="urn:didata.com:api:cloud:types">
+	<operation>CLEAN_CONSISTENCY_GROUP</operation>
+	<responseCode>IN_PROGRESS</responseCode>
+	<message>Request to Clean Failed Consistency Group has been accepted. Please use appropriate Get or List API for status.</message>
+</response>

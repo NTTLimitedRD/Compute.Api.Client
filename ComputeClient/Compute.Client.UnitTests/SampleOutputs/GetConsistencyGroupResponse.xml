@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<consistencyGroup xmlns="urn:didata.com:api:cloud:types" id="720ca33a-77bf-4d1f-8974-10ee6ec93034">
+	<name>Test-ConsistencyGroup</name>
+	<description></description>
+	<journal sizeGb="100" extentCount="1" maxSizeGb="300"/>
+	<source datacenterId="DEV1_DR_EAST">
+		<networkDomain id="c636e554-1d88-439b-b3ec-fedf855dddf9" name="Create_CG_Green_Team_Demo"/>
+	</source>
+	<target datacenterId="DEV1_DR_WEST">
+		<networkDomain id="b6576128-d18a-4638-9a72-49a920f30f69" name="Create_CG_Green_Team_Demo"/>
+	</target>
+	<createTime>2019-06-13T13:03:10.000Z</createTime>
+	<operationStatus>DRS_MODE</operationStatus>
+	<drsInfrastructure enabled="true" status="ACTIVE" updateTime="2019-06-21T10:50:07.000Z"/>
+	<drsStatusCheckFailureCount>0</drsStatusCheckFailureCount>
+	<state>NORMAL</state>
+	<serverPair id="eddf417d-dbf3-4858-a6fa-c44faa6eae66" state="NORMAL">
+		<sourceServer id="2f275809-f279-43fe-8edb-bd3dafbdcb19">
+			<name>CM-DRS-Source-2</name>
+			<nic id="5915c011-5576-4c39-9567-bea67f4e02a5" key="4000" privateIpv4Address="10.0.0.17" ipv6Address="2607:f480:1111:2004:0:0:0:0" isPrimary="true">
+				<vlanId>259bc236-fe66-42bb-ba37-d4a94da69429</vlanId>
+			</nic>
+		</sourceServer>
+		<targetServer id="6d7ff46e-a677-4ffb-92dc-a7150d478104">
+			<name>CM-DRS-Target-2</name>
+			<nic id="a2c5e55b-c9b5-4170-b025-3e3b6e2cbd2f" key="4000" privateIpv4Address="10.0.0.17" ipv6Address="2607:f480:1111:2201:0:0:0:0" isPrimary="true">
+				<vlanId>c8d91707-420a-46ff-aea5-03fe7af92ba3</vlanId>
+			</nic>
+		</targetServer>
+		<reIpAddressRules>
+			<hostName>myHostName</hostName>
+			<domain>my.domain.com</domain>
+			<dnsServer>8.8.8.8</dnsServer>
+			<dnsServer>9.9.9.9</dnsServer>
+			<dnsSuffix>my.domain.com</dnsSuffix>
+			<dnsSuffix>other.domain.com</dnsSuffix>
+			<netBiosEnabled>false</netBiosEnabled>
+			<nicRule targetNicId="a2c5e55b-c9b5-4170-b025-3e3b6e2cbd2f" key="4000" useTargetNic="false">
+				<privateIpv4Address>10.111.111.222</privateIpv4Address>
+				<ipv4PrefixSize>24</ipv4PrefixSize>
+				<ipv4GatewayAddress>10.111.111.201</ipv4GatewayAddress>
+			</nicRule>
+		</reIpAddressRules>
+	</serverPair>
+</consistencyGroup>
