@@ -149,5 +149,19 @@
 		{
 			return await _apiClient.PostAsync<ExpandJournalType, ResponseType>(ApiUris.ExpandJournal(_apiClient.OrganizationId), expandJournalType);
 		}
+
+		/// <summary>
+		/// Delete ReIp Rules from a Server Pair
+		/// </summary>
+		/// <param name="drsServerPairIdType">Server Pair Id</param>
+		/// <returns>The <see cref="ResponseType"/></returns>
+		public async Task<ResponseType> DeleteReIpAddressRules(DrsServerPairIdType drsServerPairIdType)
+		{
+			return
+				await
+				_apiClient.PostAsync<DrsServerPairIdType, ResponseType>(
+					ApiUris.DeleteDrsReIpAddressRules(_apiClient.OrganizationId),
+					drsServerPairIdType);
+		}
 	}
 }
