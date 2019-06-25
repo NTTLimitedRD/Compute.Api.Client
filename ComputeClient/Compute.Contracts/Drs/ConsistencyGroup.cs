@@ -442,8 +442,35 @@ namespace DD.CBU.Compute.Api.Contracts.Drs
         public string primaryNicIpv6;
     }
 
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.6.1055.0")]
+	/// <remarks/>
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.6.1055.0")]
+	[System.SerializableAttribute()]
+	[System.Diagnostics.DebuggerStepThroughAttribute()]
+	[System.ComponentModel.DesignerCategoryAttribute("code")]
+	[System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:didata.com:api:cloud:types")]
+	[System.Xml.Serialization.XmlRootAttribute("deleteDrsReIpAddressRules", Namespace = "urn:didata.com:api:cloud:types", IsNullable = false)]
+	public partial class DrsServerPairIdType
+	{
+
+		private string serverPairIdField;
+
+		/// <remarks/>
+		[System.Xml.Serialization.XmlAttributeAttribute()]
+		public string serverPairId
+		{
+			get
+			{
+				return this.serverPairIdField;
+			}
+			set
+			{
+				this.serverPairIdField = value;
+			}
+		}
+	}
+
+	/// <remarks/>
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]

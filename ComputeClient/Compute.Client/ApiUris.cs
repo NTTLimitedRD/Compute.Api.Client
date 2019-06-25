@@ -2507,7 +2507,7 @@ namespace DD.CBU.Compute.Api.Client
         public static Uri GetConsistencyGroups(Guid orgId)
         {
             return new Uri(string.Format(MCP2_10_PREFIX + "{0}/consistencyGroup/consistencyGroup", orgId), UriKind.Relative);
-        }
+		}
 
         /// <summary>Giving a User the ability to Clean a Consistency Group if the CG is in a Failed State.</summary>
         /// <param name="orgId">The organization id.</param>
@@ -3051,5 +3051,13 @@ namespace DD.CBU.Compute.Api.Client
         {
             return new Uri(string.Format(MCP2_10_PREFIX + "{0}/server/historicalServerConfiguration?serverId={1}", orgId, serverId), UriKind.Relative);
         }
+
+		/// <summary>Delete ReIp Rules for Target Server.</summary>
+		/// <param name="orgId">The organization Id.</param>
+		/// <returns>The <see cref="Uri"/>.</returns>
+		public static Uri DeleteDrsReIpAddressRules(Guid orgId)
+		{
+			return new Uri(String.Format(MCP2_10_PREFIX + "{0}/consistencyGroup/deleteDrsReIpAddressRules", orgId), UriKind.Relative);
+		}
     }
 }
