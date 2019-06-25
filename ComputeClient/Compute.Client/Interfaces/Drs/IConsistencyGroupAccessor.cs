@@ -36,12 +36,19 @@
         /// <returns>The selected <see cref="ConsistencyGroupType"/></returns>
         Task<ConsistencyGroupDetailType> GetConsistencyGroup(System.Guid id);
 
-        /// <summary>
-        /// The Create Consistency Group
-        /// </summary>
-        /// <param name="createConsistencyGroup">The create consistency group type.</param>
-        /// <returns>The <see cref="ResponseType"/></returns>
-        Task<ResponseType> CreateConsistencyGroup(CreateConsistencyGroupType createConsistencyGroup);
+		/// <summary>
+		/// Set Re-IP rules for a DRS Target Server to override replicated network settings when entering DRS Preview mode.
+		/// </summary>
+		/// <param name="setDrsReIpAddressRules">Drs Target Server Re-IP details</param>
+		/// <returns>The <see cref="ResponseType"/></returns>
+		Task<ResponseType> SetDrsReIpAddressRules(SetDrsReIpAddressRulesType setDrsReIpAddressRules);
+
+		/// <summary>
+		/// The Create Consistency Group
+		/// </summary>
+		/// <param name="createConsistencyGroup">The create consistency group type.</param>
+		/// <returns>The <see cref="ResponseType"/></returns>
+		Task<ResponseType> CreateConsistencyGroup(CreateConsistencyGroupType createConsistencyGroup);
 
         /// <summary>
         /// The Get Consistency Group Snapshots method.

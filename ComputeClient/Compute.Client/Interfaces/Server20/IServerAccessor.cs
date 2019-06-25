@@ -10,7 +10,6 @@ namespace DD.CBU.Compute.Api.Client.Interfaces.Server20
 	using Contracts.Requests;
 	using Contracts.Requests.Server20;
 	using Contracts.Server;
-	using DD.CBU.Compute.Api.Contracts.Drs;
 	using ServerType = Contracts.Network20.ServerType;
 
 	/// <summary>
@@ -328,13 +327,6 @@ namespace DD.CBU.Compute.Api.Client.Interfaces.Server20
 		/// <param name="createDrsTargetServer">Drs Target Server details</param>
 		/// <returns>The <see cref="ResponseType"/></returns>
 		Task<ResponseType> CreateDrsTargetServer(CreateDrsTargetServerType createDrsTargetServer);
-
-		/// <summary>
-		/// Set Re-IP rules for a DRS Target Server to override replicated network settings when entering DRS Preview mode.
-		/// </summary>
-		/// <param name="setDrsReIpAddressRules">Drs Target Server Re-IP details</param>
-		/// <returns>The <see cref="ResponseType"/></returns>
-		Task<ResponseType> SetDrsReIpAddressRules(SetDrsReIpAddressRulesType setDrsReIpAddressRules);
 
 		/// <summary>The list historical server configurations for mcp 2 deployed servers.</summary>
 		/// <param name="serverId">The server Id</param>

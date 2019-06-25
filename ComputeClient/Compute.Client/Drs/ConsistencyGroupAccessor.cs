@@ -41,13 +41,23 @@
             return response.items;
         }
 
-        /// <summary>
-        /// The Get Consistency Group menthod.
-        /// </summary>
-        /// <param name="filteringOptions">The filtering options.</param>
-        /// <param name="pagingOptions">The pagination options.</param>
-        /// <returns>Paginated result of <see cref="ConsistencyGroupType"/></returns>
-        public async Task<PagedResponse<ConsistencyGroupType>> GetConsistencyGroupsPaginated(ConsistencyGroupListOptions filteringOptions = null, PageableRequest pagingOptions = null)
+		/// <summary>
+		/// Set Re-IP rules for a DRS Target Server to override replicated network settings when entering DRS Preview mode.
+		/// </summary>
+		/// <param name="setDrsReIpAddressRules">Drs Target Server Re-IP details</param>
+		/// <returns>The <see cref="ResponseType"/></returns>
+		public async Task<ResponseType> SetDrsReIpAddressRules(SetDrsReIpAddressRulesType setDrsReIpAddressRules)
+		{
+			return await _apiClient.PostAsync<SetDrsReIpAddressRulesType, ResponseType>(ApiUris.SetDrsReIpAddressRules(_apiClient.OrganizationId), setDrsReIpAddressRules);
+		}
+
+		/// <summary>
+		/// The Get Consistency Group menthod.
+		/// </summary>
+		/// <param name="filteringOptions">The filtering options.</param>
+		/// <param name="pagingOptions">The pagination options.</param>
+		/// <returns>Paginated result of <see cref="ConsistencyGroupType"/></returns>
+		public async Task<PagedResponse<ConsistencyGroupType>> GetConsistencyGroupsPaginated(ConsistencyGroupListOptions filteringOptions = null, PageableRequest pagingOptions = null)
         {
             var response = await _apiClient.GetAsync<consistencyGroups>(ApiUris.GetConsistencyGroups(_apiClient.OrganizationId), pagingOptions, filteringOptions);
             return new PagedResponse<ConsistencyGroupType>
