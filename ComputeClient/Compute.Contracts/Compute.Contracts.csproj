@@ -95,6 +95,7 @@
     <Compile Include="Directory\IUser.cs" />
     <Compile Include="Directory\SetUserRoles.cs" />
     <Compile Include="Directory\User.cs" />
+    <Compile Include="Drs\SetDrsReIpAddressRules.cs" />
     <Compile Include="Drs\ConsistencyGroupOverride.cs" />
     <Compile Include="Drs\ConsistencyGroupSnapshot.cs" />
     <Compile Include="Drs\ConsistencyGroup.cs" />

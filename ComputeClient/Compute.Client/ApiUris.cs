@@ -3031,13 +3031,23 @@ namespace DD.CBU.Compute.Api.Client
         public static Uri CreateDrsTargetServer(Guid orgId)
         {
             return new Uri(string.Format(MCP2_10_PREFIX + "{0}/consistencyGroup/createDrsTargetServer", orgId), UriKind.Relative);
-        }
+		}
 
-        /// <summary>Returns the relative URI of the REST request for getting the List of Historical Server Configurations for MCP 2 servers. </summary>
-        /// <param name="orgId">The organization Id. </param>
-        /// <param name="serverId">	The Server Id. </param>
-        /// <returns>The <see cref="Uri"/>.</returns>
-        public static Uri ListHistoricalServerConfigurations(Guid orgId, Guid serverId)
+
+		/// <summary>Set Re-IP rules for a DRS Target Server to override replicated network settings when entering DRS Preview mode.</summary>
+		/// <param name="orgId">The organization id.</param>
+		/// <returns>The <see cref="Uri"/>.</returns>
+		public static Uri SetDrsReIpAddressRules(Guid orgId)
+		{
+			return new Uri(string.Format(MCP2_10_PREFIX + "{0}/consistencyGroup/setDrsReIpAddressRules", orgId), UriKind.Relative);
+		}
+
+
+		/// <summary>Returns the relative URI of the REST request for getting the List of Historical Server Configurations for MCP 2 servers. </summary>
+		/// <param name="orgId">The organization Id. </param>
+		/// <param name="serverId">	The Server Id. </param>
+		/// <returns>The <see cref="Uri"/>.</returns>
+		public static Uri ListHistoricalServerConfigurations(Guid orgId, Guid serverId)
         {
             return new Uri(string.Format(MCP2_10_PREFIX + "{0}/server/historicalServerConfiguration?serverId={1}", orgId, serverId), UriKind.Relative);
         }

@@ -10,7 +10,8 @@ namespace DD.CBU.Compute.Api.Client.Server20
     using Contracts.Network20;
     using Contracts.Requests;
     using Contracts.Requests.Server20;
-    using Interfaces;
+	using DD.CBU.Compute.Api.Contracts.Drs;
+	using Interfaces;
     using Interfaces.Server20;
 
     /// <summary>
@@ -636,11 +637,21 @@ namespace DD.CBU.Compute.Api.Client.Server20
 			return await _apiClient.PostAsync<CreateDrsTargetServerType, ResponseType>(ApiUris.CreateDrsTargetServer(_apiClient.OrganizationId), createDrsTargetServer);
 		}
 
-        /// <summary>The list historical server configurations for mcp 2 deployed servers.</summary>
-        /// <param name="serverId">The server Id</param>
-        /// <param name="filteringOptions">The filtering options.</param>
-        /// <returns>The <see cref="Task"/>.</returns>
-        public async Task <IEnumerable<HistoricalServerConfigurationType>> ListHistoricalServerConfigurations(Guid serverId, HistoricalServerConfigurationListOptions filteringOptions = null) {
+		/// <summary>
+		/// Set Re-IP rules for a DRS Target Server to override replicated network settings when entering DRS Preview mode.
+		/// </summary>
+		/// <param name="setDrsReIpAddressRules">Drs Target Server Re-IP details</param>
+		/// <returns>The <see cref="ResponseType"/></returns>
+		public async Task<ResponseType> SetDrsReIpAddressRules(SetDrsReIpAddressRulesType setDrsReIpAddressRules)
+		{
+			return await _apiClient.PostAsync<SetDrsReIpAddressRulesType, ResponseType>(ApiUris.SetDrsReIpAddressRules(_apiClient.OrganizationId), setDrsReIpAddressRules);
+		}
+
+		/// <summary>The list historical server configurations for mcp 2 deployed servers.</summary>
+		/// <param name="serverId">The server Id</param>
+		/// <param name="filteringOptions">The filtering options.</param>
+		/// <returns>The <see cref="Task"/>.</returns>
+		public async Task <IEnumerable<HistoricalServerConfigurationType>> ListHistoricalServerConfigurations(Guid serverId, HistoricalServerConfigurationListOptions filteringOptions = null) {
             var response = await ListHistoricalServerConfigurationsPaginated(serverId, filteringOptions, null);
             return response.items;
         }
