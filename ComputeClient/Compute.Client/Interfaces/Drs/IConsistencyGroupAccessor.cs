@@ -44,6 +44,13 @@
 		Task<ResponseType> SetDrsReIpAddressRules(SetDrsReIpAddressRulesType setDrsReIpAddressRules);
 
 		/// <summary>
+		/// The purpose of this API is to allow a customer user to Delete the Re-IP Address Rules associated with a Consistency Group Server Pair.
+		/// </summary>
+		/// <param name="drsServerPairIdType"></param>
+		/// <returns>The <see cref="ResponseType"/></returns>
+		Task<ResponseType> DeleteReIpAddressRules(DrsServerPairIdType drsServerPairIdType);
+
+		/// <summary>
 		/// The Create Consistency Group
 		/// </summary>
 		/// <param name="createConsistencyGroup">The create consistency group type.</param>
