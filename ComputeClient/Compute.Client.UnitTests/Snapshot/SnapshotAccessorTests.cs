@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,7 +15,7 @@ namespace Compute.Client.UnitTests.Snapshot
 	public class SnapshotAccessorTests : BaseApiClientTestFixture
 	{
 		[TestMethod]
-		public async Task ListSnapshotServicePlansPaginated_ReturnsResponse()
+		public async Task ListSnapshotServicePlans()
 		{
 			requestsAndResponses.Add(ApiUris.ListSnapshotServicePlans(accountId), RequestFileResponseType.AsGoodResponse("ListSnapshotServicePlansResponse.xml"));
 
@@ -76,7 +76,7 @@ namespace Compute.Client.UnitTests.Snapshot
 		}
 
 		[TestMethod]
-		public async Task ListSnapshotServicePlansPaginated_WithFiltersAndPagingOptions()
+		public async Task ListSnapshotServicePlans_WithFiltesAndPagingOptions()
 		{
 			var filter = new SnapshotServicePlanListOptions();
 			filter.available = true;
