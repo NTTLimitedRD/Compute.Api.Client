@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using DD.CBU.Compute.Api.Client;
 using DD.CBU.Compute.Api.Client.Server20;
@@ -86,9 +84,9 @@ namespace Compute.Client.UnitTests.Snapshot
 			pagingRequest.PageNumber = 1;
 			pagingRequest.PageSize = 5;
 
-			var expectedRelativeUriPath = string.Format(ApiUris.ListSnapshotServicePlans(accountId) +"?available={0}&id={1}&pageSize={2}&pageNumber={3}", "true", filter.Id, pagingRequest.PageSize, pagingRequest.PageNumber);
+			var expectedRelativeUriPath = string.Format(ApiUris.ListSnapshotServicePlans(accountId) + "?available={0}&id={1}&pageSize={2}&pageNumber={3}", "true", filter.Id, pagingRequest.PageSize, pagingRequest.PageNumber);
 			var expectedUri = new Uri(expectedRelativeUriPath, UriKind.Relative);
-			
+
 			requestsAndResponses.Add(expectedUri, RequestFileResponseType.AsGoodResponse("ListSnapshotServicePlansWithFilterResponse.xml"));
 
 			var client = GetWebApiClient();
