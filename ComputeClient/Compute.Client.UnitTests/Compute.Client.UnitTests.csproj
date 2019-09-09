@@ -89,6 +89,7 @@
     <Compile Include="Server20\ServerAccessorTests.cs" />
     <Compile Include="Network20\VlanAccessorTests.cs" />
     <Compile Include="RequestFileResponseType.cs" />
+    <Compile Include="Server20\SnapshotAccessorTests.cs" />
     <Compile Include="Utilities\PageableRequestExtensionsTests.cs" />
     <Compile Include="Utilities\FilterableRequestExtensionsTests.cs" />
   </ItemGroup>
@@ -104,6 +105,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />
+    <Folder Include="Snapshot\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="SampleOutputs\AddNicResponse.xml" />
@@ -127,6 +129,7 @@
     <Content Include="SampleOutputs\InitiateFailoverResponse.xml" />
     <Content Include="SampleOutputs\ListHistoricalServerConfigurationResponse.xml" />
     <Content Include="SampleOutputs\ListServersResponse.xml" />
+    <Content Include="SampleOutputs\ListSnapshotServicePlansResponse.xml" />
     <Content Include="SampleOutputs\NotifyNicIpChangeResponse.xml" />
     <Content Include="SampleOutputs\PowerOffServerResponse.xml" />
     <Content Include="SampleOutputs\RemoveNicResponse.xml" />

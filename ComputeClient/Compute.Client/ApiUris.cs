@@ -131,11 +131,19 @@ namespace DD.CBU.Compute.Api.Client
             return new Uri(string.Format(MCP2_10_PREFIX + "{0}/snapshot/migrateSnapshotPreviewServer", orgId), UriKind.Relative);
         }
 
-        /// <summary>The path (relative to the base API URL) delete sub administrator action.</summary>
-        /// <param name="orgId">The org Id.</param>
-        /// <param name="username">The username.</param>
-        /// <returns>The <see cref="Uri"/>.</returns>
-        public static Uri DeleteSubAdministrator(Guid orgId, string username)
+		/// <summary>The path (relative to the base API URL) to List Snapshot Service Plans.</summary>
+		/// <param name="orgId">The org Id. </param>
+		/// <returns>The <see cref="Uri"/>.</returns>
+		public static Uri ListSnapshotServicePlans(Guid orgId)
+		{
+			return new Uri(string.Format(MCP2_10_PREFIX + "{0}/snapshot/servicePlan", orgId), UriKind.Relative);
+		}
+
+		/// <summary>The path (relative to the base API URL) delete sub administrator action.</summary>
+		/// <param name="orgId">The org Id.</param>
+		/// <param name="username">The username.</param>
+		/// <returns>The <see cref="Uri"/>.</returns>
+		public static Uri DeleteSubAdministrator(Guid orgId, string username)
         {
             return new Uri(string.Format(MCP1_0_PREFIX + "{0}/account/{1}?delete", orgId, username), UriKind.Relative);
         }
