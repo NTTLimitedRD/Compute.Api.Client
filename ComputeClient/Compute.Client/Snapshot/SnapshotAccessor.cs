@@ -119,7 +119,7 @@
 		/// <param name="filteringOptions">The filtering options.</param>
 		/// <param name="pagingOptions">The paging options.</param>
 		/// <returns>The <see cref="Task"/>.</returns>
-		public async Task<PagedResponse<SnapshotServicePlanType>> GetSnapshotServicePlansPaginated(SnapshotServicePlanListOptions filteringOptions = null, IPageableRequest pagingOptions = null)
+		public async Task<PagedResponse<SnapshotServicePlanType>> ListSnapshotServicePlans(SnapshotServicePlanListOptions filteringOptions = null, IPageableRequest pagingOptions = null)
 		{
 			var response = await _apiClient.GetAsync<snapshotServicePlans>(
 			ApiUris.ListSnapshotServicePlans(_apiClient.OrganizationId),

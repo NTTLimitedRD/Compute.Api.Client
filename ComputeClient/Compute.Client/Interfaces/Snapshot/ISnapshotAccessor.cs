@@ -52,6 +52,6 @@
 		/// <param name="filteringOptions">The filtering options.</param>
 		/// <param name="pagingOptions">The paging options.</param>
 		/// <returns>The <see cref="Task"/>.</returns>
-		Task<PagedResponse<SnapshotServicePlanType>> GetSnapshotServicePlansPaginated(SnapshotServicePlanListOptions filteringOptions = null, IPageableRequest pagingOptions = null);
+		Task<PagedResponse<SnapshotServicePlanType>> ListSnapshotServicePlans(SnapshotServicePlanListOptions filteringOptions = null, IPageableRequest pagingOptions = null);
 	}
 }
