@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -76,7 +76,7 @@ namespace Compute.Client.UnitTests.Snapshot
 		}
 
 		[TestMethod]
-		public async Task ListSnapshotServicePlans_WithFiltesAndPagingOptions()
+		public async Task ListSnapshotServicePlans_WithFiltersAndPagingOptions()
 		{
 			var filter = new SnapshotServicePlanListOptions();
 			filter.available = true;
@@ -95,6 +95,7 @@ namespace Compute.Client.UnitTests.Snapshot
 			var accessor = new SnapshotAccessor(client);
 
 			var snapshotServicePlansPaginated = await accessor.ListSnapshotServicePlans(filter, pagingRequest);
+
 			Assert.IsNotNull(snapshotServicePlansPaginated);
 			Assert.IsNotNull(snapshotServicePlansPaginated);
 			Assert.AreEqual(1, snapshotServicePlansPaginated.pageCount);
