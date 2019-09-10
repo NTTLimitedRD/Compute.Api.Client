@@ -371,4 +371,105 @@ namespace DD.CBU.Compute.Api.Contracts.Network20
         public string id;
     }
 
+
+	/// <remarks/>
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.6.1055.0")]
+	[System.SerializableAttribute()]
+	[System.Diagnostics.DebuggerStepThroughAttribute()]
+	[System.ComponentModel.DesignerCategoryAttribute("code")]
+	[System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:didata.com:api:cloud:types")]
+	public partial class FirewallRuleStatisticsType
+	{
+
+		/// <remarks/>
+		public string networkDomainId;
+
+		/// <remarks/>
+		public string name;
+
+		/// <remarks/>
+		public bool enabled;
+
+		/// <remarks/>
+		public string state;
+
+		/// <remarks/>
+		public FirewallRuleStatisticsTypeStatistics statistics;
+
+		/// <remarks/>
+		[System.Xml.Serialization.XmlAttributeAttribute()]
+		public string firewallRuleId;
+	}
+
+	/// <remarks/>
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.6.1055.0")]
+	[System.SerializableAttribute()]
+	[System.Diagnostics.DebuggerStepThroughAttribute()]
+	[System.ComponentModel.DesignerCategoryAttribute("code")]
+	[System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:didata.com:api:cloud:types")]
+	public partial class FirewallRuleStatisticsTypeStatistics
+	{
+
+		/// <remarks/>
+		public string overlapType;
+
+		/// <remarks/>
+		public long hitCounter;
+
+		/// <remarks/>
+		public System.DateTime lastHitTimestamp;
+
+		/// <remarks/>
+		[System.Xml.Serialization.XmlIgnoreAttribute()]
+		public bool lastHitTimestampSpecified;
+	}
+
+	/// <remarks/>
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.6.1055.0")]
+	[System.SerializableAttribute()]
+	[System.Diagnostics.DebuggerStepThroughAttribute()]
+	[System.ComponentModel.DesignerCategoryAttribute("code")]
+	[System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:didata.com:api:cloud:types")]
+	[System.Xml.Serialization.XmlRootAttribute("firewallRulesStatistics", Namespace = "urn:didata.com:api:cloud:types", IsNullable = false)]
+	public partial class FirewallRulesStatisticsType
+	{
+
+		/// <remarks/>
+		[System.Xml.Serialization.XmlElementAttribute("firewallRuleStatistics")]
+		public FirewallRuleStatisticsType[] firewallRuleStatistics;
+
+		/// <remarks/>
+		[System.Xml.Serialization.XmlAttributeAttribute()]
+		public int pageNumber;
+
+		/// <remarks/>
+		[System.Xml.Serialization.XmlIgnoreAttribute()]
+		public bool pageNumberSpecified;
+
+		/// <remarks/>
+		[System.Xml.Serialization.XmlAttributeAttribute()]
+		public int pageCount;
+
+		/// <remarks/>
+		[System.Xml.Serialization.XmlIgnoreAttribute()]
+		public bool pageCountSpecified;
+
+		/// <remarks/>
+		[System.Xml.Serialization.XmlAttributeAttribute()]
+		public int totalCount;
+
+		/// <remarks/>
+		[System.Xml.Serialization.XmlIgnoreAttribute()]
+		public bool totalCountSpecified;
+
+		/// <remarks/>
+		[System.Xml.Serialization.XmlAttributeAttribute()]
+		public int pageSize;
+
+		/// <remarks/>
+		[System.Xml.Serialization.XmlIgnoreAttribute()]
+		public bool pageSizeSpecified;
+	}
+
+
 }

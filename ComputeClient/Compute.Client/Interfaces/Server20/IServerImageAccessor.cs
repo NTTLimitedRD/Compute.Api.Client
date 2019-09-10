@@ -139,5 +139,9 @@
 	    /// </returns>
 	    Task<ResponseType> CopyCustomerImage(CopyImageType copyImage);
 
+        /// <summary>The Reconfigure Advanced Virtualization Settings on a Customer Image.</summary>
+        /// <param name="reconfigureImageType">The reconfigure image.</param>
+        /// <returns>The <see cref="Task"/>.</returns>
+        Task<ResponseType> ReconfigureImage(ReconfigureImageType reconfigureImageType);
     }
 }

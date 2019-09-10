@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<consistencyGroups xmlns="urn:didata.com:api:cloud:types" pageNumber="1" pageCount="2" totalCount="2" pageSize="20">
+	<consistencyGroup id="4331e2a1-169d-433a-bd6d-ea7fcc306ea0">
+		<name>GoodCGNoReIp</name>
+		<description/>
+		<journal sizeGb="100" extentCount="1" maxSizeGb="300"/>
+		<source datacenterId="DEV1_DR_EAST">
+			<networkDomain id="c636e554-1d88-439b-b3ec-fedf855dddf9" name="Create_CG_Green_Team_Demo"/>
+		</source>
+		<target datacenterId="DEV1_DR_WEST">
+			<networkDomain id="b6576128-d18a-4638-9a72-49a920f30f69" name="Create_CG_Green_Team_Demo"/>
+		</target>
+		<createTime>2019-06-14T12:21:07.000Z</createTime>
+		<operationStatus>DRS_MODE</operationStatus>
+		<drsInfrastructure enabled="true" status="ACTIVE" updateTime="2019-06-20T09:45:05.000Z"/>
+		<drsStatusCheckFailureCount>0</drsStatusCheckFailureCount>
+		<state>NORMAL</state>
+		<serverPair id="2193f6d8-ecfd-4e84-bf90-f35c00bb6818" state="NORMAL" reIpAddressRulesDefined="false">
+			<sourceServer id="016f6f18-96e1-4040-a0da-83505e151f00" primaryNicIpv4="10.0.3.13" primaryNicIpv6="2607:f480:1111:2007:58d4:9b23:6e84:f00c">
+				<name>Green Re-IP NIC Test (Linux)</name>
+			</sourceServer>
+			<targetServer id="e14c070b-aad5-4ffa-916e-e6cd5142eb2e" primaryNicIpv4="10.0.2.11" primaryNicIpv6="2607:f480:1111:2202:1dd2:b5d4:699e:7c87">
+				<name>Green Re-IP NIC Test (Linux) DRS Target</name>
+			</targetServer>
+		</serverPair>
+	</consistencyGroup>
+	<consistencyGroup id="91751b32-f3e0-4f40-b28b-8ff0afb79cf0">
+		<name>FailedCG</name>
+		<description></description>
+		<journal sizeGb="100" extentCount="0" maxSizeGb="1000"/>
+		<source datacenterId="QA1_N1_VMWARE_1">
+			<network id="fa79bd07-2ae4-11e5-b819-005056986f6c" name="Test"/>
+		</source>
+		<target datacenterId="QA1_N2_VMWARE_1">
+			<networkDomain id="40115a53-db31-4349-8de9-1c5f9349fded" name="Network domain enterprise"/>
+		</target>
+		<createTime>2019-06-18T07:10:19.000Z</createTime>
+		<operationStatus>DRS_MODE</operationStatus>
+		<drsStatusCheckFailureCount>0</drsStatusCheckFailureCount>
+		<state>FAILED_ADD</state>
+		<progress>
+			<action>CREATE_CONSISTENCY_GROUP</action>
+			<requestTime>2019-06-18T07:10:20.000Z</requestTime>
+			<userName>NR_test1</userName>
+			<numberOfSteps>12</numberOfSteps>
+			<updateTime>2019-06-18T08:42:01.000Z</updateTime>
+			<step>
+				<name>WAIT_FOR_CONSISTENCY_GROUP_WRITABLE</name>
+				<number>10</number>
+			</step>
+			<failureReason>Create DRS consistency group has timed out.</failureReason>
+		</progress>
+		<serverPair id="2861363d-1f66-4bce-b568-82c4d3582ed7" state="NORMAL" reIpAddressRulesDefined="false">
+			<sourceServer id="e55a4707-e7cd-4dad-9c03-ef834b6e4528" primaryNicIpv4="10.160.15.11">
+				<name>SourceServer1</name>
+			</sourceServer>
+			<targetServer id="f3174580-2d51-400f-9584-f0e32784e7e7" primaryNicIpv4="172.16.0.8" primaryNicIpv6="2607:f480:1111:1412:6203:64e1:5385:286f">
+				<name>TargetServer1</name>
+			</targetServer>
+		</serverPair>
+	</consistencyGroup>
+	<consistencyGroup xmlns="urn:didata.com:api:cloud:types" id="720ca33a-77bf-4d1f-8974-10ee6ec93034">
+		<name>ReIpEnabled</name>
+		<description></description>
+		<journal sizeGb="100" extentCount="1" maxSizeGb="300"/>
+		<source datacenterId="DEV1_DR_EAST">
+			<networkDomain id="c636e554-1d88-439b-b3ec-fedf855dddf9" name="Create_CG_Green_Team_Demo"/>
+		</source>
+		<target datacenterId="DEV1_DR_WEST">
+			<networkDomain id="b6576128-d18a-4638-9a72-49a920f30f69" name="Create_CG_Green_Team_Demo"/>
+		</target>
+		<createTime>2019-06-13T13:03:10.000Z</createTime>
+		<operationStatus>DRS_MODE</operationStatus>
+		<drsInfrastructure enabled="true" status="ACTIVE" updateTime="2019-06-20T10:05:05.000Z"/>
+		<drsStatusCheckFailureCount>0</drsStatusCheckFailureCount>
+		<state>NORMAL</state>
+		<serverPair id="eddf417d-dbf3-4858-a6fa-c44faa6eae66" state="NORMAL" reIpAddressRulesDefined="true">
+			<sourceServer id="2f275809-f279-43fe-8edb-bd3dafbdcb19">
+				<name>CM-DRS-Source-2</name>
+				<nic id="5915c011-5576-4c39-9567-bea67f4e02a5" key="4000" privateIpv4Address="10.0.0.17" ipv6Address="2607:f480:1111:2004:0:0:0:0" isPrimary="true">
+					<vlanId>259bc236-fe66-42bb-ba37-d4a94da69429</vlanId>
+				</nic>
+			</sourceServer>
+			<targetServer id="6d7ff46e-a677-4ffb-92dc-a7150d478104">
+				<name>CM-DRS-Target-2</name>
+				<nic id="a2c5e55b-c9b5-4170-b025-3e3b6e2cbd2f" key="4000" privateIpv4Address="10.0.0.17" ipv6Address="2607:f480:1111:2201:0:0:0:0" isPrimary="true">
+					<vlanId>c8d91707-420a-46ff-aea5-03fe7af92ba3</vlanId>
+				</nic>
+			</targetServer>
+			<reIpAddressRules>
+				<hostName>myHostName</hostName>
+				<domain>my.domain.com</domain>
+				<dnsServer>8.8.8.8</dnsServer>
+				<dnsServer>9.9.9.9</dnsServer>
+				<dnsSuffix>my.domain.com</dnsSuffix>
+				<dnsSuffix>other.domain.com</dnsSuffix>
+				<netBiosEnabled>false</netBiosEnabled>
+				<nicRule targetNicId="a2c5e55b-c9b5-4170-b025-3e3b6e2cbd2f" key="4000" useTargetNic="false">
+					<privateIpv4Address>192.168.1.42</privateIpv4Address>
+					<ipv4PrefixSize>25</ipv4PrefixSize>
+					<ipv4GatewayAddress>192.168.1.1</ipv4GatewayAddress>
+				</nicRule>
+			</reIpAddressRules>
+		</serverPair>
+	</consistencyGroup>
+</consistencyGroups>

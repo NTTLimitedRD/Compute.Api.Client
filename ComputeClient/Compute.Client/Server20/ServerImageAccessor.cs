@@ -231,5 +231,14 @@ namespace DD.CBU.Compute.Api.Client.Server20
         {
             return await _apiClient.PostAsync<MoveCustomerImageType, ResponseType>(ApiUris.MoveCustomerImageToCluster(_apiClient.OrganizationId), moveCustomerImage);
         }
+
+        /// <summary>The Reconfigure Advanced Virtualization Settings on a Customer Image.</summary>
+        /// <param name="reconfigureImageType">The reconfigure image.</param>
+        /// <returns>The <see cref="Task"/></returns>
+        public async Task<ResponseType> ReconfigureImage(ReconfigureImageType reconfigureImageType)
+        {
+            return await _apiClient.PostAsync<ReconfigureImageType, ResponseType>(
+                ApiUris.ReconfigureImage(_apiClient.OrganizationId), reconfigureImageType);
+        }
     }
 }

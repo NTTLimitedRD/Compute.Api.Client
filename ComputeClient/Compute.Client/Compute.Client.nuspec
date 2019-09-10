@@ -5,7 +5,7 @@
     <version>$version$</version>
     <title>Dimension Data Compute Client API</title>
     <authors>Dimension Data</authors>
-    <projectUrl>https://github.com/DimensionDataCBUSydney/DimensionData.ComputeClient</projectUrl>
+    <projectUrl>https://github.com/DimensionDataCBUSydney/Compute.Api.Client</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Provides a client to fully manage the CaaS including deploying machines, managing backups etc.</description>
     <summary>Dimension Data Compute as a Service client API.</summary>    

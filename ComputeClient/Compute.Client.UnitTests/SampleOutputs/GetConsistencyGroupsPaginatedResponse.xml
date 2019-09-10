@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<consistencyGroups xmlns="urn:didata.com:api:cloud:types" pageNumber="1" pageCount="3" totalCount="8" pageSize="3">
+	<consistencyGroup id="32174f90-7c91-4e95-bb44-2aeb19efaa62">
+		<name>ross-will-this-break-the-journal</name>
+		<description>testing for nk</description>
+		<journal sizeGb="100" extentCount="1" maxSizeGb="300"/>
+		<source datacenterId="DEV1_DR_EAST">
+			<networkDomain id="c707d560-2b4f-4d43-9a19-2b2a74829d54" name="blue_team_nd"/>
+		</source>
+		<target datacenterId="DEV1_DR_WEST">
+			<networkDomain id="54576cd7-d472-48c3-8206-d5e1266f9ad9" name="blue_team_nd_w"/>
+		</target>
+		<createTime>2019-06-04T15:36:05.000Z</createTime>
+		<operationStatus>DRS_MODE</operationStatus>
+		<drsInfrastructure enabled="true" status="ACTIVE" updateTime="2019-06-21T10:20:04.000Z"/>
+		<drsStatusCheckFailureCount>0</drsStatusCheckFailureCount>
+		<state>NORMAL</state>
+		<serverPair id="15124637-b266-405e-b020-7d26cb806a8b" state="NORMAL" reIpAddressRulesDefined="false">
+			<sourceServer id="8beff26c-f17f-46a6-9128-7134dc0f1023" primaryNicIpv4="172.16.0.18" primaryNicIpv6="2607:f480:1111:2001:3d0a:41a1:a422:6ebe">
+				<name>Ross-Source-ConsistencyGroup-Server</name>
+			</sourceServer>
+			<targetServer id="db90d2bc-6b93-4767-b70f-3f90721da0b9" primaryNicIpv4="10.0.1.6" primaryNicIpv6="2607:f480:1111:2205:27b:c7f0:6585:9d58">
+				<name>Ross-Target-ConsistenctGroup-Server</name>
+			</targetServer>
+		</serverPair>
+	</consistencyGroup>
+	<consistencyGroup id="4331e2a1-169d-433a-bd6d-ea7fcc306ea0">
+		<name>BT-DRS-Test</name>
+		<description></description>
+		<journal sizeGb="100" extentCount="1" maxSizeGb="300"/>
+		<source datacenterId="DEV1_DR_EAST">
+			<networkDomain id="c636e554-1d88-439b-b3ec-fedf855dddf9" name="Create_CG_Green_Team_Demo"/>
+		</source>
+		<target datacenterId="DEV1_DR_WEST">
+			<networkDomain id="b6576128-d18a-4638-9a72-49a920f30f69" name="Create_CG_Green_Team_Demo"/>
+		</target>
+		<createTime>2019-06-14T12:21:07.000Z</createTime>
+		<operationStatus>DRS_MODE</operationStatus>
+		<drsInfrastructure enabled="true" status="ACTIVE" updateTime="2019-06-21T10:20:05.000Z"/>
+		<drsStatusCheckFailureCount>0</drsStatusCheckFailureCount>
+		<state>NORMAL</state>
+		<serverPair id="2193f6d8-ecfd-4e84-bf90-f35c00bb6818" state="NORMAL" reIpAddressRulesDefined="false">
+			<sourceServer id="016f6f18-96e1-4040-a0da-83505e151f00" primaryNicIpv4="10.0.3.13" primaryNicIpv6="2607:f480:1111:2007:58d4:9b23:6e84:f00c">
+				<name>Green Re-IP NIC Test (Linux)</name>
+			</sourceServer>
+			<targetServer id="e14c070b-aad5-4ffa-916e-e6cd5142eb2e" primaryNicIpv4="10.0.2.11" primaryNicIpv6="2607:f480:1111:2202:1dd2:b5d4:699e:7c87">
+				<name>Green Re-IP NIC Test (Linux) DRS Target</name>
+			</targetServer>
+		</serverPair>
+	</consistencyGroup>
+	<consistencyGroup id="63f69d03-60ef-4ca7-8536-bdf7d81e3c38">
+		<name>ross-cg-2-please-work</name>
+		<description>using for demos sometime early june 2019</description>
+		<journal sizeGb="100" extentCount="1" maxSizeGb="300"/>
+		<source datacenterId="DEV1_DR_EAST">
+			<networkDomain id="c707d560-2b4f-4d43-9a19-2b2a74829d54" name="blue_team_nd"/>
+		</source>
+		<target datacenterId="DEV1_DR_WEST">
+			<networkDomain id="54576cd7-d472-48c3-8206-d5e1266f9ad9" name="blue_team_nd_w"/>
+		</target>
+		<createTime>2019-06-04T14:42:59.000Z</createTime>
+		<operationStatus>DRS_MODE</operationStatus>
+		<drsInfrastructure enabled="true" status="ACTIVE" updateTime="2019-06-21T10:20:06.000Z"/>
+		<drsStatusCheckFailureCount>0</drsStatusCheckFailureCount>
+		<state>NORMAL</state>
+		<serverPair id="818ebe00-e80f-4738-bf50-5a819bde0907" state="NORMAL" reIpAddressRulesDefined="false">
+			<sourceServer id="0527596d-8383-4925-bb7b-4b043f8208c8" primaryNicIpv4="172.16.0.20" primaryNicIpv6="2607:f480:1111:2001:1a7:58c5:38c6:73bb">
+				<name>Ross-Source-CG-Server-2</name>
+			</sourceServer>
+			<targetServer id="9d4b40c8-e861-4747-906c-a75b9a124bf0" primaryNicIpv4="10.0.1.7" primaryNicIpv6="2607:f480:1111:2205:6904:2d3:9fe6:ac14">
+				<name>Ross-Target-CG-Server-2</name>
+			</targetServer>
+		</serverPair>
+	</consistencyGroup>
+</consistencyGroups>

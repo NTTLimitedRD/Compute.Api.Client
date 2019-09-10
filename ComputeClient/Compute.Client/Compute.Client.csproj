@@ -121,6 +121,7 @@
     <Compile Include="Interfaces\IDeprecatedComputeApiClient.cs" />
     <Compile Include="Interfaces\Network20\IIpAddressAccessor.cs" />
     <Compile Include="Interfaces\Network20\INatAccessor.cs" />
+    <Compile Include="Interfaces\Network20\ISslAccessor.cs" />
     <Compile Include="Interfaces\Network20\IVipAccessor.cs" />
     <Compile Include="Interfaces\Network20\IVipVirtualListenerAccessor.cs" />
     <Compile Include="Interfaces\Network20\IVipNodeAccessor.cs" />
@@ -134,6 +135,7 @@
     <Compile Include="Interfaces\Network\INetworkVipAccessor.cs" />
     <Compile Include="Interfaces\Network20\IVlanAccessor.cs" />
     <Compile Include="Interfaces\ImportExportImages\IImportExportCustomerImageAccessor.cs" />
+    <Compile Include="Interfaces\Organization\IOrganizationAccessor.cs" />
     <Compile Include="Interfaces\Server20\IMonitoringAccessor.cs" />
     <Compile Include="Interfaces\Server20\IAntiAffinityRuleAccessor.cs" />
     <Compile Include="Interfaces\Reports\IReportAccessor.cs" />
@@ -143,6 +145,7 @@
     <Compile Include="Interfaces\Server\IServerAccessor.cs" />
     <Compile Include="Interfaces\Server\IServerImagesAccessor.cs" />
     <Compile Include="Interfaces\Server\IServerManagementLegacyAccessor.cs" />
+    <Compile Include="Interfaces\Snapshot\ISnapshotAccessor.cs" />
     <Compile Include="Interfaces\Tagging\ITaggingAccessor.cs" />
     <Compile Include="KnownApiUri.cs" />
     <Compile Include="Network20\ComputeApiClientNetworkExtensions.cs" />
@@ -150,6 +153,7 @@
     <Compile Include="Network20\NatAccessor.cs" />
     <Compile Include="Network20\NetworkDomainAccessor.cs" />
     <Compile Include="Network20\NetworkDomainExtensions.cs" />
+    <Compile Include="Network20\SslAccessor.cs" />
     <Compile Include="Network20\VipSupportAccessor.cs" />
     <Compile Include="Network20\VipPoolAccessor.cs" />
     <Compile Include="Network20\NetworkingAccessor.cs" />
@@ -161,6 +165,7 @@
     <Compile Include="Network20\VlanExtensions.cs" />
     <Compile Include="Network\Network.cs" />
     <Compile Include="Network\NetworkingLegacyAccessor.cs" />
+    <Compile Include="Organization\OrganizationAccessor.cs" />
     <Compile Include="Server20\MonitoringAccessor.cs" />
     <Compile Include="Reports\ReportAccessor.cs" />
     <Compile Include="Server20\Server20Extensions.cs" />
@@ -175,6 +180,7 @@
     <Compile Include="Server\ServerAccessor.cs" />
     <Compile Include="Server\ServerImagesAccessor.cs" />
     <Compile Include="Server\ServerManagementLegacyAccessor.cs" />
+    <Compile Include="Snapshot\SnapshotAccessor.cs" />
     <Compile Include="StatusExtensions.cs" />
     <Compile Include="Tagging\TaggingAccessor.cs" />
     <Compile Include="Utilities\PageableRequestExtensions.cs" />

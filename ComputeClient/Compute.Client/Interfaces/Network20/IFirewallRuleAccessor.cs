@@ -29,11 +29,20 @@ namespace DD.CBU.Compute.Api.Client.Interfaces.Network20
         Task<PagedResponse<FirewallRuleType>> GetFirewallRulesPaginated(FirewallRuleListOptions options = null, PageableRequest pagingOptions = null);
 
         /// <summary>
-        /// Gets a specific firewall rule.
+        /// Lists all firewall rules statistics.
         /// </summary>
-        /// <param name="firewallRuleId">The firewall rule identifier.</param>
-        /// <returns>The response details.</returns>
-        Task<FirewallRuleType> GetFirewallRule(Guid firewallRuleId);
+        /// <param name="options">The filter options.</param>
+        /// <param name="pagingOptions">The paging options.</param>
+        /// <returns>The async task of <see cref="PagedResponse{FirewallRuleStatisticsType}"/></returns>
+        Task<PagedResponse<FirewallRuleStatisticsType>> GetFirewallRulesStatisticsPaginated(
+	        FirewallRuleStatisticsListOptions options = null, PageableRequest pagingOptions = null);
+
+		/// <summary>
+		/// Gets a specific firewall rule.
+		/// </summary>
+		/// <param name="firewallRuleId">The firewall rule identifier.</param>
+		/// <returns>The response details.</returns>
+		Task<FirewallRuleType> GetFirewallRule(Guid firewallRuleId);
 
         /// <summary>
         /// Creates a firewall rule.

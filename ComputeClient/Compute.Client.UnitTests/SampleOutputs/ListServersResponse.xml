@@ -1,0 +1,638 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<servers xmlns="urn:didata.com:api:cloud:types" pageNumber="1" pageCount="23" totalCount="23" pageSize="250">
+  <server id="c4e80cb1-e819-4dbf-97aa-020a7f1d9fd3" datacenterId="QA1_N1_VMWARE_1">
+    <name>Automation Test A</name>
+    <description>Automation_Testing, Do_Not_Delete&lt;script src='http://google.com'>dd&lt;/script>zz</description>
+    <cpu count="2" speed="STANDARD" coresPerSocket="1"/>
+    <memoryGb>2</memoryGb>
+    <scsiController state="NORMAL" id="5ace6601-bc75-462d-9072-e8a5d3edbb77" adapterType="LSI_LOGIC_PARALLEL" key="1000" busNumber="0">
+      <disk state="FAILED_DELETE" id="95e0b81c-2e1f-4499-bd46-21454fbd6c4d" sizeGb="10" speed="STANDARD" scsiId="0"/>
+      <disk state="FAILED_ADD" id="0c274b1e-6c78-492b-8a6c-3880faa152f7" sizeGb="10" speed="STANDARD" scsiId="1"/>
+    </scsiController>
+    <ideController state="NORMAL" id="f26fc758-55a3-11e7-898e-005056986f6c" adapterType="IDE" key="200" channel="0">
+      <disk state="FAILED_ADD" id="8e71c4d0-9083-4285-a138-254a3ba9673e" sizeGb="10" speed="STANDARD" slot="0"/>
+      <disk state="FAILED_ADD" id="2a9c77a7-6576-4ebe-bea0-ec5bac6f9a41" sizeGb="10" speed="STANDARD" slot="1"/>
+    </ideController>
+    <ideController state="NORMAL" id="f26fde54-55a3-11e7-898e-005056986f6c" adapterType="IDE" key="201" channel="1">
+      <device state="NORMAL" id="f2700b6f-55a3-11e7-898e-005056986f6c" type="CDROM" slot="0"/>
+    </ideController>
+    <floppy state="NORMAL" id="f270373f-55a3-11e7-898e-005056986f6c" driveNumber="0" key="8000"/>
+    <nic id="fda2ca1b-75c1-4095-bc67-ee006308b46a" privateIpv4="10.160.14.111" networkId="fa79b9d6-2ae4-11e5-b819-005056986f6c" networkName="Automation Test" state="NORMAL"/>
+    <source type="IMAGE_ID" value="146ed9d2-5774-4c90-bbcd-5c05452e15c8"/>
+    <createTime>2017-03-23T01:20:18.000Z</createTime>
+    <deployed>true</deployed>
+    <started>false</started>
+    <state>NORMAL</state>
+    <guest osCustomization="true">
+      <operatingSystem id="REDHAT632" displayName="REDHAT6/32" family="UNIX" osUnitsGroupId="REDHAT"/>
+      <vmTools type="VMWARE_TOOLS" versionStatus="NEED_UPGRADE" runningStatus="NOT_RUNNING" apiVersion="8389"/>
+    </guest>
+    <virtualHardware version="vmx-08" upToDate="false"/>
+  </server>
+  <server id="acf1b25d-e7c5-4de7-b431-41d1e247fedf" datacenterId="QA1_N2_VMWARE_1">
+    <name>Automation Test A</name>
+    <description>VM_Not_Installed,  Automation Test, DO_NOT_MODIFY</description>
+    <cluster id="QA1_N2_VMWARE_1-01" name="QA1_N2_VMWARE_1-01"/>
+    <cpu count="2" speed="STANDARD" coresPerSocket="1"/>
+    <memoryGb>4</memoryGb>
+    <scsiController state="NORMAL" id="7927b04c-2b9d-42f9-95e7-4b0df3ecb66c" adapterType="LSI_LOGIC_PARALLEL" key="1000" busNumber="0">
+      <disk state="NORMAL" id="12f46f4f-9744-4ed8-9ad0-53d8c42ace04" sizeGb="1" speed="STANDARD" scsiId="1"/>
+      <disk state="NORMAL" id="7f1a470b-321d-442f-99fd-684a8f633ed6" sizeGb="1" speed="STANDARD" scsiId="2"/>
+      <disk state="NORMAL" id="51974158-f624-4aa4-825b-390b747ab3d0" sizeGb="1" speed="STANDARD" scsiId="3"/>
+      <disk state="NORMAL" id="df21cbc0-30ea-4efe-8550-3132668e3739" sizeGb="2" speed="STANDARD" scsiId="13"/>
+    </scsiController>
+    <scsiController state="NORMAL" id="706ccf64-91df-4366-874b-e4f7a6b651e9" adapterType="LSI_LOGIC_PARALLEL" key="1001" busNumber="1"/>
+    <scsiController state="NORMAL" id="62b2d1ca-e436-4ade-a1b6-0ba5c8b46474" adapterType="LSI_LOGIC_PARALLEL" key="1002" busNumber="2"/>
+    <scsiController state="NORMAL" id="eb18936b-3066-45d0-9c4c-7804b806b170" adapterType="LSI_LOGIC_PARALLEL" key="1003" busNumber="3"/>
+    <ideController state="NORMAL" id="f00bda07-55a3-11e7-898e-005056986f6c" adapterType="IDE" key="200" channel="0">
+      <disk state="NORMAL" id="6541acfe-20e9-4299-9146-6bb79c031e37" sizeGb="10" speed="STANDARD" slot="0"/>
+      <disk state="NORMAL" id="7f7f4471-44c2-4559-b949-efb462642961" sizeGb="10" speed="STANDARD" slot="1"/>
+    </ideController>
+    <ideController state="NORMAL" id="f00bf102-55a3-11e7-898e-005056986f6c" adapterType="IDE" key="201" channel="1">
+      <device state="NORMAL" id="f00c2004-55a3-11e7-898e-005056986f6c" type="CDROM" slot="0"/>
+    </ideController>
+    <floppy state="NORMAL" id="f00c5a72-55a3-11e7-898e-005056986f6c" driveNumber="0" key="8000"/>
+    <networkInfo networkDomainId="b8c7e9e0-e55b-4840-a5c7-06381f64a6e5">
+      <primaryNic id="edc24cd0-3527-4b9c-91f0-541d01cdf2de" privateIpv4="10.0.0.6" ipv6="2607:f480:1111:1410:568a:6db3:265b:6be9" vlanId="abd5ab20-3487-4ab2-822f-d0464dff5767" vlanName="Automation Test" networkAdapter="E1000" connected="true" macAddress="00:50:56:84:76:25" key="4000" state="NORMAL"/>
+    </networkInfo>
+    <source type="IMAGE_ID" value="509a4728-ac83-47a4-8ef4-8ae95b88621a"/>
+    <createTime>2017-05-31T00:51:38.000Z</createTime>
+    <deployed>true</deployed>
+    <started>false</started>
+    <state>NORMAL</state>
+    <guest osCustomization="true">
+      <operatingSystem id="REDHAT664" displayName="REDHAT6/64" family="UNIX" osUnitsGroupId="REDHAT"/>
+    </guest>
+    <virtualHardware version="vmx-08" upToDate="false"/>
+  </server>
+  <server id="9309d741-6db0-44f8-89cb-baf38822b556" datacenterId="QA1_N2_VMWARE_1">
+    <name>Automation Test B</name>
+    <description>Automation_Testing, Do_Not_Delete</description>
+    <cluster id="QA1_N2_VMWARE_1-01" name="QA1_N2_VMWARE_1-01"/>
+    <cpu count="2" speed="STANDARD" coresPerSocket="1"/>
+    <memoryGb>4</memoryGb>
+    <scsiController state="NORMAL" id="90dfeacc-1b19-41e9-b82f-196bf5b3d7af" adapterType="LSI_LOGIC_PARALLEL" key="1000" busNumber="0">
+      <disk state="NORMAL" id="069aef66-b3e9-4115-895f-3bbeff2060f9" sizeGb="10" speed="PROVISIONEDIOPS" iops="60" scsiId="0"/>
+    </scsiController>
+    <ideController state="NORMAL" id="eff1bd26-55a3-11e7-898e-005056986f6c" adapterType="IDE" key="200" channel="0"/>
+    <ideController state="NORMAL" id="eff1d5b5-55a3-11e7-898e-005056986f6c" adapterType="IDE" key="201" channel="1">
+      <device state="NORMAL" id="eff20ccd-55a3-11e7-898e-005056986f6c" type="CDROM" slot="0"/>
+    </ideController>
+    <floppy state="NORMAL" id="eff24d5a-55a3-11e7-898e-005056986f6c" driveNumber="0" key="8000"/>
+    <networkInfo networkDomainId="b8c7e9e0-e55b-4840-a5c7-06381f64a6e5">
+      <primaryNic id="d602e8f8-824e-4f4b-80ae-74871b5f4ffa" privateIpv4="10.0.0.7" ipv6="2607:f480:1111:1410:904:16d5:9a83:bf24" vlanId="abd5ab20-3487-4ab2-822f-d0464dff5767" vlanName="Automation Test" networkAdapter="E1000" connected="true" macAddress="00:50:56:84:27:46" key="4000" state="NORMAL"/>
+    </networkInfo>
+    <source type="IMAGE_ID" value="509a4728-ac83-47a4-8ef4-8ae95b88621a"/>
+    <createTime>2017-05-31T00:51:40.000Z</createTime>
+    <deployed>true</deployed>
+    <started>false</started>
+    <state>NORMAL</state>
+    <guest osCustomization="true">
+      <operatingSystem id="REDHAT664" displayName="REDHAT6/64" family="UNIX" osUnitsGroupId="REDHAT"/>
+      <vmTools type="VMWARE_TOOLS" versionStatus="NEED_UPGRADE" runningStatus="NOT_RUNNING" apiVersion="8389"/>
+    </guest>
+    <virtualHardware version="vmx-08" upToDate="false"/>
+    <snapshotService servicePlan="ESSENTIALS" state="NORMAL" manualSnapshotInProgress="false"/>
+  </server>
+  <server id="5abb0bad-d220-46be-928b-a8e99b723589" datacenterId="QA1_N1_VMWARE_1">
+    <name>Automation Test B</name>
+    <description>Automation_Testing, Do_Not_Delete</description>
+    <cpu count="1" speed="STANDARD" coresPerSocket="1"/>
+    <memoryGb>2</memoryGb>
+    <scsiController state="NORMAL" id="500428ab-2e7c-4c8d-b77c-3ecdeaa917bf" adapterType="LSI_LOGIC_PARALLEL" key="1000" busNumber="0">
+      <disk state="NORMAL" id="9a717969-63d2-4f59-a65c-2993d7b4f85c" sizeGb="10" speed="STANDARD" scsiId="0"/>
+    </scsiController>
+    <ideController state="NORMAL" id="f23b549e-55a3-11e7-898e-005056986f6c" adapterType="IDE" key="200" channel="0"/>
+    <ideController state="NORMAL" id="f23b6eb5-55a3-11e7-898e-005056986f6c" adapterType="IDE" key="201" channel="1">
+      <device state="NORMAL" id="f23b9cd0-55a3-11e7-898e-005056986f6c" type="CDROM" slot="0"/>
+    </ideController>
+    <floppy state="NORMAL" id="f23bc481-55a3-11e7-898e-005056986f6c" driveNumber="0" key="8000"/>
+    <nic id="f4451703-4965-4543-b305-87ccb8d8958f" privateIpv4="10.160.14.14" networkId="fa79b9d6-2ae4-11e5-b819-005056986f6c" networkName="Automation Test" state="NORMAL"/>
+    <source type="IMAGE_ID" value="12e667de-1ad3-42e2-8da5-96a73794d2aa"/>
+    <createTime>2017-05-31T00:56:02.000Z</createTime>
+    <deployed>true</deployed>
+    <started>false</started>
+    <state>NORMAL</state>
+    <guest osCustomization="true">
+      <operatingSystem id="REDHAT664" displayName="REDHAT6/64" family="UNIX" osUnitsGroupId="REDHAT"/>
+      <vmTools type="VMWARE_TOOLS" versionStatus="NEED_UPGRADE" runningStatus="NOT_RUNNING" apiVersion="8394"/>
+    </guest>
+    <virtualHardware version="vmx-08" upToDate="false"/>
+  </server>
+  <server id="874f9bbb-6a4b-4fb0-bf49-9a42e3dd6df8" datacenterId="QA1_N1_VMWARE_1">
+    <name>Automation Test C</name>
+    <description>Automation_Testing, Do_Not_Delete</description>
+    <cpu count="1" speed="STANDARD" coresPerSocket="1"/>
+    <memoryGb>2</memoryGb>
+    <scsiController state="NORMAL" id="901ddc0d-1be5-4a86-8c57-92a46d5d32b4" adapterType="LSI_LOGIC_PARALLEL" key="1000" busNumber="0">
+      <disk state="NORMAL" id="80d39d88-a0a0-435b-aa96-9bd455a7224b" sizeGb="10" speed="STANDARD" scsiId="0"/>
+    </scsiController>
+    <ideController state="NORMAL" id="f249fa1f-55a3-11e7-898e-005056986f6c" adapterType="IDE" key="200" channel="0"/>
+    <ideController state="NORMAL" id="f24a0f8f-55a3-11e7-898e-005056986f6c" adapterType="IDE" key="201" channel="1">
+      <device state="NORMAL" id="f24a3e6d-55a3-11e7-898e-005056986f6c" type="CDROM" slot="0"/>
+    </ideController>
+    <floppy state="NORMAL" id="f24a6743-55a3-11e7-898e-005056986f6c" driveNumber="0" key="8000"/>
+    <nic id="da6f6bb1-a598-4500-b411-01297bb51c15" privateIpv4="10.160.14.14" networkId="fa79b9d6-2ae4-11e5-b819-005056986f6c" networkName="Automation Test" state="NORMAL"/>
+    <source type="IMAGE_ID" value="12e667de-1ad3-42e2-8da5-96a73794d2aa"/>
+    <createTime>2017-05-31T00:56:03.000Z</createTime>
+    <deployed>true</deployed>
+    <started>false</started>
+    <state>NORMAL</state>
+    <guest osCustomization="true">
+      <operatingSystem id="REDHAT664" displayName="REDHAT6/64" family="UNIX" osUnitsGroupId="REDHAT"/>
+      <vmTools type="VMWARE_TOOLS" versionStatus="NEED_UPGRADE" runningStatus="NOT_RUNNING" apiVersion="8394"/>
+    </guest>
+    <virtualHardware version="vmx-08" upToDate="false"/>
+  </server>
+  <server id="e39a665e-cf00-4614-970e-2da11fe641d9" datacenterId="QA1_N2_VMWARE_1">
+    <name>AServerFor Test Edited</name>
+    <description>Resource Locked, failed to delete</description>
+    <cluster id="QA1_N2_VMWARE_1-01" name="QA1_N2_VMWARE_1-01"/>
+    <cpu count="4" speed="ECONOMY" coresPerSocket="1"/>
+    <memoryGb>4</memoryGb>
+    <networkInfo networkDomainId="b8c7e9e0-e55b-4840-a5c7-06381f64a6e5">
+      <primaryNic id="48350aea-c7eb-11e8-996b-005056986f6c" privateIpv4="172.16.0.6" ipv6="2607:f480:1111:1420:1342:64fc:a2c6:cc26" vlanId="a58de7b7-fe5c-40e1-a870-c5f41850b9f6" vlanName="vlan11" networkAdapter="E1000" connected="false" key="4000" state="NORMAL"/>
+    </networkInfo>
+    <source type="SERVER_SNAPSHOT_ID" value="144663b7-c7e0-4681-87bf-4bafba0def5c"/>
+    <createTime>2017-12-21T02:43:55.000Z</createTime>
+    <deployed>true</deployed>
+    <started>false</started>
+    <state>PENDING_CLEAN</state>
+    <guest osCustomization="true">
+      <operatingSystem id="REDHAT664" displayName="REDHAT6/64" family="UNIX" osUnitsGroupId="REDHAT"/>
+      <vmTools type="VMWARE_TOOLS" versionStatus="NEED_UPGRADE" runningStatus="NOT_RUNNING" apiVersion="9354"/>
+    </guest>
+    <virtualHardware version="vmx-08" upToDate="false"/>
+    <progress>
+      <action>CLEAN_SERVER</action>
+      <requestTime>2018-10-04T15:43:38.000Z</requestTime>
+      <userName>oecAdministrator</userName>
+    </progress>
+    <snapshotService servicePlan="ESSENTIALS" state="FAILED_ADD" manualSnapshotInProgress="false"/>
+  </server>
+  <server id="31047e90-57ec-4dfc-b273-c9989ab674f9" datacenterId="QA1_N2_DRS_EAST">
+    <name>ServerWithSata</name>
+    <cluster id="QA1_N2_DRS_EAST-01" name="QA1_N2_DRS_EAST-01"/>
+    <cpu count="2" speed="STANDARD" coresPerSocket="1"/>
+    <memoryGb>4</memoryGb>
+    <networkInfo networkDomainId="b8c7e9e0-e55b-4840-a5c7-06381f64a6e5">
+      <primaryNic id="c3704d06-c7ed-11e8-996b-005056986f6c" privateIpv4="172.16.0.7" ipv6="2607:f480:1111:1420:6f80:3893:5f5d:f7e3" vlanId="a58de7b7-fe5c-40e1-a870-c5f41850b9f6" vlanName="vlan11" networkAdapter="E1000" connected="true" key="4000" state="NORMAL"/>
+    </networkInfo>
+    <source type="IMAGE_ID" value="ee1df485-0123-48b6-a92a-ead1a4ed0a34"/>
+    <createTime>2018-03-26T04:31:50.000Z</createTime>
+    <deployed>false</deployed>
+    <started>false</started>
+    <state>FAILED_ADD</state>
+    <guest osCustomization="true">
+      <operatingSystem id="REDHAT664" displayName="REDHAT6/64" family="UNIX" osUnitsGroupId="REDHAT"/>
+    </guest>
+  </server>
+  <server id="fd17366a-3c1a-4d5f-ab90-64f8a5e7d967" datacenterId="QA1_N1_VMWARE_1">
+    <name>DeleteServer</name>
+    <cpu count="2" speed="STANDARD" coresPerSocket="1"/>
+    <memoryGb>4</memoryGb>
+    <scsiController state="PENDING_ADD" id="25047eee-d92f-4f21-8937-fde8156ae874" adapterType="LSI_LOGIC_SAS" key="1000" busNumber="0">
+      <disk state="PENDING_ADD" id="a268a90b-1fcb-4f69-944d-a2af704d86fc" sizeGb="50" speed="STANDARD" scsiId="0"/>
+    </scsiController>
+    <ideController state="PENDING_ADD" id="79b25dce-8529-4317-b963-21a9a56fd0db" adapterType="IDE" key="200" channel="0"/>
+    <ideController state="PENDING_ADD" id="b3e60948-3ae5-4fdb-982f-cc534f67b178" adapterType="IDE" key="201" channel="1">
+      <device state="PENDING_ADD" id="6e2e133e-f003-418d-852f-c53c515f7d20" type="CDROM" slot="0"/>
+    </ideController>
+    <floppy state="PENDING_ADD" id="b461a25d-cdb8-439c-91ef-beb026eff5cf" driveNumber="0" key="8000"/>
+    <nic id="fd010924-8f2f-4948-a1aa-7e2a79683bc2" privateIpv4="10.160.14.11" networkId="fa79b9d6-2ae4-11e5-b819-005056986f6c" networkName="Automation Test" state="FAILED_ADD"/>
+    <source type="IMAGE_ID" value="0300efb3-0478-4840-ab9d-ff1d739affce"/>
+    <createTime>2018-04-04T22:51:52.000Z</createTime>
+    <deployed>false</deployed>
+    <started>false</started>
+    <state>REQUIRES_SUPPORT</state>
+    <guest osCustomization="true">
+      <operatingSystem id="WIN2008E32" displayName="WIN2008E/32" family="WINDOWS" osUnitsGroupId="WINDOWS_SERVER"/>
+    </guest>
+    <progress>
+      <action>CLEAN_SERVER</action>
+      <requestTime>2018-04-04T22:52:23.000Z</requestTime>
+      <userName>nr_test1</userName>
+      <failureReason>Unable to find the target VM - this will need to be checked by support.Could not locate the folder for the VM</failureReason>
+    </progress>
+  </server>
+  <server id="4f703f18-f169-4d01-9a44-c22b866c5189" datacenterId="QA1_N1_VMWARE_1">
+    <name>DeleteServer-1</name>
+    <cpu count="2" speed="STANDARD" coresPerSocket="1"/>
+    <memoryGb>4</memoryGb>
+    <scsiController state="PENDING_ADD" id="dd44e470-92d9-430d-a056-760499b31ba5" adapterType="LSI_LOGIC_SAS" key="1000" busNumber="0">
+      <disk state="PENDING_ADD" id="29c775d7-16e8-42f3-8f13-4cf6db2a626c" sizeGb="50" speed="STANDARD" scsiId="0"/>
+    </scsiController>
+    <ideController state="PENDING_ADD" id="994b48c5-fdf9-4006-b2c7-9a0b1a4db00f" adapterType="IDE" key="200" channel="0"/>
+    <ideController state="PENDING_ADD" id="f485fada-b9bc-4a41-8f28-bdcb4828eef6" adapterType="IDE" key="201" channel="1">
+      <device state="PENDING_ADD" id="4056341e-be5a-49a6-9fa2-8f174cf92a01" type="CDROM" slot="0"/>
+    </ideController>
+    <floppy state="PENDING_ADD" id="5ec3dccf-3aff-4f3e-93d3-073b68be9a16" driveNumber="0" key="8000"/>
+    <nic id="eab0cab4-b04d-45e9-978d-61b6ef59e0c1" privateIpv4="10.160.14.12" networkId="fa79b9d6-2ae4-11e5-b819-005056986f6c" networkName="Automation Test" state="FAILED_ADD"/>
+    <source type="IMAGE_ID" value="0300efb3-0478-4840-ab9d-ff1d739affce"/>
+    <createTime>2018-04-04T22:51:54.000Z</createTime>
+    <deployed>false</deployed>
+    <started>false</started>
+    <state>REQUIRES_SUPPORT</state>
+    <guest osCustomization="true">
+      <operatingSystem id="WIN2008E32" displayName="WIN2008E/32" family="WINDOWS" osUnitsGroupId="WINDOWS_SERVER"/>
+    </guest>
+    <progress>
+      <action>CLEAN_SERVER</action>
+      <requestTime>2018-04-04T22:52:32.000Z</requestTime>
+      <userName>nr_test1</userName>
+      <failureReason>Unable to find the target VM - this will need to be checked by support.Could not locate the folder for the VM</failureReason>
+    </progress>
+  </server>
+  <server id="d8d2db04-0694-41b9-b702-84b5647ee951" datacenterId="QA1_N2_VMWARE_1">
+    <name>Automation Test C</name>
+    <cluster id="QA1_N2_VMWARE_1-01" name="QA1_N2_VMWARE_1-01"/>
+    <cpu count="1" speed="STANDARD" coresPerSocket="1"/>
+    <memoryGb>2</memoryGb>
+    <scsiController state="NORMAL" id="f3ecc9b0-03da-41b1-b5e8-a059dff5da02" adapterType="LSI_LOGIC_PARALLEL" key="1000" busNumber="0">
+      <disk state="NORMAL" id="0adc17a4-7b3b-456d-8aef-af4c6ad6053a" sizeGb="10" speed="STANDARD" scsiId="0"/>
+    </scsiController>
+    <ideController state="NORMAL" id="c4be36e5-df13-4338-a5fa-18f9d93d2617" adapterType="IDE" key="200" channel="0"/>
+    <ideController state="NORMAL" id="f067add9-3cac-444a-b704-a70ccd642cbe" adapterType="IDE" key="201" channel="1">
+      <device state="NORMAL" id="40d90209-1763-463d-9657-13c1c9810a55" type="CDROM" slot="0"/>
+    </ideController>
+    <floppy state="NORMAL" id="bbc6d2d3-e95e-40db-845d-225c490d1d71" driveNumber="0" key="8000"/>
+    <networkInfo networkDomainId="b8c7e9e0-e55b-4840-a5c7-06381f64a6e5">
+      <primaryNic id="89ed5158-8552-4266-b960-03d646c40aa1" privateIpv4="10.0.0.8" ipv6="2607:f480:1111:1410:3bc4:6e57:8fbe:3d9e" vlanId="abd5ab20-3487-4ab2-822f-d0464dff5767" vlanName="Automation Test" networkAdapter="E1000" connected="true" macAddress="00:50:56:84:cc:41" key="4000" state="NORMAL"/>
+    </networkInfo>
+    <source type="IMAGE_ID" value="509a4728-ac83-47a4-8ef4-8ae95b88621a"/>
+    <createTime>2018-04-06T00:55:56.000Z</createTime>
+    <deployed>true</deployed>
+    <started>false</started>
+    <state>NORMAL</state>
+    <guest osCustomization="true">
+      <operatingSystem id="REDHAT664" displayName="REDHAT6/64" family="UNIX" osUnitsGroupId="REDHAT"/>
+      <vmTools type="VMWARE_TOOLS" versionStatus="NEED_UPGRADE" runningStatus="NOT_RUNNING" apiVersion="8389"/>
+    </guest>
+    <virtualHardware version="vmx-08" upToDate="false"/>
+    <tag tagKeyId="087be5ad-9e12-4949-8961-ab074ef05c2a">
+      <tagKeyName>CAAS TESTING</tagKeyName>
+      <value>test</value>
+    </tag>
+  </server>
+  <server id="660d87bf-2211-494f-8a69-4d150beac11d" datacenterId="QA1_N2_VMWARE_1">
+    <name>migrationTest-AServerFromSnapshotWithVariIOPS</name>
+    <description></description>
+    <cluster id="QA1_N2_VMWARE_1-01" name="QA1_N2_VMWARE_1-01"/>
+    <cpu count="2" speed="STANDARD" coresPerSocket="2"/>
+    <memoryGb>4</memoryGb>
+    <networkInfo networkDomainId="b8c7e9e0-e55b-4840-a5c7-06381f64a6e5">
+      <primaryNic id="25b0710e-c7ee-11e8-996b-005056986f6c" privateIpv4="172.16.0.8" ipv6="2607:f480:1111:1420:6308:8e42:673c:5326" vlanId="a58de7b7-fe5c-40e1-a870-c5f41850b9f6" vlanName="vlan11" networkAdapter="E1000" connected="true" key="4000" state="NORMAL"/>
+    </networkInfo>
+    <source type="SERVER_SNAPSHOT_ID" value="f52f2cfa-11fc-4d80-8ca2-6eef8c89476e"/>
+    <createTime>2018-04-06T01:20:08.000Z</createTime>
+    <deployed>true</deployed>
+    <started>true</started>
+    <state>FAILED_ADD</state>
+    <deploymentMode>SNAPSHOT_PREVIEW</deploymentMode>
+    <guest osCustomization="false">
+      <operatingSystem id="REDHAT664" displayName="REDHAT6/64" family="UNIX" osUnitsGroupId="REDHAT"/>
+    </guest>
+    <virtualHardware version="vmx-08" upToDate="false"/>
+  </server>
+  <server id="7a1a5a4b-669b-4858-b61c-6628cd5534dd" datacenterId="QA1_N1_VMWARE_1">
+    <name>vnsMcp1</name>
+    <cpu count="1" speed="STANDARD" coresPerSocket="1"/>
+    <memoryGb>2</memoryGb>
+    <scsiController state="PENDING_ADD" id="480a12a2-e5b4-47ce-84f1-17a95fa2b869" adapterType="LSI_LOGIC_PARALLEL" key="1000" busNumber="0">
+      <disk state="PENDING_ADD" id="896d66f7-212c-4951-9903-dfd8e46d2b51" sizeGb="10" speed="STANDARD" scsiId="0"/>
+    </scsiController>
+    <ideController state="PENDING_ADD" id="9bbe5b30-218e-4c56-a042-6b5b40833bf5" adapterType="IDE" key="200" channel="0">
+      <device state="PENDING_ADD" id="8a36e193-db27-4800-9ec9-59dbb9963b2e" type="CDROM" slot="0"/>
+    </ideController>
+    <ideController state="PENDING_ADD" id="7e5fe7e8-f600-438d-9abe-0d277ab473b3" adapterType="IDE" key="201" channel="1"/>
+    <floppy state="PENDING_ADD" id="6e78c1ba-420d-4c7e-a20f-166d065b6722" driveNumber="0" key="8000"/>
+    <nic id="adc63367-11d8-4628-9ba5-5ebd9401c256" privateIpv4="10.160.14.17" networkId="fa79b9d6-2ae4-11e5-b819-005056986f6c" networkName="Automation Test" state="FAILED_ADD"/>
+    <source type="IMAGE_ID" value="23f3e5ce-907b-41b6-893d-530a718e67f2"/>
+    <createTime>2018-04-10T01:14:36.000Z</createTime>
+    <deployed>false</deployed>
+    <started>false</started>
+    <state>REQUIRES_SUPPORT</state>
+    <guest osCustomization="true">
+      <operatingSystem id="CENTOS532" displayName="CENTOS5/32" family="UNIX" osUnitsGroupId="CENTOS"/>
+      <vmTools type="VMWARE_TOOLS" versionStatus="NEED_UPGRADE" runningStatus="NOT_RUNNING"/>
+    </guest>
+    <virtualHardware version="vmx-08" upToDate="false"/>
+    <progress>
+      <action>CLEAN_SERVER</action>
+      <requestTime>2018-05-30T00:35:54.000Z</requestTime>
+      <userName>NR_test1</userName>
+      <failureReason>Unable to find the target VM - this will need to be checked by support.Could not locate the folder for the VM</failureReason>
+    </progress>
+  </server>
+  <server id="7be597b0-660d-444d-8b82-797d0372a3c8" datacenterId="QA1_N2_VMWARE_1">
+    <name>NGOC1</name>
+    <cluster id="QA1_N2_VMWARE_1-01" name="QA1_N2_VMWARE_1-01"/>
+    <cpu count="2" speed="STANDARD" coresPerSocket="1"/>
+    <memoryGb>4</memoryGb>
+    <scsiController state="NORMAL" id="f18417ae-887e-4d60-82e2-0dacebd0fa12" adapterType="LSI_LOGIC_PARALLEL" key="1000" busNumber="0">
+      <disk state="NORMAL" id="020ecd93-eefa-40e7-b834-5e62576be459" sizeGb="10" speed="STANDARD" scsiId="0"/>
+    </scsiController>
+    <scsiController state="NORMAL" id="bb5d2baf-00c3-4cbf-a6e7-6fcdf205201f" adapterType="LSI_LOGIC_PARALLEL" key="1001" busNumber="1">
+      <disk state="NORMAL" id="1ac56996-cedf-407e-bad0-ec65c719659c" sizeGb="10" speed="STANDARD" scsiId="0"/>
+    </scsiController>
+    <ideController state="NORMAL" id="a1d2eb4a-ff97-4fdb-86b7-56335ac59523" adapterType="IDE" key="200" channel="0">
+      <disk state="NORMAL" id="40439065-52f7-465f-9c79-9b31f53f7655" sizeGb="10" speed="STANDARD" slot="0"/>
+    </ideController>
+    <floppy state="NORMAL" id="77297d9b-410f-4d7d-a3ef-5be56c316290" driveNumber="0" key="8000"/>
+    <networkInfo networkDomainId="b8c7e9e0-e55b-4840-a5c7-06381f64a6e5">
+      <primaryNic id="345db8fa-442c-4648-9b46-66e8f5ffeeb0" privateIpv4="172.16.0.12" ipv6="2607:f480:1111:1420:139a:887f:9c11:2224" vlanId="a58de7b7-fe5c-40e1-a870-c5f41850b9f6" vlanName="vlan11" networkAdapter="E1000" connected="true" macAddress="00:50:56:84:f5:5a" key="4000" state="NORMAL"/>
+    </networkInfo>
+    <source type="IMAGE_ID" value="150d82ce-0ae1-4c4f-9fb5-fdf6960e5fcb"/>
+    <createTime>2018-09-26T07:43:59.000Z</createTime>
+    <deployed>true</deployed>
+    <started>false</started>
+    <state>NORMAL</state>
+    <guest osCustomization="false">
+      <operatingSystem id="REDHAT664" displayName="REDHAT6/64" family="UNIX" osUnitsGroupId="REDHAT"/>
+      <vmTools type="VMWARE_TOOLS" versionStatus="NEED_UPGRADE" runningStatus="NOT_RUNNING" apiVersion="9354"/>
+    </guest>
+    <virtualHardware version="vmx-08" upToDate="false"/>
+  </server>
+  <server id="503db869-758c-4b91-8c72-db6feb656308" datacenterId="QA1_N2_VF5">
+    <name>SuSE</name>
+    <cpu count="5" speed="STANDARD" coresPerSocket="1"/>
+    <memoryGb>8</memoryGb>
+    <scsiController state="PENDING_ADD" id="24def076-3afc-401b-82ee-a49ff0d2587b" adapterType="LSI_LOGIC_PARALLEL" key="1000" busNumber="0">
+      <disk state="PENDING_ADD" id="b449aa15-faac-499d-94fe-fff18b5f65f0" sizeGb="10" speed="STANDARD" scsiId="0"/>
+      <disk state="PENDING_ADD" id="b758c28a-a184-44cc-a0be-7ede7b8ce747" sizeGb="20" speed="STANDARD" scsiId="1"/>
+    </scsiController>
+    <networkInfo networkDomainId="70dae55c-9274-47bf-a220-e3a2830a91c1">
+      <primaryNic id="7bd36fea-9303-46c7-b849-afc34f66053d" privateIpv4="10.0.0.1" ipv6="2607:f480:1111:683:73d8:c26f:6a7e:1933" vlanId="4b607acb-bcad-4701-b9ec-f3e916740d23" vlanName="Testing001 - 19 high Attached" networkAdapter="VMXNET3" connected="true" key="4000" state="PENDING_ADD"/>
+    </networkInfo>
+    <source type="IMAGE_ID" value="7c6afe65-03b8-4d13-b273-527079840390"/>
+    <createTime>2018-10-02T06:36:55.000Z</createTime>
+    <deployed>false</deployed>
+    <started>false</started>
+    <state>PENDING_ADD</state>
+    <guest osCustomization="true">
+      <operatingSystem id="SUSE1164" displayName="SUSE11/64" family="UNIX" osUnitsGroupId="SUSE"/>
+    </guest>
+    <progress>
+      <action>DEPLOY_SERVER</action>
+      <requestTime>2018-10-02T06:36:55.000Z</requestTime>
+      <userName>NR_test1</userName>
+    </progress>
+  </server>
+  <server id="149d0d1f-a2ca-46bd-904e-7118785ac126" datacenterId="QA1_N1_VMWARE_1">
+    <name>CentOS</name>
+    <cpu count="1" speed="STANDARD" coresPerSocket="1"/>
+    <memoryGb>2</memoryGb>
+    <scsiController state="NORMAL" id="5accc282-abd5-47a7-93a3-e78d27a39cb3" adapterType="LSI_LOGIC_PARALLEL" key="1000" busNumber="0">
+      <disk state="NORMAL" id="02effa78-a4b6-4728-9f97-107f4d0d3a39" sizeGb="10" speed="STANDARD" scsiId="0"/>
+    </scsiController>
+    <ideController state="NORMAL" id="dd563688-3042-4475-bfc6-f1d5b183a185" adapterType="IDE" key="200" channel="0">
+      <device state="NORMAL" id="d58eb314-58e5-4c99-9f76-a92410862b03" type="CDROM" slot="0"/>
+    </ideController>
+    <ideController state="NORMAL" id="c5c319ff-87a1-4657-9f08-22b3dece3634" adapterType="IDE" key="201" channel="1"/>
+    <floppy state="NORMAL" id="b4febb28-afff-4281-8521-ee50d5be8b89" driveNumber="0" key="8000"/>
+    <nic id="0e731ee5-24a7-41c5-bafb-b4d5a5d74dbd" privateIpv4="10.160.14.18" networkId="fa79b9d6-2ae4-11e5-b819-005056986f6c" networkName="Automation Test" state="NORMAL"/>
+    <source type="IMAGE_ID" value="23f3e5ce-907b-41b6-893d-530a718e67f2"/>
+    <createTime>2018-10-02T06:37:36.000Z</createTime>
+    <deployed>true</deployed>
+    <started>false</started>
+    <state>NORMAL</state>
+    <guest osCustomization="true">
+      <operatingSystem id="CENTOS532" displayName="CENTOS5/32" family="UNIX" osUnitsGroupId="CENTOS"/>
+      <vmTools type="VMWARE_TOOLS" versionStatus="NEED_UPGRADE" runningStatus="NOT_RUNNING" apiVersion="8394"/>
+    </guest>
+    <virtualHardware version="vmx-08" upToDate="false"/>
+  </server>
+  <server id="0ac84421-15c1-4879-b3cc-0a706cc55c89" datacenterId="QA1_N2_VMWARE_1">
+    <name>RH6</name>
+    <cluster id="QA1_N2_VMWARE_1-01" name="QA1_N2_VMWARE_1-01"/>
+    <cpu count="1" speed="STANDARD" coresPerSocket="1"/>
+    <memoryGb>2</memoryGb>
+    <scsiController state="NORMAL" id="0da5a69e-50a3-480f-b160-c42e17daf0ad" adapterType="LSI_LOGIC_PARALLEL" key="1000" busNumber="0">
+      <disk state="NORMAL" id="c690bb08-7a4c-4cea-a2de-6aad5448a40a" sizeGb="10" speed="STANDARD" scsiId="0"/>
+    </scsiController>
+    <ideController state="NORMAL" id="b3e44cd7-d0c4-4b44-aa5d-059192df9951" adapterType="IDE" key="200" channel="0"/>
+    <ideController state="NORMAL" id="b4a163e9-491f-41c3-8f44-b2ed940546c6" adapterType="IDE" key="201" channel="1">
+      <device state="NORMAL" id="753c66d4-bb2a-4a2f-a734-5f1aab5a7065" type="CDROM" slot="0"/>
+    </ideController>
+    <floppy state="NORMAL" id="c1c58f78-018d-4d96-9806-ca1db0521eba" driveNumber="0" key="8000"/>
+    <networkInfo networkDomainId="40115a53-db31-4349-8de9-1c5f9349fded">
+      <primaryNic id="d5496e7e-8961-4b86-a5b1-b2bc81338066" privateIpv4="10.0.0.6" ipv6="2607:f480:1111:1415:40c2:a55c:6c7:7880" vlanId="3219b91d-b96a-46a8-97e2-23501baf19ce" vlanName="AttachVlan1" networkAdapter="E1000" connected="true" macAddress="00:50:56:84:78:f0" key="4000" state="NORMAL"/>
+    </networkInfo>
+    <source type="IMAGE_ID" value="509a4728-ac83-47a4-8ef4-8ae95b88621a"/>
+    <createTime>2018-10-03T00:51:44.000Z</createTime>
+    <deployed>true</deployed>
+    <started>true</started>
+    <state>NORMAL</state>
+    <guest osCustomization="true">
+      <operatingSystem id="REDHAT664" displayName="REDHAT6/64" family="UNIX" osUnitsGroupId="REDHAT"/>
+      <vmTools type="VMWARE_TOOLS" versionStatus="NEED_UPGRADE" runningStatus="RUNNING" apiVersion="8389"/>
+    </guest>
+    <virtualHardware version="vmx-08" upToDate="false"/>
+  </server>
+  <server id="9a5318af-1cbf-4cb0-914d-f120df98500d" datacenterId="QA1_N2_VMWARE_1">
+    <name>WinServer</name>
+    <cluster id="QA1_N2_VMWARE_1-01" name="QA1_N2_VMWARE_1-01"/>
+    <cpu count="2" speed="STANDARD" coresPerSocket="1"/>
+    <memoryGb>4</memoryGb>
+    <scsiController state="NORMAL" id="d8bb1b97-4229-4428-bfae-04a13e51c2e8" adapterType="LSI_LOGIC_SAS" key="1000" busNumber="0">
+      <disk state="NORMAL" id="172da31b-7400-4b63-af41-c55cc8d7402f" sizeGb="50" speed="STANDARD" scsiId="0"/>
+    </scsiController>
+    <ideController state="NORMAL" id="ba7a142a-9a63-478b-a400-7c169238db05" adapterType="IDE" key="200" channel="0"/>
+    <ideController state="NORMAL" id="69cdd228-6df5-4d14-b629-42c354d62e54" adapterType="IDE" key="201" channel="1">
+      <device state="NORMAL" id="228b662a-8de6-476a-85f0-8e466755bfb0" type="CDROM" slot="0"/>
+    </ideController>
+    <floppy state="NORMAL" id="3149c19e-2df7-4cba-8e63-f36267bb3866" driveNumber="0" key="8000"/>
+    <networkInfo networkDomainId="40115a53-db31-4349-8de9-1c5f9349fded">
+      <primaryNic id="e57d4e13-adaf-4e51-8342-267478781db0" privateIpv4="10.0.0.7" ipv6="2607:f480:1111:1415:5798:b998:e644:dd4d" vlanId="3219b91d-b96a-46a8-97e2-23501baf19ce" vlanName="AttachVlan1" networkAdapter="VMXNET3" connected="true" macAddress="00:50:56:84:1e:90" key="4000" state="NORMAL"/>
+    </networkInfo>
+    <source type="IMAGE_ID" value="fbfc32c5-a798-4830-8e7c-66909fcb28ae"/>
+    <createTime>2018-10-03T01:41:38.000Z</createTime>
+    <deployed>true</deployed>
+    <started>true</started>
+    <state>NORMAL</state>
+    <guest osCustomization="true">
+      <operatingSystem id="WIN2008S32" displayName="WIN2008S/32" family="WINDOWS" osUnitsGroupId="WINDOWS_SERVER"/>
+      <vmTools type="VMWARE_TOOLS" versionStatus="NEED_UPGRADE" runningStatus="RUNNING" apiVersion="9354"/>
+    </guest>
+    <virtualHardware version="vmx-08" upToDate="false"/>
+    <snapshotService servicePlan="ESSENTIALS" state="NORMAL" manualSnapshotInProgress="false"/>
+  </server>
+  <server id="dcc4ba0a-63cf-4d57-a1ec-8c53cd07a22d" datacenterId="QA1_N2_DRS_EAST">
+    <name>SourceServer1</name>
+    <cluster id="QA1_N2_DRS_EAST-01" name="QA1_N2_DRS_EAST-01"/>
+    <cpu count="1" speed="STANDARD" coresPerSocket="1"/>
+    <memoryGb>4</memoryGb>
+    <scsiController state="NORMAL" id="cff1e7fc-39c5-4ae2-9d3e-85fda7f29d1d" adapterType="LSI_LOGIC_PARALLEL" key="1000" busNumber="0">
+      <disk state="NORMAL" id="336d57da-be14-4a2c-8dbf-5507df7d593e" sizeGb="10" speed="STANDARD" scsiId="0"/>
+    </scsiController>
+    <ideController state="NORMAL" id="c23448e1-1777-4cb8-9ca3-140abf5af518" adapterType="IDE" key="200" channel="0"/>
+    <ideController state="NORMAL" id="0975c4f0-6ff7-4f1b-878b-7955661ecb06" adapterType="IDE" key="201" channel="1">
+      <device state="NORMAL" id="ee921a06-adab-4b61-9093-57bd978a7ca1" type="CDROM" slot="0"/>
+    </ideController>
+    <floppy state="NORMAL" id="927bc274-a6f4-4abb-8c1e-4c24da5f4c92" driveNumber="0" key="8000"/>
+    <networkInfo networkDomainId="f0804e7a-a67f-48d9-8e3b-992c4b33ce35">
+      <primaryNic id="9df93a06-12a2-4781-9712-50e174450cae" privateIpv4="10.0.0.6" ipv6="2607:f480:1ab:1104:724:bd29:db2f:a300" vlanId="82f2abca-1844-4b6b-8428-33517eb98389" vlanName="vlan1" networkAdapter="E1000" connected="true" macAddress="00:50:56:a6:39:7a" key="4000" state="NORMAL"/>
+    </networkInfo>
+    <source type="IMAGE_ID" value="36c1c403-e31b-4efd-a967-34baad903ee1"/>
+    <createTime>2018-10-03T02:10:30.000Z</createTime>
+    <deployed>true</deployed>
+    <started>false</started>
+    <state>NORMAL</state>
+    <guest osCustomization="true">
+      <operatingSystem id="REDHAT664" displayName="REDHAT6/64" family="UNIX" osUnitsGroupId="REDHAT"/>
+      <vmTools type="VMWARE_TOOLS" versionStatus="NEED_UPGRADE" runningStatus="NOT_RUNNING" apiVersion="9354"/>
+    </guest>
+    <virtualHardware version="vmx-08" upToDate="false"/>
+  </server>
+  <server id="61108d7e-cfcb-49e2-ba35-e96f311f62ea" datacenterId="QA1_N2_DRS_EAST">
+    <name>SourceServer2</name>
+    <cluster id="QA1_N2_DRS_EAST-01" name="QA1_N2_DRS_EAST-01"/>
+    <cpu count="1" speed="STANDARD" coresPerSocket="1"/>
+    <memoryGb>4</memoryGb>
+    <scsiController state="NORMAL" id="0f242fd0-45da-4472-9304-33f227a40dcd" adapterType="LSI_LOGIC_PARALLEL" key="1000" busNumber="0">
+      <disk state="NORMAL" id="16226899-760a-4170-a9f0-61fab7dedb69" sizeGb="10" speed="STANDARD" scsiId="0"/>
+    </scsiController>
+    <ideController state="NORMAL" id="d16d1065-f2c9-4f7d-bed2-b4e8da07ec21" adapterType="IDE" key="200" channel="0"/>
+    <ideController state="NORMAL" id="9bfbc1a8-2132-4174-a9ae-5b0ccf14ac9d" adapterType="IDE" key="201" channel="1">
+      <device state="NORMAL" id="6a8d2a8c-78c8-4276-b6dc-3512f46ccfc4" type="CDROM" slot="0"/>
+    </ideController>
+    <floppy state="NORMAL" id="59f50973-6aaf-40d7-a586-a1344b10532a" driveNumber="0" key="8000"/>
+    <networkInfo networkDomainId="f0804e7a-a67f-48d9-8e3b-992c4b33ce35">
+      <primaryNic id="b66bcfc4-133c-4fda-b21a-1fdb0cc3b5b6" privateIpv4="10.0.0.7" ipv6="2607:f480:1ab:1104:e7:f230:1d2b:121c" vlanId="82f2abca-1844-4b6b-8428-33517eb98389" vlanName="vlan1" networkAdapter="E1000" connected="true" macAddress="00:50:56:a6:24:cc" key="4000" state="NORMAL"/>
+    </networkInfo>
+    <source type="IMAGE_ID" value="36c1c403-e31b-4efd-a967-34baad903ee1"/>
+    <createTime>2018-10-03T02:10:32.000Z</createTime>
+    <deployed>true</deployed>
+    <started>false</started>
+    <state>NORMAL</state>
+    <guest osCustomization="true">
+      <operatingSystem id="REDHAT664" displayName="REDHAT6/64" family="UNIX" osUnitsGroupId="REDHAT"/>
+      <vmTools type="VMWARE_TOOLS" versionStatus="NEED_UPGRADE" runningStatus="NOT_RUNNING" apiVersion="9354"/>
+    </guest>
+    <virtualHardware version="vmx-08" upToDate="false"/>
+  </server>
+  <server id="7121b4c4-95db-4df4-a36a-1a6b9318875c" datacenterId="QA1_N2_DRS_WEST">
+    <name>TargetServer1</name>
+    <cpu count="1" speed="STANDARD" coresPerSocket="1"/>
+    <memoryGb>4</memoryGb>
+    <scsiController state="PENDING_ADD" id="a9bcd1f9-6043-42c3-8260-6d761d01d08a" adapterType="LSI_LOGIC_PARALLEL" key="1000" busNumber="0">
+      <disk state="PENDING_ADD" id="d869d42c-19a1-456d-b911-caa85baf8529" sizeGb="10" speed="STANDARD" scsiId="0"/>
+    </scsiController>
+    <ideController state="PENDING_ADD" id="90079de3-8055-4115-bd26-53a8786cfca5" adapterType="IDE" key="200" channel="0"/>
+    <ideController state="PENDING_ADD" id="716e272b-8519-43d8-8be5-5e11600f4f1a" adapterType="IDE" key="201" channel="1">
+      <device state="PENDING_ADD" id="147f3511-920b-4f62-bca0-22ce488d0072" type="CDROM" slot="0"/>
+    </ideController>
+    <floppy state="PENDING_ADD" id="0d1a3f66-70eb-4a9b-b2dd-329ebcd0e3af" driveNumber="0" key="8000"/>
+    <networkInfo networkDomainId="4a36551a-6c51-4053-b9bd-3b0f98bff944">
+      <primaryNic id="53e6f794-3c6b-4440-813f-91089cc1ddfa" privateIpv4="10.0.0.6" ipv6="2607:f480:1ab:1158:4c64:f3da:3f6e:6413" vlanId="25ac860a-fdbb-457d-9f61-1b9012211981" vlanName="vlan2" networkAdapter="E1000" connected="true" key="4000" state="FAILED_ADD"/>
+    </networkInfo>
+    <source type="IMAGE_ID" value="80ce2146-3220-44b1-9f72-c0e504b96634"/>
+    <createTime>2018-10-03T02:11:21.000Z</createTime>
+    <deployed>false</deployed>
+    <started>false</started>
+    <state>REQUIRES_SUPPORT</state>
+    <guest osCustomization="true">
+      <operatingSystem id="REDHAT664" displayName="REDHAT6/64" family="UNIX" osUnitsGroupId="REDHAT"/>
+    </guest>
+    <progress>
+      <action>CLEAN_SERVER</action>
+      <requestTime>2018-10-03T02:11:47.000Z</requestTime>
+      <userName>NR_test1</userName>
+      <failureReason>Unable to find the target VM - this will need to be checked by support.Could not locate the folder for the VM</failureReason>
+    </progress>
+  </server>
+  <server id="424a6131-e815-4b7b-b617-06a20980e749" datacenterId="QA1_N2_DRS_WEST">
+    <name>TargetServer2</name>
+    <cpu count="1" speed="STANDARD" coresPerSocket="1"/>
+    <memoryGb>4</memoryGb>
+    <scsiController state="PENDING_ADD" id="a14c9aec-28a5-45be-909f-bfc1be0c71bc" adapterType="LSI_LOGIC_PARALLEL" key="1000" busNumber="0">
+      <disk state="PENDING_ADD" id="004bd56d-284d-4437-a65b-efad9facbbd8" sizeGb="10" speed="STANDARD" scsiId="0"/>
+    </scsiController>
+    <ideController state="PENDING_ADD" id="c60059c0-51e0-46db-a374-46a93940b552" adapterType="IDE" key="200" channel="0"/>
+    <ideController state="PENDING_ADD" id="6cfe4485-25bd-41e3-b28c-facd983b2a9c" adapterType="IDE" key="201" channel="1">
+      <device state="PENDING_ADD" id="7b432d59-7bd2-4fca-9e21-c859e59e899e" type="CDROM" slot="0"/>
+    </ideController>
+    <floppy state="PENDING_ADD" id="46ffbb38-ed6f-4006-8d6a-ff51164f23a4" driveNumber="0" key="8000"/>
+    <networkInfo networkDomainId="4a36551a-6c51-4053-b9bd-3b0f98bff944">
+      <primaryNic id="b3852d87-3249-4da3-8859-e2ce8889c167" privateIpv4="10.0.0.7" ipv6="2607:f480:1ab:1158:1fc1:ea64:757d:9dad" vlanId="25ac860a-fdbb-457d-9f61-1b9012211981" vlanName="vlan2" networkAdapter="E1000" connected="true" key="4000" state="FAILED_ADD"/>
+    </networkInfo>
+    <source type="IMAGE_ID" value="80ce2146-3220-44b1-9f72-c0e504b96634"/>
+    <createTime>2018-10-03T02:11:22.000Z</createTime>
+    <deployed>false</deployed>
+    <started>false</started>
+    <state>REQUIRES_SUPPORT</state>
+    <guest osCustomization="true">
+      <operatingSystem id="REDHAT664" displayName="REDHAT6/64" family="UNIX" osUnitsGroupId="REDHAT"/>
+    </guest>
+    <progress>
+      <action>CLEAN_SERVER</action>
+      <requestTime>2018-10-03T02:11:55.000Z</requestTime>
+      <userName>NR_test1</userName>
+      <failureReason>Unable to find the target VM - this will need to be checked by support.Could not locate the folder for the VM</failureReason>
+    </progress>
+  </server>
+  <server id="1e949d2a-ee95-4f21-bd2f-727e0df2f87e" datacenterId="QA1_N2_DRS_WEST">
+    <name>TargetServer3</name>
+    <cpu count="4" speed="STANDARD" coresPerSocket="1"/>
+    <memoryGb>5</memoryGb>
+    <scsiController state="PENDING_ADD" id="6cbcf28c-35b1-4060-8689-f8fca8dd62b1" adapterType="LSI_LOGIC_PARALLEL" key="2000" busNumber="0">
+      <disk state="PENDING_ADD" id="27bfa8b3-5b09-41a3-aca1-d6c1e2d922a7" sizeGb="10" speed="HIGHPERFORMANCE" scsiId="0"/>
+    </scsiController>
+    <scsiController state="PENDING_ADD" id="3a3421ae-bb2f-45b1-ba63-d2cb697ef7e1" adapterType="LSI_LOGIC_PARALLEL" key="2001" busNumber="1">
+      <disk state="PENDING_ADD" id="1242aaa6-29d6-41c3-9e08-8dac4a94ed88" sizeGb="10" speed="STANDARD" scsiId="1"/>
+      <disk state="PENDING_ADD" id="fd734e36-cc4b-4155-b410-9c98abe09198" sizeGb="30" speed="HIGHPERFORMANCE" scsiId="4"/>
+    </scsiController>
+    <scsiController state="PENDING_ADD" id="f09cbe21-9b99-4837-be32-5519870b2ff0" adapterType="LSI_LOGIC_PARALLEL" key="2003" busNumber="3">
+      <disk state="PENDING_ADD" id="eea1edfb-4776-4dd9-ab2d-a6d828c8507f" sizeGb="25" speed="HIGHPERFORMANCE" scsiId="1"/>
+    </scsiController>
+    <networkInfo networkDomainId="4a36551a-6c51-4053-b9bd-3b0f98bff944">
+      <primaryNic id="00e9cbaf-a3e6-4749-a07f-2f66fe3be185" privateIpv4="10.0.0.8" ipv6="2607:f480:1ab:1158:7283:d5f7:d03e:e6e4" vlanId="25ac860a-fdbb-457d-9f61-1b9012211981" vlanName="vlan2" networkAdapter="VMXNET3" connected="true" key="4000" state="FAILED_ADD"/>
+    </networkInfo>
+    <source type="IMAGE_ID" value="3b05a1d6-a858-4bb9-a820-9380fc705368"/>
+    <createTime>2018-10-03T02:13:00.000Z</createTime>
+    <deployed>false</deployed>
+    <started>false</started>
+    <state>REQUIRES_SUPPORT</state>
+    <guest osCustomization="true">
+      <operatingSystem id="UBUNTU1064" displayName="UBUNTU10/64" family="UNIX" osUnitsGroupId="CANONICAL"/>
+    </guest>
+    <progress>
+      <action>CLEAN_SERVER</action>
+      <requestTime>2018-10-03T02:15:27.000Z</requestTime>
+      <userName>NR_test1</userName>
+      <failureReason>Unable to find the target VM - this will need to be checked by support.Could not locate the folder for the VM</failureReason>
+    </progress>
+  </server>
+  <server id="ed1adcfb-2d7a-4fa5-a6da-4c7486fb036f" datacenterId="QA1_N2_DRS_WEST">
+    <name>TargetServer4</name>
+    <cpu count="4" speed="STANDARD" coresPerSocket="1"/>
+    <memoryGb>5</memoryGb>
+    <scsiController state="PENDING_ADD" id="680ab6b6-bfba-47f2-aaf3-befc2d0a0d55" adapterType="LSI_LOGIC_PARALLEL" key="2000" busNumber="0">
+      <disk state="PENDING_ADD" id="9aff7118-0c9a-46d4-af21-2096662fc9dd" sizeGb="10" speed="HIGHPERFORMANCE" scsiId="0"/>
+    </scsiController>
+    <scsiController state="PENDING_ADD" id="7a6284c4-f498-436c-ac43-b286c01cd1e5" adapterType="LSI_LOGIC_PARALLEL" key="2001" busNumber="1">
+      <disk state="PENDING_ADD" id="bf35b3e3-49fe-4429-ae69-30ef493262c2" sizeGb="10" speed="STANDARD" scsiId="1"/>
+      <disk state="PENDING_ADD" id="2aec32eb-ece7-459a-ad15-6dae956a916f" sizeGb="30" speed="HIGHPERFORMANCE" scsiId="4"/>
+    </scsiController>
+    <scsiController state="PENDING_ADD" id="af8dd0ab-e66b-4cd6-8c16-f3feded8d15b" adapterType="LSI_LOGIC_PARALLEL" key="2003" busNumber="3">
+      <disk state="PENDING_ADD" id="4a85578b-a012-4498-a654-31cc700c87ae" sizeGb="25" speed="HIGHPERFORMANCE" scsiId="1"/>
+    </scsiController>
+    <networkInfo networkDomainId="4a36551a-6c51-4053-b9bd-3b0f98bff944">
+      <primaryNic id="6f865470-3ff2-4ce0-99d8-467cc892917d" privateIpv4="10.0.0.9" ipv6="2607:f480:1ab:1158:7959:2f85:ba46:66b4" vlanId="25ac860a-fdbb-457d-9f61-1b9012211981" vlanName="vlan2" networkAdapter="VMXNET3" connected="true" key="4000" state="FAILED_ADD"/>
+    </networkInfo>
+    <source type="IMAGE_ID" value="3b05a1d6-a858-4bb9-a820-9380fc705368"/>
+    <createTime>2018-10-03T02:13:02.000Z</createTime>
+    <deployed>false</deployed>
+    <started>false</started>
+    <state>FAILED_ADD</state>
+    <guest osCustomization="true">
+      <operatingSystem id="UBUNTU1064" displayName="UBUNTU10/64" family="UNIX" osUnitsGroupId="CANONICAL"/>
+    </guest>
+    <progress>
+      <action>DEPLOY_SERVER</action>
+      <requestTime>2018-10-03T02:13:02.000Z</requestTime>
+      <userName>NR_test1</userName>
+      <failureReason>Execution of task for job be7601f5-f258-4a00-8626-200eb8a471c0 failed with exception: Could not send Message.</failureReason>
+    </progress>
+  </server>
+</servers>

@@ -45,5 +45,6 @@ xmlns="urn:didata.com:api:cloud:types" pageNumber="1" pageCount="5" totalCount="
     name="CCDEFAULT.IpProtocolTimers"/>
     <irule id="2b20e790-ffdc-11e4-b010-005056806999"
     name="CCDEFAULT.Ips"/>
+    <sslOffloadProfile id="26f856c4-2c60-4ecb-97c1-0a3dc4017844" name="SSL offload profile 01"/>
   </virtualListener>
 </virtualListeners>

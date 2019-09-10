@@ -34,14 +34,28 @@
         /// </summary>
         /// <param name="id">The Consistency group id.</param>
         /// <returns>The selected <see cref="ConsistencyGroupType"/></returns>
-        Task<ConsistencyGroupType> GetConsistencyGroup(System.Guid id);
+        Task<ConsistencyGroupDetailType> GetConsistencyGroup(System.Guid id);
 
-        /// <summary>
-        /// The Create Consistency Group
-        /// </summary>
-        /// <param name="createConsistencyGroup">The create consistency group type.</param>
-        /// <returns>The <see cref="ResponseType"/></returns>
-        Task<ResponseType> CreateConsistencyGroup(CreateConsistencyGroupType createConsistencyGroup);
+		/// <summary>
+		/// Set Re-IP rules for a DRS Target Server to override replicated network settings when entering DRS Preview mode.
+		/// </summary>
+		/// <param name="setDrsReIpAddressRules">Drs Target Server Re-IP details</param>
+		/// <returns>The <see cref="ResponseType"/></returns>
+		Task<ResponseType> SetDrsReIpAddressRules(SetDrsReIpAddressRulesType setDrsReIpAddressRules);
+
+		/// <summary>
+		/// The purpose of this API is to allow a customer user to Delete the Re-IP Address Rules associated with a Consistency Group Server Pair.
+		/// </summary>
+		/// <param name="drsServerPairIdType"></param>
+		/// <returns>The <see cref="ResponseType"/></returns>
+		Task<ResponseType> DeleteReIpAddressRules(DrsServerPairIdType drsServerPairIdType);
+
+		/// <summary>
+		/// The Create Consistency Group
+		/// </summary>
+		/// <param name="createConsistencyGroup">The create consistency group type.</param>
+		/// <returns>The <see cref="ResponseType"/></returns>
+		Task<ResponseType> CreateConsistencyGroup(CreateConsistencyGroupType createConsistencyGroup);
 
         /// <summary>
         /// The Get Consistency Group Snapshots method.
@@ -69,6 +83,13 @@
         /// <param name="deleteConsistencyGroupType">The delete consistency group.</param>
         /// <returns><see cref="ResponseType"/></returns>
         Task<ResponseType> DeleteConsistencyGroup(DeleteConsistencyGroupType deleteConsistencyGroupType);
+
+        /// <summary>
+        /// The Clean Consistency Group method.
+        /// </summary>
+        /// <param name="cleanConsistencyGroupType">The delete consistency group.</param>
+        /// <returns><see cref="ResponseType"/></returns>
+        Task<ResponseType> CleanConsistencyGroup(CleanConsistencyGroupType cleanConsistencyGroupType);
 
         /// <summary>
         /// The initiate failover for a consistency group.

@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<response requestId="na/2014-04-14T13:37:20/62f06368-c3fb-11e3-b29c-001517c4643e" xmlns="urn:didata.com:api:cloud:types">
+	<operation>STOP_PREVIEW_SNAPSHOT</operation>
+	<responseCode>IN_PROGRESS</responseCode>
+	<message>
+		Request to Stop Preview Snapshot for Consistency Group "my consistency group" has been accepted and is being processed.
+	</message>
+</response>

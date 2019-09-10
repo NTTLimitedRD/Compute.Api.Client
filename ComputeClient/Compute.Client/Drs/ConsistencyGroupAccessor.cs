@@ -41,13 +41,23 @@
             return response.items;
         }
 
-        /// <summary>
-        /// The Get Consistency Group menthod.
-        /// </summary>
-        /// <param name="filteringOptions">The filtering options.</param>
-        /// <param name="pagingOptions">The pagination options.</param>
-        /// <returns>Paginated result of <see cref="ConsistencyGroupType"/></returns>
-        public async Task<PagedResponse<ConsistencyGroupType>> GetConsistencyGroupsPaginated(ConsistencyGroupListOptions filteringOptions = null, PageableRequest pagingOptions = null)
+		/// <summary>
+		/// Set Re-IP rules for a DRS Target Server to override replicated network settings when entering DRS Preview mode.
+		/// </summary>
+		/// <param name="setDrsReIpAddressRules">Drs Target Server Re-IP details</param>
+		/// <returns>The <see cref="ResponseType"/></returns>
+		public async Task<ResponseType> SetDrsReIpAddressRules(SetDrsReIpAddressRulesType setDrsReIpAddressRules)
+		{
+			return await _apiClient.PostAsync<SetDrsReIpAddressRulesType, ResponseType>(ApiUris.SetDrsReIpAddressRules(_apiClient.OrganizationId), setDrsReIpAddressRules);
+		}
+
+		/// <summary>
+		/// The Get Consistency Group menthod.
+		/// </summary>
+		/// <param name="filteringOptions">The filtering options.</param>
+		/// <param name="pagingOptions">The pagination options.</param>
+		/// <returns>Paginated result of <see cref="ConsistencyGroupType"/></returns>
+		public async Task<PagedResponse<ConsistencyGroupType>> GetConsistencyGroupsPaginated(ConsistencyGroupListOptions filteringOptions = null, PageableRequest pagingOptions = null)
         {
             var response = await _apiClient.GetAsync<consistencyGroups>(ApiUris.GetConsistencyGroups(_apiClient.OrganizationId), pagingOptions, filteringOptions);
             return new PagedResponse<ConsistencyGroupType>
@@ -58,16 +68,16 @@
                 pageNumber = response.pageNumberSpecified ? response.pageNumber : (int?)null,
                 pageSize = response.pageSizeSpecified ? response.pageSize : (int?)null
             };
-        }
+        } 
 
         /// <summary>
-        /// The Get Consistency Group method.
+        /// The Get Consistency Group detail method.
         /// </summary>
         /// <param name="id">The Consistency group id.</param>
-        /// <returns>The selected <see cref="ConsistencyGroupType"/></returns>
-        public async Task<ConsistencyGroupType> GetConsistencyGroup(System.Guid id)
+        /// <returns>The selected <see cref="ConsistencyGroupDetailType"/></returns>
+        public async Task<ConsistencyGroupDetailType> GetConsistencyGroup(System.Guid id)
         {
-            return await _apiClient.GetAsync<ConsistencyGroupType>(ApiUris.GetConsistencyGroup(_apiClient.OrganizationId, id));
+            return await _apiClient.GetAsync<ConsistencyGroupDetailType>(ApiUris.GetConsistencyGroup(_apiClient.OrganizationId, id));
         }
 
         /// <summary>
@@ -121,6 +131,16 @@
         }
 
         /// <summary>
+        /// The Clean Consistency Group method.
+        /// </summary>
+        /// <param name="cleanConsistencyGroupType">The delete consistency group.</param>
+        /// <returns><see cref="ResponseType"/></returns>
+        public async Task<ResponseType> CleanConsistencyGroup(CleanConsistencyGroupType cleanConsistencyGroupType)
+        {
+            return await _apiClient.PostAsync<CleanConsistencyGroupType, ResponseType>(ApiUris.CleanConsistencyGroup(_apiClient.OrganizationId), cleanConsistencyGroupType);
+        }
+
+        /// <summary>
         /// The initiate failover for a consistency group.
         /// </summary>
         /// <param name="InitiateFailover">The Initiate failover type.</param>
@@ -138,6 +158,20 @@
 		public async Task<ResponseType> ExpandJournal(ExpandJournalType expandJournalType)
 		{
 			return await _apiClient.PostAsync<ExpandJournalType, ResponseType>(ApiUris.ExpandJournal(_apiClient.OrganizationId), expandJournalType);
+		}
+
+		/// <summary>
+		/// Delete ReIp Rules from a Server Pair
+		/// </summary>
+		/// <param name="drsServerPairIdType">Server Pair Id</param>
+		/// <returns>The <see cref="ResponseType"/></returns>
+		public async Task<ResponseType> DeleteReIpAddressRules(DrsServerPairIdType drsServerPairIdType)
+		{
+			return
+				await
+				_apiClient.PostAsync<DrsServerPairIdType, ResponseType>(
+					ApiUris.DeleteDrsReIpAddressRules(_apiClient.OrganizationId),
+					drsServerPairIdType);
 		}
 	}
 }

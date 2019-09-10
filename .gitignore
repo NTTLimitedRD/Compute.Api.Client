@@ -336,3 +336,9 @@ FakesAssemblies/
 *.nupkg
 PowershellModule/CloudCompute.Powershell.Tests/nunit-results.xml
 PowershellModule/CloudCompute.Powershell.Tests/MockApisRecordings/
+/ComputeClient/.vs/ComputeClient/v15/Server/sqlite3/storage.ide-wal
+/ComputeClient/.vs/ComputeClient/v15/Server/sqlite3/storage.ide-shm
+/ComputeClient/.vs/ComputeClient/v15/Server/sqlite3/storage.ide
+/ComputeClient/.vs/ComputeClient/v15/Server/sqlite3/db.lock
+/.vs/VSWorkspaceState.json
+/.vs/slnx.sqlite

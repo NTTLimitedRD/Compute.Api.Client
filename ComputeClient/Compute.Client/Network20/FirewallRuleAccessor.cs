@@ -59,12 +59,31 @@
             };
         }
 
-        /// <summary>
-        /// Gets a specific firewall rule.
-        /// </summary>
-        /// <param name="firewallRuleId">The firewall rule identifier.</param>
-        /// <returns>The response details.</returns>
-        public async Task<FirewallRuleType> GetFirewallRule(Guid firewallRuleId)
+		/// <summary>
+		/// Lists all firewall rules statistics.
+		/// </summary>
+		/// <param name="options">The filter options.</param>
+		/// <param name="pagingOptions">The paging options.</param>
+		/// <returns>The async task of <see cref="PagedResponse{FirewallRuleStatisticsType}"/></returns>
+		public async Task<PagedResponse<FirewallRuleStatisticsType>> GetFirewallRulesStatisticsPaginated(FirewallRuleStatisticsListOptions options = null, PageableRequest pagingOptions = null)
+        {
+	        var response = await _api.GetAsync<FirewallRulesStatisticsType>(ApiUris.GetFirewallRulesStatistics(_api.OrganizationId), pagingOptions, options);
+	        return new PagedResponse<FirewallRuleStatisticsType>
+	        {
+		        items = response.firewallRuleStatistics,
+		        totalCount = response.totalCountSpecified ? response.totalCount : (int?)null,
+		        pageCount = response.pageCountSpecified ? response.pageCount : (int?)null,
+		        pageNumber = response.pageNumberSpecified ? response.pageNumber : (int?)null,
+		        pageSize = response.pageSizeSpecified ? response.pageSize : (int?)null
+	        };
+        }
+
+		/// <summary>
+		/// Gets a specific firewall rule.
+		/// </summary>
+		/// <param name="firewallRuleId">The firewall rule identifier.</param>
+		/// <returns>The response details.</returns>
+		public async Task<FirewallRuleType> GetFirewallRule(Guid firewallRuleId)
         {
             return await _api.GetAsync<FirewallRuleType>(
                 ApiUris.GetFirewallRule(_api.OrganizationId, firewallRuleId));
