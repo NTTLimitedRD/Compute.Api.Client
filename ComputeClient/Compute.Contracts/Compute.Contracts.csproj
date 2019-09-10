@@ -133,6 +133,7 @@
     <Compile Include="Requests\Network20\FirewallRuleStatisticsListOptions.cs" />
     <Compile Include="Requests\Network20\SnatExclusionListOptions.cs" />
     <Compile Include="Requests\Server20\HistoricalServerConfigurationListOptions.cs" />
+    <Compile Include="Requests\Snapshot\SnapshotServicePlanListOptions.cs" />
     <Compile Include="Server\CopyServerType.cs" />
     <Compile Include="Organization\SetTwoFactorAuthentication.cs" />
     <Compile Include="Organization\TwoFactorAuthentication.cs" />
@@ -385,6 +386,8 @@
     <Compile Include="Snapshot\MigrateSnapshotPreviewServerType.cs" />
     <Compile Include="Snapshot\RestoreFromSnapshotType.cs" />
     <Compile Include="Snapshot\Snapshot.cs" />
+    <Compile Include="Snapshot\SnapshotServicePlans.cs" />
+    <Compile Include="Snapshot\SnapshotServicePlanType.cs" />
     <Compile Include="Software\SoftwareLabels.cs" />
     <Compile Include="Network20\HealthMonitor.cs" />
     <Compile Include="Network20\Irule.cs" />

@@ -165,6 +165,14 @@ namespace Compute.Client.UnitTests
         }
 
 		[TestMethod]
+		public void ListSnapshotServicePlansUri()
+		{
+			var uri = ApiUris.ListSnapshotServicePlans(_orgId);
+
+			Assert.AreEqual(ApiUris.MCP2_10_PREFIX + _orgId + "/snapshot/servicePlan", uri.OriginalString);
+		}
+
+		[TestMethod]
 		public void DeleteDrsReIpAddressRules()
 		{
 			var uri = ApiUris.DeleteDrsReIpAddressRules(_orgId);

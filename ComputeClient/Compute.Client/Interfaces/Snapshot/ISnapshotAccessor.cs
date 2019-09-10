@@ -47,5 +47,11 @@
 		/// <param name="request">The Create Replicated Snapshot Preview Server Request</param>
 		/// <returns>The <see cref="Task"/>.</returns>
 		Task<ResponseType> CreateReplicatedSnapshotPreviewServer(CreateReplicatedSnapshotPreviewServerType request);
+
+		/// <summary>The Snapshot Service Plans.</summary>
+		/// <param name="filteringOptions">The filtering options.</param>
+		/// <param name="pagingOptions">The paging options.</param>
+		/// <returns>The <see cref="Task"/>.</returns>
+		Task<PagedResponse<SnapshotServicePlanType>> ListSnapshotServicePlans(SnapshotServicePlanListOptions filteringOptions = null, IPageableRequest pagingOptions = null);
 	}
 }
