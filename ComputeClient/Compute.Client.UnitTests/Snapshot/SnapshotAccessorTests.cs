@@ -82,7 +82,7 @@ namespace Compute.Client.UnitTests.Snapshot
 
 			var pagingRequest = new PageableRequest();
 			pagingRequest.PageNumber = 1;
-			pagingRequest.PageSize = 5;
+			pagingRequest.PageSize = 10;
 
 			var expectedRelativeUriPath = string.Format(ApiUris.ListSnapshotServicePlans(accountId) + "?available={0}&id={1}&pageSize={2}&pageNumber={3}", "true", filter.Id, pagingRequest.PageSize, pagingRequest.PageNumber);
 			var expectedUri = new Uri(expectedRelativeUriPath, UriKind.Relative);
@@ -108,7 +108,7 @@ namespace Compute.Client.UnitTests.Snapshot
 			Assert.AreEqual("One Month: 7d-4w", oneMonthSnapshotServicePlan.displayName);
 			Assert.AreEqual("Daily Snapshots retained for 7 Days, Weekly Snapshots retained for 31 Days", oneMonthSnapshotServicePlan.description);
 			Assert.AreEqual("DAILY", oneMonthSnapshotServicePlan.snapshotFrequency);
-			Assert.IsFalse(oneMonthSnapshotServicePlan.supportsReplication);
+			Assert.IsTrue(oneMonthSnapshotServicePlan.supportsReplication);
 			Assert.IsTrue(oneMonthSnapshotServicePlan.available);
 		}
 	}
