@@ -21,7 +21,7 @@ namespace DD.CBU.Compute.Api.Contracts.Requests.Snapshot
 		/// <summary>
 		/// The "available" field name.
 		/// </summary>
-		public const string availableField = "available";
+		public const string AvailableField = "available";
 
 		/// <summary>	
 		/// Identifies an individual Snapshot Service Plan.
@@ -36,10 +36,10 @@ namespace DD.CBU.Compute.Api.Contracts.Requests.Snapshot
 		/// <summary>
 		/// Gets or sets the available filter.
 		/// </summary>
-		public bool? available
+		public bool? Available
 		{
-			get { return GetFilter<bool?>(availableField); }
-			set { SetFilter(availableField, value); }
+			get { return GetFilter<bool?>(AvailableField); }
+			set { SetFilter(AvailableField, value); }
 		}
 	}
 }

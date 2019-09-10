@@ -77,7 +77,7 @@ namespace Compute.Client.UnitTests.Snapshot
 		public async Task ListSnapshotServicePlans_WithFiltersAndPagingOptions()
 		{
 			var filter = new SnapshotServicePlanListOptions();
-			filter.available = true;
+			filter.Available = true;
 			filter.Id = Guid.NewGuid();
 
 			var pagingRequest = new PageableRequest();
