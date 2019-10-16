@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<snapshotServicePlans xmlns="urn:didata.com:api:cloud:types" pageNumber="1" pageCount="1" totalCount="5" pageSize="5" >
+	<snapshotServicePlan id="ONE_MONTH">
+		<displayName>One Month: 7d-4w</displayName>
+		<description>Daily Snapshots retained for 7 Days, Weekly Snapshots retained for 31 Days</description>
+		<snapshotFrequency>DAILY</snapshotFrequency>
+		<supportsReplication>false</supportsReplication>
+		<available>true</available>
+	</snapshotServicePlan>
+	<snapshotServicePlan id="THREE_MONTH">
+		<displayName>Three Month: 14d-12w</displayName>
+		<description>Daily Snapshots retained for 14 Days, Weekly Snapshots retained for 90 Days</description>
+		<snapshotFrequency>DAILY</snapshotFrequency>
+		<supportsReplication>false</supportsReplication>
+		<available>true</available>
+	</snapshotServicePlan>
+	<snapshotServicePlan id="TWELVE_MONTH">
+		<displayName>Twelve Month: 31d-12w-12m</displayName>
+		<description>Daily Snapshots retained for 31 Days, Weekly Snapshots retained for 90 Days, Monthly Snapshots retained for 1 Year</description>
+		<snapshotFrequency>DAILY</snapshotFrequency>
+		<supportsReplication>false</supportsReplication>
+		<available>true</available>
+	</snapshotServicePlan>
+	<snapshotServicePlan id="ESSENTIALS">
+		<displayName>Essentials: 4w</displayName>
+		<description>One snapshot each week, retained for 31 Days</description>
+		<snapshotFrequency>WEEKLY</snapshotFrequency>
+		<supportsReplication>false</supportsReplication>
+		<available>false</available>
+	</snapshotServicePlan>
+	<snapshotServicePlan id="ADVANCED">
+		<displayName>Advanced: 31d-52w</displayName>
+		<description>Daily Snapshots for retained for 31 Days, Weekly Snapshots retained for 1 Year</description>
+		<snapshotFrequency>DAILY</snapshotFrequency>
+		<supportsReplication>false</supportsReplication>
+		<available>false</available>
+	</snapshotServicePlan>
+</snapshotServicePlans>
