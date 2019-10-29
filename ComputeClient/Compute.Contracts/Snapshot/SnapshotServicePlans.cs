@@ -1,0 +1,163 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DD.CBU.Compute.Api.Contracts.Snapshot
+{
+	/// <remarks/>
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.6.1055.0")]
+	[System.SerializableAttribute()]
+	[System.Diagnostics.DebuggerStepThroughAttribute()]
+	[System.ComponentModel.DesignerCategoryAttribute("code")]
+	[System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:didata.com:api:cloud:types")]
+	[System.Xml.Serialization.XmlRootAttribute(Namespace = "urn:didata.com:api:cloud:types", IsNullable = false)]
+	public partial class snapshotServicePlans
+	{
+
+		private SnapshotServicePlanType[] snapshotServicePlanField;
+
+		private int pageNumberField;
+
+		private bool pageNumberFieldSpecified;
+
+		private int pageCountField;
+
+		private bool pageCountFieldSpecified;
+
+		private int totalCountField;
+
+		private bool totalCountFieldSpecified;
+
+		private int pageSizeField;
+
+		private bool pageSizeFieldSpecified;
+
+		/// <remarks/>
+		[System.Xml.Serialization.XmlElementAttribute("snapshotServicePlan")]
+		public SnapshotServicePlanType[] snapshotServicePlan
+		{
+			get
+			{
+				return this.snapshotServicePlanField;
+			}
+			set
+			{
+				this.snapshotServicePlanField = value;
+			}
+		}
+
+		/// <remarks/>
+		[System.Xml.Serialization.XmlAttributeAttribute()]
+		public int pageNumber
+		{
+			get
+			{
+				return this.pageNumberField;
+			}
+			set
+			{
+				this.pageNumberField = value;
+			}
+		}
+
+		/// <remarks/>
+		[System.Xml.Serialization.XmlIgnoreAttribute()]
+		public bool pageNumberSpecified
+		{
+			get
+			{
+				return this.pageNumberFieldSpecified;
+			}
+			set
+			{
+				this.pageNumberFieldSpecified = value;
+			}
+		}
+
+		/// <remarks/>
+		[System.Xml.Serialization.XmlAttributeAttribute()]
+		public int pageCount
+		{
+			get
+			{
+				return this.pageCountField;
+			}
+			set
+			{
+				this.pageCountField = value;
+			}
+		}
+
+		/// <remarks/>
+		[System.Xml.Serialization.XmlIgnoreAttribute()]
+		public bool pageCountSpecified
+		{
+			get
+			{
+				return this.pageCountFieldSpecified;
+			}
+			set
+			{
+				this.pageCountFieldSpecified = value;
+			}
+		}
+
+		/// <remarks/>
+		[System.Xml.Serialization.XmlAttributeAttribute()]
+		public int totalCount
+		{
+			get
+			{
+				return this.totalCountField;
+			}
+			set
+			{
+				this.totalCountField = value;
+			}
+		}
+
+		/// <remarks/>
+		[System.Xml.Serialization.XmlIgnoreAttribute()]
+		public bool totalCountSpecified
+		{
+			get
+			{
+				return this.totalCountFieldSpecified;
+			}
+			set
+			{
+				this.totalCountFieldSpecified = value;
+			}
+		}
+
+		/// <remarks/>
+		[System.Xml.Serialization.XmlAttributeAttribute()]
+		public int pageSize
+		{
+			get
+			{
+				return this.pageSizeField;
+			}
+			set
+			{
+				this.pageSizeField = value;
+			}
+		}
+
+		/// <remarks/>
+		[System.Xml.Serialization.XmlIgnoreAttribute()]
+		public bool pageSizeSpecified
+		{
+			get
+			{
+				return this.pageSizeFieldSpecified;
+			}
+			set
+			{
+				this.pageSizeFieldSpecified = value;
+			}
+		}
+	}
+}

@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<snapshotServicePlans xmlns="urn:didata.com:api:cloud:types" pageNumber="1" pageCount="1" totalCount="1" pageSize="10" >
+	<snapshotServicePlan id="ONE_MONTH">
+		<displayName>One Month: 7d-4w</displayName>
+		<description>Daily Snapshots retained for 7 Days, Weekly Snapshots retained for 31 Days</description>
+		<snapshotFrequency>DAILY</snapshotFrequency>
+		<supportsReplication>true</supportsReplication>
+		<available>true</available>
+	</snapshotServicePlan>
+</snapshotServicePlans>
