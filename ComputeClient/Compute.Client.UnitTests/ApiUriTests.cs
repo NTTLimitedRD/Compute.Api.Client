@@ -15,7 +15,7 @@ namespace Compute.Client.UnitTests
         {
             var networkDomainId = Guid.NewGuid();
             var uri = ApiUris.GetDomainNatRules(_orgId, networkDomainId.ToString());
-            Assert.AreEqual(ApiUris.MCP2_10_PREFIX + _orgId + "/network/natRule?networkDomainId=" + networkDomainId, uri.OriginalString);
+            Assert.AreEqual(ApiUris.MCP2_11_PREFIX + _orgId + "/network/natRule?networkDomainId=" + networkDomainId, uri.OriginalString);
         }
 
         [TestMethod]
@@ -23,35 +23,35 @@ namespace Compute.Client.UnitTests
         {
             var networkId = Guid.NewGuid();
             var uri = ApiUris.GetNatRule(_orgId, networkId.ToString());
-            Assert.AreEqual(ApiUris.MCP2_10_PREFIX + _orgId + "/network/natRule/" + networkId, uri.OriginalString);
+            Assert.AreEqual(ApiUris.MCP2_11_PREFIX + _orgId + "/network/natRule/" + networkId, uri.OriginalString);
         }
 
         [TestMethod]
         public void ReturnsCreateNatRuleUri()
         {
             var uri = ApiUris.CreateNatRule(_orgId);
-            Assert.AreEqual(ApiUris.MCP2_10_PREFIX + _orgId + "/network/createNatRule", uri.OriginalString);
+            Assert.AreEqual(ApiUris.MCP2_11_PREFIX + _orgId + "/network/createNatRule", uri.OriginalString);
         }
 
         [TestMethod]
         public void ReturnsDeleteNatRuleUri()
         {
             var uri = ApiUris.DeleteNatRule(_orgId);
-            Assert.AreEqual(ApiUris.MCP2_10_PREFIX + _orgId + "/network/deleteNatRule", uri.OriginalString);
+            Assert.AreEqual(ApiUris.MCP2_11_PREFIX + _orgId + "/network/deleteNatRule", uri.OriginalString);
         }
 
         [TestMethod]
         public void ReturnsCreatePoolUri()
         {
             var uri = ApiUris.CreatePool(_orgId);
-            Assert.AreEqual(ApiUris.MCP2_10_PREFIX + _orgId + "/networkDomainVip/createPool", uri.OriginalString);
+            Assert.AreEqual(ApiUris.MCP2_11_PREFIX + _orgId + "/networkDomainVip/createPool", uri.OriginalString);
         }
 
         [TestMethod]
         public void ReturnsGetPoolsUri()
         {
             var uri = ApiUris.GetPools(_orgId);
-            Assert.AreEqual(ApiUris.MCP2_10_PREFIX + _orgId + "/networkDomainVip/pool", uri.OriginalString);
+            Assert.AreEqual(ApiUris.MCP2_11_PREFIX + _orgId + "/networkDomainVip/pool", uri.OriginalString);
         }
 
         [TestMethod]
@@ -59,35 +59,35 @@ namespace Compute.Client.UnitTests
         {
             var poolId = Guid.NewGuid();
             var uri = ApiUris.GetPool(_orgId, poolId);
-            Assert.AreEqual(ApiUris.MCP2_10_PREFIX + _orgId + "/networkDomainVip/pool/" + poolId, uri.OriginalString);
+            Assert.AreEqual(ApiUris.MCP2_11_PREFIX + _orgId + "/networkDomainVip/pool/" + poolId, uri.OriginalString);
         }
 
         [TestMethod]
         public void ReturnsEditPoolUri()
         {
             var uri = ApiUris.EditPool(_orgId);
-            Assert.AreEqual(ApiUris.MCP2_10_PREFIX + _orgId + "/networkDomainVip/editPool", uri.OriginalString);
+            Assert.AreEqual(ApiUris.MCP2_11_PREFIX + _orgId + "/networkDomainVip/editPool", uri.OriginalString);
         }
 
         [TestMethod]
         public void ReturnsDeletePoolUri()
         {
             var uri = ApiUris.DeletePool(_orgId);
-            Assert.AreEqual(ApiUris.MCP2_10_PREFIX + _orgId + "/networkDomainVip/deletePool", uri.OriginalString);
+            Assert.AreEqual(ApiUris.MCP2_11_PREFIX + _orgId + "/networkDomainVip/deletePool", uri.OriginalString);
         }
 
         [TestMethod]
         public void ReturnsAddPoolMemberUri()
         {
             var uri = ApiUris.AddPoolMember(_orgId);
-            Assert.AreEqual(ApiUris.MCP2_10_PREFIX + _orgId + "/networkDomainVip/addPoolMember", uri.OriginalString);
+            Assert.AreEqual(ApiUris.MCP2_11_PREFIX + _orgId + "/networkDomainVip/addPoolMember", uri.OriginalString);
         }
 
         [TestMethod]
         public void ReturnsGetPoolMembersUri()
         {
             var uri = ApiUris.GetPoolMembers(_orgId);
-            Assert.AreEqual(ApiUris.MCP2_10_PREFIX + _orgId + "/networkDomainVip/poolMember", uri.OriginalString);
+            Assert.AreEqual(ApiUris.MCP2_11_PREFIX + _orgId + "/networkDomainVip/poolMember", uri.OriginalString);
         }
 
         [TestMethod]
@@ -95,35 +95,35 @@ namespace Compute.Client.UnitTests
         {
             var memberId = Guid.NewGuid();
             var uri = ApiUris.GetPoolMember(_orgId, memberId);
-            Assert.AreEqual(ApiUris.MCP2_10_PREFIX + _orgId + "/networkDomainVip/poolMember/" + memberId, uri.OriginalString);
+            Assert.AreEqual(ApiUris.MCP2_11_PREFIX + _orgId + "/networkDomainVip/poolMember/" + memberId, uri.OriginalString);
         }
 
         [TestMethod]
         public void ReturnsEditPoolMemberUri()
         {
             var uri = ApiUris.EditPoolMember(_orgId);
-            Assert.AreEqual(ApiUris.MCP2_10_PREFIX + _orgId + "/networkDomainVip/editPoolMember", uri.OriginalString);
+            Assert.AreEqual(ApiUris.MCP2_11_PREFIX + _orgId + "/networkDomainVip/editPoolMember", uri.OriginalString);
         }
 
         [TestMethod]
         public void ReturnsDeletePoolMemberUri()
         {
             var uri = ApiUris.DeletePoolMember(_orgId);
-            Assert.AreEqual(ApiUris.MCP2_10_PREFIX + _orgId + "/networkDomainVip/removePoolMember", uri.OriginalString);
+            Assert.AreEqual(ApiUris.MCP2_11_PREFIX + _orgId + "/networkDomainVip/removePoolMember", uri.OriginalString);
         }
 
         [TestMethod]
         public void ReturnsAddVipNodeUri()
         {
             var uri = ApiUris.AddVipNode(_orgId);
-            Assert.AreEqual(ApiUris.MCP2_10_PREFIX + _orgId + "/networkDomainVip/createNode", uri.OriginalString);
+            Assert.AreEqual(ApiUris.MCP2_11_PREFIX + _orgId + "/networkDomainVip/createNode", uri.OriginalString);
         }
 
         [TestMethod]
         public void ReturnsGetVipNodesUri()
         {
             var uri = ApiUris.GetVipNodes(_orgId);
-            Assert.AreEqual(ApiUris.MCP2_10_PREFIX + _orgId + "/networkDomainVip/node", uri.OriginalString);
+            Assert.AreEqual(ApiUris.MCP2_11_PREFIX + _orgId + "/networkDomainVip/node", uri.OriginalString);
         }
 
         [TestMethod]
@@ -131,28 +131,28 @@ namespace Compute.Client.UnitTests
         {
             var nodeId = Guid.NewGuid();
             var uri = ApiUris.GetVipNode(_orgId, nodeId);
-            Assert.AreEqual(ApiUris.MCP2_10_PREFIX + _orgId + "/networkDomainVip/node/" + nodeId, uri.OriginalString);
+            Assert.AreEqual(ApiUris.MCP2_11_PREFIX + _orgId + "/networkDomainVip/node/" + nodeId, uri.OriginalString);
         }
 
         [TestMethod]
         public void ReturnsEditVipNodeUri()
         {
             var uri = ApiUris.EditVipNode(_orgId);
-            Assert.AreEqual(ApiUris.MCP2_10_PREFIX + _orgId + "/networkDomainVip/editNode", uri.OriginalString);
+            Assert.AreEqual(ApiUris.MCP2_11_PREFIX + _orgId + "/networkDomainVip/editNode", uri.OriginalString);
         }
 
         [TestMethod]
         public void ReturnsDeleteVipNodeUri()
         {
             var uri = ApiUris.DeleteVipNode(_orgId);
-            Assert.AreEqual(ApiUris.MCP2_10_PREFIX + _orgId + "/networkDomainVip/deleteNode", uri.OriginalString);
+            Assert.AreEqual(ApiUris.MCP2_11_PREFIX + _orgId + "/networkDomainVip/deleteNode", uri.OriginalString);
         }
 
         [TestMethod]
         public void ReconfigureImageUri()
         {
             var uri = ApiUris.ReconfigureImage(_orgId);
-            Assert.AreEqual(ApiUris.MCP2_10_PREFIX + _orgId + "/image/reconfigureImage", uri.OriginalString);
+            Assert.AreEqual(ApiUris.MCP2_11_PREFIX + _orgId + "/image/reconfigureImage", uri.OriginalString);
         }
 
         [TestMethod]
@@ -161,7 +161,7 @@ namespace Compute.Client.UnitTests
             var serverId = Guid.NewGuid();
             var uri = ApiUris.ListHistoricalServerConfigurations(_orgId, serverId);
 
-            Assert.AreEqual(ApiUris.MCP2_10_PREFIX + _orgId + "/server/historicalServerConfiguration?serverId=" + serverId, uri.OriginalString);
+            Assert.AreEqual(ApiUris.MCP2_11_PREFIX + _orgId + "/server/historicalServerConfiguration?serverId=" + serverId, uri.OriginalString);
         }
 
 		[TestMethod]
@@ -169,7 +169,7 @@ namespace Compute.Client.UnitTests
 		{
 			var uri = ApiUris.ListSnapshotServicePlans(_orgId);
 
-			Assert.AreEqual(ApiUris.MCP2_10_PREFIX + _orgId + "/snapshot/servicePlan", uri.OriginalString);
+			Assert.AreEqual(ApiUris.MCP2_11_PREFIX + _orgId + "/snapshot/servicePlan", uri.OriginalString);
 		}
 
 		[TestMethod]
@@ -177,7 +177,7 @@ namespace Compute.Client.UnitTests
 		{
 			var uri = ApiUris.DeleteDrsReIpAddressRules(_orgId);
 
-			Assert.AreEqual(ApiUris.MCP2_10_PREFIX + _orgId + "/consistencyGroup/deleteDrsReIpAddressRules", uri.OriginalString);
+			Assert.AreEqual(ApiUris.MCP2_11_PREFIX + _orgId + "/consistencyGroup/deleteDrsReIpAddressRules", uri.OriginalString);
 		}
 	}
 }
