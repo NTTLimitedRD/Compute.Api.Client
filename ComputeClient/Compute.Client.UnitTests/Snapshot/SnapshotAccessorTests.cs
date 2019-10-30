@@ -111,5 +111,40 @@ namespace Compute.Client.UnitTests.Snapshot
 			Assert.IsTrue(oneMonthSnapshotServicePlan.supportsReplication);
 			Assert.IsTrue(oneMonthSnapshotServicePlan.available);
 		}
+
+		[TestMethod]
+		public async Task ListSnapshots()
+		{
+			Guid serverId = new Guid("0fad8eeb-83d7-4703-b450-171c33a79682");
+
+			requestsAndResponses.Add(ApiUris.ListSnapshots(accountId, serverId), RequestFileResponseType.AsGoodResponse("ListSnapshots.xml"));
+
+			var client = GetWebApiClient();
+			var accessor = new SnapshotAccessor(client);
+			var snapshotsPaginated = await accessor.GetSnapshotsPaginated(serverId);
+
+			Assert.IsNotNull(snapshotsPaginated);
+			Assert.AreEqual(1, snapshotsPaginated.pageCount);
+			Assert.AreEqual(2, snapshotsPaginated.totalCount);
+			Assert.AreEqual(250, snapshotsPaginated.pageSize);
+			Assert.AreEqual(1, snapshotsPaginated.pageNumber);
+
+			Assert.AreEqual(2, snapshotsPaginated.items.Count(), "There should be 2 server snapshots.");
+
+			var notArchivedSnapshot = snapshotsPaginated.items.ElementAt(0);
+			var archivedSnapshot = snapshotsPaginated.items.ElementAt(1);
+
+			Assert.IsFalse(notArchivedSnapshot.archived);
+			Assert.IsTrue(notArchivedSnapshot.replica);
+			Assert.AreEqual(notArchivedSnapshot.datacenterId, "NA1");
+			Assert.AreEqual(notArchivedSnapshot.indexState, "INDEX_VALID");
+			Assert.AreEqual(notArchivedSnapshot.type, "SYSTEM");
+
+			Assert.IsTrue(archivedSnapshot.archived);
+			Assert.IsFalse(archivedSnapshot.replica);
+			Assert.AreEqual(archivedSnapshot.datacenterId, "NA2");
+			Assert.AreEqual(archivedSnapshot.indexState, "INDEX_INVALID");
+			Assert.AreEqual(archivedSnapshot.type, "SYSTEM");
+		}
 	}
 }

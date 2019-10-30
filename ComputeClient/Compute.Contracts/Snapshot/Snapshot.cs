@@ -2195,6 +2195,8 @@ public partial class SnapshotType
 
     private bool replicaField;
 
+    private bool archivedField;
+
     /// <remarks/>
     public System.DateTime startTime
     {
@@ -2434,4 +2436,19 @@ public partial class SnapshotType
             this.replicaField = value;
         }
     }
+
+    /// <remarks/>
+    [System.Xml.Serialization.XmlAttributeAttribute()]
+    public bool archived
+    {
+        get
+        {
+            return this.archivedField;
+        }
+        set
+        {
+            this.archivedField = value;
+        }
+    }
+
 }

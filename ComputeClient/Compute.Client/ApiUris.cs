@@ -18,6 +18,9 @@ namespace DD.CBU.Compute.Api.Client
         /// <summary>	The MCP 2.10 prefix. </summary>
         public const string MCP2_10_PREFIX = "caas/2.10/";
 
+        /// <summary> The MCP 2.11 prefix. </summary>
+        public const string MCP2_11_PREFIX = "caas/2.11/";
+
         /// <summary>
         /// The path (relative to the base API URL) of the My Account action.
         /// </summary>
@@ -2884,7 +2887,7 @@ namespace DD.CBU.Compute.Api.Client
         /// <returns>The <see cref="Uri"/>.</returns>
         public static Uri ListSnapshots(Guid orgId, Guid serverId)
         {
-            return new Uri(string.Format(MCP2_10_PREFIX + "{0}/snapshot/snapshot?serverId={1}", orgId, serverId), UriKind.Relative);
+            return new Uri(string.Format(MCP2_11_PREFIX + "{0}/snapshot/snapshot?serverId={1}", orgId, serverId), UriKind.Relative);
         }
 
         /// <summary> Restore From Snapshot. </summary>
