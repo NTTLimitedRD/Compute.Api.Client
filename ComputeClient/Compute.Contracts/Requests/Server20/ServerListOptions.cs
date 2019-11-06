@@ -117,10 +117,20 @@
 		/// </summary>
 		public const string ReplicationTargetDatacenterIdField = "replicationTargetDatacenterId";
 
-		/// <summary>
-		/// The "deploymentMode" field name.
-		/// </summary>
-		public Guid? TagKeyId { get; set; }
+        /// <summary>
+        /// The "sourceType" field name.
+        /// </summary>
+        public const string SourceTypeField = "sourceType";
+
+        /// <summary>
+        /// The "sourceValue" field name.
+        /// </summary>
+        public const string SourceValueField = "sourceValue";
+
+        /// <summary>
+        /// The "deploymentMode" field name.
+        /// </summary>
+        public Guid? TagKeyId { get; set; }
 
         /// <summary>
 		/// The "deploymentMode" field name.
@@ -332,6 +342,24 @@
                 var tag = string.IsNullOrEmpty(TagKeyName) ? TagIdField + TagKeyId : TagField + TagKeyName;
                 SetFilter(tag, value);
             }
+        }
+
+        /// <summary>
+        /// Gets or sets the sourceType filter.
+        /// </summary>
+        public string SourceType
+        {
+            get { return GetFilter<string>(SourceTypeField); }
+            set { SetFilter(SourceTypeField, value); }
+        }
+
+        /// <summary>
+        /// Gets or sets the sourceValue filter.
+        /// </summary>
+        public string SourceValue
+        {
+            get { return GetFilter<string>(SourceValueField); }
+            set { SetFilter(SourceValueField, value); }
         }
     }
 }

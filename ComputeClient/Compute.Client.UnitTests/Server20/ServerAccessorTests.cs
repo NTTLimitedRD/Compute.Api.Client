@@ -6,6 +6,8 @@ using DD.CBU.Compute.Api.Client;
 using DD.CBU.Compute.Api.Client.Exceptions;
 using DD.CBU.Compute.Api.Client.Server20;
 using DD.CBU.Compute.Api.Contracts.Network20;
+using DD.CBU.Compute.Api.Contracts.Requests;
+using DD.CBU.Compute.Api.Contracts.Requests.Server20;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Compute.Client.UnitTests.Server20
@@ -45,6 +47,33 @@ namespace Compute.Client.UnitTests.Server20
             Assert.AreEqual(23, servers.Count());
             Assert.AreEqual("c4e80cb1-e819-4dbf-97aa-020a7f1d9fd3", servers.First().id);
             Assert.AreEqual("QA1_N1_VMWARE_1", servers.First().datacenterId);
+        }
+
+        [TestMethod]
+        public async Task ListServersWithFilterOptions_ReturnsResponse()
+        {
+            var serverListOptions = new ServerListOptions
+            {
+                Filters =
+                {
+                    new Filter { Field = ServerListOptions.StateField,Value = "PENDING_ADD" },
+                    new Filter { Field = ServerListOptions.SourceTypeField,Value = "SERVER_SNAPSHOT_ID" },
+                    new Filter { Field = ServerListOptions.SourceValueField,Value="c4e80cb1-e819-4dbf-97aa-020a7f1d9fd3" }
+                }
+            };
+
+            var queryString = "state=PENDING_ADD&sourceType=SERVER_SNAPSHOT_ID&sourceValue=c4e80cb1-e819-4dbf-97aa-020a7f1d9fd3";
+            var listServersUri = new Uri(ApiUris.ListServers(accountId) + "?" + queryString, UriKind.Relative);
+
+            requestsAndResponses.Add(listServersUri, RequestFileResponseType.AsGoodResponse("ListServersResponse.xml"));
+
+            var client = GetWebApiClient();
+            var accessor = new ServerAccessor(client);
+            var servers = await accessor.ListServers(serverListOptions);
+
+            Assert.IsNotNull(servers);
+            Assert.AreEqual(23, servers.Count());
+            Assert.AreEqual("c4e80cb1-e819-4dbf-97aa-020a7f1d9fd3", servers.First().id);
         }
 
 
