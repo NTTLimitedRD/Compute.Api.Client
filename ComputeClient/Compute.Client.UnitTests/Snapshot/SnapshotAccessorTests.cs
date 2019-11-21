@@ -125,26 +125,42 @@ namespace Compute.Client.UnitTests.Snapshot
 
 			Assert.IsNotNull(snapshotsPaginated);
 			Assert.AreEqual(1, snapshotsPaginated.pageCount);
-			Assert.AreEqual(2, snapshotsPaginated.totalCount);
+			Assert.AreEqual(4, snapshotsPaginated.totalCount);
 			Assert.AreEqual(250, snapshotsPaginated.pageSize);
 			Assert.AreEqual(1, snapshotsPaginated.pageNumber);
 
-			Assert.AreEqual(2, snapshotsPaginated.items.Count(), "There should be 2 server snapshots.");
+			Assert.AreEqual(4, snapshotsPaginated.items.Count(), "There should be 4 server snapshots.");
 
 			var notArchivedSnapshot = snapshotsPaginated.items.ElementAt(0);
-			var archivedSnapshot = snapshotsPaginated.items.ElementAt(1);
+			var additonalNotArchivedSnapshot = snapshotsPaginated.items.ElementAt(1);
 
-			Assert.IsFalse(notArchivedSnapshot.archived);
+            var archivedSnapshot = snapshotsPaginated.items.ElementAt(2);
+            var additonalArchivedSnapshot = snapshotsPaginated.items.ElementAt(3);
+
+            Assert.AreEqual("43559921", notArchivedSnapshot.id);
+            Assert.AreEqual("AVAILABLE_LOCALLY", notArchivedSnapshot.archiveStatus);
+            Assert.IsFalse(notArchivedSnapshot.archived);
 			Assert.IsTrue(notArchivedSnapshot.replica);
-			Assert.AreEqual(notArchivedSnapshot.datacenterId, "NA1");
-			Assert.AreEqual(notArchivedSnapshot.indexState, "INDEX_VALID");
-			Assert.AreEqual(notArchivedSnapshot.type, "SYSTEM");
+			Assert.AreEqual("NA1",notArchivedSnapshot.datacenterId);
+			Assert.AreEqual("INDEX_VALID",notArchivedSnapshot.indexState);
+			Assert.AreEqual("SYSTEM",notArchivedSnapshot.type);
 
-			Assert.IsTrue(archivedSnapshot.archived);
-			Assert.IsFalse(archivedSnapshot.replica);
-			Assert.AreEqual(archivedSnapshot.datacenterId, "NA2");
-			Assert.AreEqual(archivedSnapshot.indexState, "INDEX_INVALID");
-			Assert.AreEqual(archivedSnapshot.type, "SYSTEM");
-		}
+            Assert.AreEqual("4349921", additonalNotArchivedSnapshot.id);
+            Assert.IsNull(additonalNotArchivedSnapshot.archiveStatus);
+            Assert.IsFalse(additonalNotArchivedSnapshot.archived);
+            Assert.IsFalse(additonalNotArchivedSnapshot.replica);
+			Assert.AreEqual("NA2",additonalNotArchivedSnapshot.datacenterId);
+			Assert.AreEqual("MANUAL",additonalNotArchivedSnapshot.type);
+
+            Assert.AreEqual("5559921", archivedSnapshot.id);
+            Assert.AreEqual("ARCHIVED", archivedSnapshot.archiveStatus);
+            Assert.IsTrue(archivedSnapshot.archived);
+            Assert.AreEqual("SYSTEM",archivedSnapshot.type);
+
+            Assert.AreEqual("888921", additonalArchivedSnapshot.id);
+            Assert.AreEqual("DOWNLOAD_IN_PROGRESS", additonalArchivedSnapshot.archiveStatus);
+            Assert.IsTrue(additonalArchivedSnapshot.archived);
+            Assert.AreEqual("SYSTEM",additonalArchivedSnapshot.type);
+        }
 	}
 }

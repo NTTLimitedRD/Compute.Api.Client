@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<snapshots xmlns="urn:didata.com:api:cloud:types" pageNumber="1" pageCount="1" totalCount="2" pageSize="250">
-	<snapshot id="43559921" replica="true" archived="false">
+<snapshots xmlns="urn:didata.com:api:cloud:types" pageNumber="1" pageCount="1" totalCount="4" pageSize="250">
+	<snapshot id="43559921" replica="true">
 		<startTime>2017-08-22T12:12:12</startTime>
 		<endTime>2017-08-22T13:10:11</endTime>
 		<expiryTime>2017-09-22T12:12:12</expiryTime>
@@ -9,6 +9,7 @@
 		<description>On Demand Manual Snapshot</description>
 		<consistencyLevel>CRASH_CONSISTENT</consistencyLevel>
 		<indexState>INDEX_VALID</indexState>
+		<archiveStatus>AVAILABLE_LOCALLY</archiveStatus>
 		<serverConfig>
 			<cluster id="DEV_LAB1_N2_VMWARE_1" name="DEV_LAB1_N2_VMWARE_1"/>
 			<cpu count="8" speed="HIGHPERFORMANCE" coresPerSocket="4"/>
@@ -49,13 +50,76 @@
 		<state>NORMAL</state>
 		<createTime>2017-08-22T12:11:12</createTime>
 	</snapshot>
-	<snapshot id="5559921" replica="false" archived="true">
+	<snapshot id="4349921" replica="false">
+		<startTime>2017-08-22T12:12:12</startTime>
+		<type>MANUAL</type>
+		<datacenterId>NA2</datacenterId>
+		<description>Initial Manual Snapshot</description>
+		<state>PENDING_ADD</state>
+		<progress>
+			<action>INITIATE_MANUAL_SNAPSHOT</action>
+			<requestTime>2017-09-08T09:24:50.000Z</requestTime>
+			<userName>myUser</userName>
+			<numberOfSteps>3</numberOfSteps>
+			<updateTime>2017-09-08T09:26:35.000Z</updateTime>
+			<step>
+				<name>GET_SNAPSHOT_DETAILS</name>
+				<number>3</number>
+			</step>
+		</progress>
+		<createTime>2017-08-22T12:11:12</createTime>
+	</snapshot>
+	<snapshot id="5559921" replica="false">
 		<startTime>2017-08-22T12:12:12</startTime>
 		<expiryTime>2017-09-22T12:12:12</expiryTime>
 		<type>SYSTEM</type>
 		<datacenterId>NA2</datacenterId>
 		<consistencyLevel>CRASH_CONSISTENT</consistencyLevel>
 		<indexState>INDEX_INVALID</indexState>
+		<archiveStatus>ARCHIVED</archiveStatus>
+		<serverConfig>
+			<cluster id="DEV_LAB1_N2_VMWARE_1" name="DEV_LAB1_N2_VMWARE_1"/>
+			<cpu count="8" speed="HIGHPERFORMANCE" coresPerSocket="4"/>
+			<memoryGb>16</memoryGb>
+			<scsiController id="72e3fe6d-3a25-4ce1-a115-7688e7c94f8d" adapterType="LSI_LOGIC_PARALLEL" busNumber="0" state="NORMAL">
+				<disk id="7577dd16-392b-44d8-ae8d-552716853da5" sizeGb="10" speed="STANDARD" scsiId="0" state="NORMAL" driveType="DISK"/>
+				<disk id="3e62f9d5-3257-4fb6-bcd2-cdaf1755b2ec" sizeGb="3" speed="STANDARD" scsiId="1" driveType="DISK" state="NORMAL"/>
+			</scsiController>
+			<sataController id="6636b28d-aad5-4d92-9830-f025d0e6c929" adapterType="AHCI" busNumber="1" state="NORMAL">
+				<device id="836774a7-3fcd-11e7-898e-005056986f6c" type="CDROM" sizeGb="1" fileName="filename.iso" sataId="2" driveType="DEVICE" state="NORMAL"/>
+				<device id="a1278035-3fcd-11e7-898e-005056986f6c" type="CDROM" sataId="3" driveType="DEVICE" state="NORMAL"/>
+				<disk id="8c8bbe23-c530-4731-b0cb-1414d6b10aa0" sizeGb="17" speed="STANDARD" sataId="1" driveType="DISK" state="NORMAL"/>
+			</sataController>
+			<ideController id="e75ab511-cd04-4efa-9791-8baf86fe7489" adapterType="IDE" channel="0" state="NORMAL">
+				<device id="991834ec-3fce-11e7-898e-005056986f6c" type="CDROM" sizeGb="1" fileName="filename.iso" slot="2" driveType="DEVICE" state="NORMAL"/>
+				<device id="9a225904-3fce-11e7-898e-005056986f6c" type="CDROM" slot="3" driveType="DEVICE" state="NORMAL"/>
+				<device id="b0cde4c6-3fce-11e7-898e-005056986f6c" type="CDROM" slot="4" driveType="DEVICE" state="NORMAL"/>
+				<disk id="a1f67af7-7ba7-4f87-9715-05994d001039" sizeGb="10" speed="STANDARD" slot="0" driveType="DISK" state="NORMAL"/>
+			</ideController>
+			<floppy id="a4b2a27a-d632-4d8f-851b-1a33a9cb7f73" driveNumber="0" state="NORMAL"/>
+			<floppy id="5999246b-3fd0-11e7-898e-005056986f6c" driveNumber="1" sizeGb="1" fileName="floppy.flp" state="NORMAL"/>
+			<networkInfo networkDomainId="b6576128-d18a-4638-9a72-49a920f30f69" networkDomainName="companyNetworkDomian">
+				<primaryNic id="21585e63-cb69-4553-b1a2-9b88d866d1d1" privateIpv4="10.0.0.7" ipv6="2607:f480:1111:2201:558b:cdc1:42f7:e1f3" vlanId="c8d91707-420a-46ff-aea5-03fe7af92ba3" vlanName="MyVlan1" networkAdapter="E1000" key="4000" connected="true" state="NORMAL"/>
+				<additionalNic id="25ce4817-88bb-4519-aea5-9a69a3134ac8" privateIpv4="172.16.0.6" ipv6="2607:f480:1111:2210:818:613c:861b:d80c" vlanId="2d0ab26f-5da1-4408-b416-370277c32230" vlanName="MyVlan2" networkAdapter="E1000" key="4001" connected="true" state="NORMAL"/>
+				<additionalNic id="ae77e6fe-fb9a-4fbc-baf4-07aa5dd487ae" privateIpv4="11.4.8.1" ipv6="2607:f480:1111:2214:53c0:38f1:53ea:ae95" vlanId="139c4926-3b22-4f50-b24d-0d495fa19a01" vlanName="MyVlan3" networkAdapter="E1000" key="4002" connected="true" state="NORMAL"/>
+			</networkInfo>
+			<softwareLabel>MSSQL2008R2E</softwareLabel>
+			<softwareLabel>SAPACCEL</softwareLabel>
+			<guest osCustomization="true">
+				<operatingSystem id="REDHAT664" displayName="REDHAT" family="UNIX"/>
+			</guest>
+			<virtualHardwareVersion>vmx-10</virtualHardwareVersion>
+		</serverConfig>
+		<state>NORMAL</state>
+	</snapshot>
+	<snapshot id="888921" replica="false">
+		<startTime>2017-11-22T12:12:12</startTime>
+		<expiryTime>2017-12-22T12:12:12</expiryTime>
+		<type>SYSTEM</type>
+		<datacenterId>NA2</datacenterId>
+		<consistencyLevel>CRASH_CONSISTENT</consistencyLevel>
+		<indexState>INDEX_INVALID</indexState>
+		<archiveStatus>DOWNLOAD_IN_PROGRESS</archiveStatus>
 		<serverConfig>
 			<cluster id="DEV_LAB1_N2_VMWARE_1" name="DEV_LAB1_N2_VMWARE_1"/>
 			<cpu count="8" speed="HIGHPERFORMANCE" coresPerSocket="4"/>
