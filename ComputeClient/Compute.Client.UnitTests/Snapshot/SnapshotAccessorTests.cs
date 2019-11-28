@@ -162,5 +162,84 @@ namespace Compute.Client.UnitTests.Snapshot
             Assert.IsTrue(additonalArchivedSnapshot.archived);
             Assert.AreEqual("SYSTEM",additonalArchivedSnapshot.type);
         }
+
+        [TestMethod]
+        public async Task ListSnapshotsWithFilterOptions()
+        {
+			Guid serverId = new Guid("0fad8eeb-83d7-4703-b450-171c33a79682");
+			var snapshotListOptions = new SnapshotListOptions
+			    {
+			         Filters =
+			          {
+				          new Filter { Field = SnapshotListOptions.TypeField,Value = "SYSTEM" },
+				          new Filter { Field = SnapshotListOptions.IndexStateField,Value = "INDEX_INVALID" },
+				          new Filter { Field = SnapshotListOptions.ArchiveStatusField,Value="ARCHIVED" }
+
+			          }
+
+			    };
+
+			var queryString = "type=SYSTEM&indexState=INDEX_INVALID&archiveStatus=ARCHIVED";
+
+			var listSnapshotsUri = new Uri(ApiUris.ListSnapshots(accountId, serverId) + "&" + queryString, UriKind.Relative);
+
+			requestsAndResponses.Add(listSnapshotsUri, RequestFileResponseType.AsGoodResponse("ListSnapshotFiltered.xml"));
+
+			var client = GetWebApiClient();
+            var accessor = new SnapshotAccessor(client);
+            var snapshotsPaginated = await accessor.GetSnapshotsPaginated(serverId, snapshotListOptions);
+
+			Assert.IsNotNull(snapshotsPaginated);
+			Assert.AreEqual(1, snapshotsPaginated.pageCount);
+			Assert.AreEqual(1, snapshotsPaginated.totalCount);
+			Assert.AreEqual(50, snapshotsPaginated.pageSize);
+			Assert.AreEqual(1, snapshotsPaginated.pageNumber);
+
+			Assert.AreEqual(1, snapshotsPaginated.items.Count(), "There should be 1 server snapshot.");
+			var archivedSnapshot = snapshotsPaginated.items.ElementAt(0);
+			Assert.AreEqual("5559921", archivedSnapshot.id);
+			Assert.AreEqual("ARCHIVED", archivedSnapshot.archiveStatus);
+			Assert.AreEqual("INDEX_INVALID", archivedSnapshot.indexState);
+			Assert.AreEqual("SYSTEM", archivedSnapshot.type);
+		}
+        [TestMethod]
+        public async Task ListSnapshotsWithFilterAndPagingOptions_differentOverload()
+        {
+	        Guid serverId = new Guid("0fad8eeb-83d7-4703-b450-171c33a79682");
+	        var snapshotListOptions = new SnapshotListOptions
+	        {
+		        Filters =
+		        {
+			        new Filter { Field = SnapshotListOptions.TypeField,Value = "SYSTEM" },
+			        new Filter { Field = SnapshotListOptions.IndexStateField,Value = "INDEX_INVALID" },
+			        new Filter { Field = SnapshotListOptions.ArchiveStatusField,Value="ARCHIVED" },
+			        new Filter { Field = SnapshotListOptions.ServerIdField,Value = serverId }
+
+				}
+
+			};
+	        var pagingRequest = new PageableRequest();
+	        pagingRequest.PageNumber = 1;
+	        pagingRequest.PageSize = 50;
+
+			var queryString = "type=SYSTEM&indexState=INDEX_INVALID&archiveStatus=ARCHIVED&serverId=0fad8eeb-83d7-4703-b450-171c33a79682&pageSize=50&pageNumber=1";
+
+	        var listSnapshotsUri = new Uri(ApiUris.ListSnapshots(accountId, snapshotListOptions.ServerId.Value) + "&" + queryString, UriKind.Relative);
+
+	        requestsAndResponses.Add(listSnapshotsUri, RequestFileResponseType.AsGoodResponse("ListSnapshotFiltered.xml"));
+
+	        var client = GetWebApiClient();
+	        var accessor = new SnapshotAccessor(client);
+	        var snapshotsPaginated = await accessor.GetSnapshotsPaginated(snapshotListOptions, pagingRequest);
+
+	        Assert.IsNotNull(snapshotsPaginated);
+	        Assert.AreEqual(1, snapshotsPaginated.pageCount);
+	        Assert.AreEqual(1, snapshotsPaginated.totalCount);
+	        Assert.AreEqual(50, snapshotsPaginated.pageSize);
+	        Assert.AreEqual(1, snapshotsPaginated.pageNumber);
+
+	        Assert.AreEqual(1, snapshotsPaginated.items.Count(), "There should be 1 server snapshot.");
+        }
 	}
+
 }
