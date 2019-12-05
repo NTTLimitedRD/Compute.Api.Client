@@ -111,5 +111,135 @@ namespace Compute.Client.UnitTests.Snapshot
 			Assert.IsTrue(oneMonthSnapshotServicePlan.supportsReplication);
 			Assert.IsTrue(oneMonthSnapshotServicePlan.available);
 		}
+
+		[TestMethod]
+		public async Task ListSnapshots()
+		{
+			Guid serverId = new Guid("0fad8eeb-83d7-4703-b450-171c33a79682");
+
+			requestsAndResponses.Add(ApiUris.ListSnapshots(accountId, serverId), RequestFileResponseType.AsGoodResponse("ListSnapshots.xml"));
+
+			var client = GetWebApiClient();
+			var accessor = new SnapshotAccessor(client);
+			var snapshotsPaginated = await accessor.GetSnapshotsPaginated(serverId);
+
+			Assert.IsNotNull(snapshotsPaginated);
+			Assert.AreEqual(1, snapshotsPaginated.pageCount);
+			Assert.AreEqual(4, snapshotsPaginated.totalCount);
+			Assert.AreEqual(250, snapshotsPaginated.pageSize);
+			Assert.AreEqual(1, snapshotsPaginated.pageNumber);
+
+			Assert.AreEqual(4, snapshotsPaginated.items.Count(), "There should be 4 server snapshots.");
+
+			var notArchivedSnapshot = snapshotsPaginated.items.ElementAt(0);
+			var additonalNotArchivedSnapshot = snapshotsPaginated.items.ElementAt(1);
+
+            var archivedSnapshot = snapshotsPaginated.items.ElementAt(2);
+            var additonalArchivedSnapshot = snapshotsPaginated.items.ElementAt(3);
+
+            Assert.AreEqual("43559921", notArchivedSnapshot.id);
+            Assert.AreEqual("AVAILABLE_LOCALLY", notArchivedSnapshot.archiveStatus);
+            Assert.IsFalse(notArchivedSnapshot.archived);
+			Assert.IsTrue(notArchivedSnapshot.replica);
+			Assert.AreEqual("NA1",notArchivedSnapshot.datacenterId);
+			Assert.AreEqual("INDEX_VALID",notArchivedSnapshot.indexState);
+			Assert.AreEqual("SYSTEM",notArchivedSnapshot.type);
+
+            Assert.AreEqual("4349921", additonalNotArchivedSnapshot.id);
+            Assert.IsNull(additonalNotArchivedSnapshot.archiveStatus);
+            Assert.IsFalse(additonalNotArchivedSnapshot.archived);
+            Assert.IsFalse(additonalNotArchivedSnapshot.replica);
+			Assert.AreEqual("NA2",additonalNotArchivedSnapshot.datacenterId);
+			Assert.AreEqual("MANUAL",additonalNotArchivedSnapshot.type);
+
+            Assert.AreEqual("5559921", archivedSnapshot.id);
+            Assert.AreEqual("ARCHIVED", archivedSnapshot.archiveStatus);
+            Assert.IsTrue(archivedSnapshot.archived);
+            Assert.AreEqual("SYSTEM",archivedSnapshot.type);
+
+            Assert.AreEqual("888921", additonalArchivedSnapshot.id);
+            Assert.AreEqual("DOWNLOAD_IN_PROGRESS", additonalArchivedSnapshot.archiveStatus);
+            Assert.IsTrue(additonalArchivedSnapshot.archived);
+            Assert.AreEqual("SYSTEM",additonalArchivedSnapshot.type);
+        }
+
+        [TestMethod]
+        public async Task ListSnapshotsWithFilterOptions()
+        {
+			Guid serverId = new Guid("0fad8eeb-83d7-4703-b450-171c33a79682");
+			var snapshotListOptions = new SnapshotListOptions
+			    {
+			         Filters =
+			          {
+				          new Filter { Field = SnapshotListOptions.TypeField,Value = "SYSTEM" },
+				          new Filter { Field = SnapshotListOptions.IndexStateField,Value = "INDEX_INVALID" },
+				          new Filter { Field = SnapshotListOptions.ArchiveStatusField,Value="ARCHIVED" }
+
+			          }
+
+			    };
+
+			var queryString = "type=SYSTEM&indexState=INDEX_INVALID&archiveStatus=ARCHIVED";
+
+			var listSnapshotsUri = new Uri(ApiUris.ListSnapshots(accountId, serverId) + "&" + queryString, UriKind.Relative);
+
+			requestsAndResponses.Add(listSnapshotsUri, RequestFileResponseType.AsGoodResponse("ListSnapshotFiltered.xml"));
+
+			var client = GetWebApiClient();
+            var accessor = new SnapshotAccessor(client);
+            var snapshotsPaginated = await accessor.GetSnapshotsPaginated(serverId, snapshotListOptions);
+
+			Assert.IsNotNull(snapshotsPaginated);
+			Assert.AreEqual(1, snapshotsPaginated.pageCount);
+			Assert.AreEqual(1, snapshotsPaginated.totalCount);
+			Assert.AreEqual(50, snapshotsPaginated.pageSize);
+			Assert.AreEqual(1, snapshotsPaginated.pageNumber);
+
+			Assert.AreEqual(1, snapshotsPaginated.items.Count(), "There should be 1 server snapshot.");
+			var archivedSnapshot = snapshotsPaginated.items.ElementAt(0);
+			Assert.AreEqual("5559921", archivedSnapshot.id);
+			Assert.AreEqual("ARCHIVED", archivedSnapshot.archiveStatus);
+			Assert.AreEqual("INDEX_INVALID", archivedSnapshot.indexState);
+			Assert.AreEqual("SYSTEM", archivedSnapshot.type);
+		}
+        [TestMethod]
+        public async Task ListSnapshotsWithFilterAndPagingOptions_differentOverload()
+        {
+	        Guid serverId = new Guid("0fad8eeb-83d7-4703-b450-171c33a79682");
+	        var snapshotListOptions = new SnapshotListOptions
+	        {
+		        Filters =
+		        {
+			        new Filter { Field = SnapshotListOptions.TypeField,Value = "SYSTEM" },
+			        new Filter { Field = SnapshotListOptions.IndexStateField,Value = "INDEX_INVALID" },
+			        new Filter { Field = SnapshotListOptions.ArchiveStatusField,Value="ARCHIVED" },
+			        new Filter { Field = SnapshotListOptions.ServerIdField,Value = serverId }
+
+				}
+
+			};
+	        var pagingRequest = new PageableRequest();
+	        pagingRequest.PageNumber = 1;
+	        pagingRequest.PageSize = 50;
+
+			var queryString = "type=SYSTEM&indexState=INDEX_INVALID&archiveStatus=ARCHIVED&serverId=0fad8eeb-83d7-4703-b450-171c33a79682&pageSize=50&pageNumber=1";
+
+	        var listSnapshotsUri = new Uri(ApiUris.ListSnapshots(accountId, snapshotListOptions.ServerId.Value) + "&" + queryString, UriKind.Relative);
+
+	        requestsAndResponses.Add(listSnapshotsUri, RequestFileResponseType.AsGoodResponse("ListSnapshotFiltered.xml"));
+
+	        var client = GetWebApiClient();
+	        var accessor = new SnapshotAccessor(client);
+	        var snapshotsPaginated = await accessor.GetSnapshotsPaginated(snapshotListOptions, pagingRequest);
+
+	        Assert.IsNotNull(snapshotsPaginated);
+	        Assert.AreEqual(1, snapshotsPaginated.pageCount);
+	        Assert.AreEqual(1, snapshotsPaginated.totalCount);
+	        Assert.AreEqual(50, snapshotsPaginated.pageSize);
+	        Assert.AreEqual(1, snapshotsPaginated.pageNumber);
+
+	        Assert.AreEqual(1, snapshotsPaginated.items.Count(), "There should be 1 server snapshot.");
+        }
 	}
+
 }

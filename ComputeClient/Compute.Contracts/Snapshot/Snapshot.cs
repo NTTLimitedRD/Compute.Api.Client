@@ -9,6 +9,7 @@
 //------------------------------------------------------------------------------
 
 using DD.CBU.Compute.Api.Contracts.Network20;
+using System;
 using System.Xml.Serialization;
 
 // 
@@ -2181,6 +2182,8 @@ public partial class SnapshotType
 
     private string indexStateField;
 
+    private string archiveStatusField;
+
     private SnapshotServerConfigType serverConfigField;
 
     private string stateField;
@@ -2342,6 +2345,19 @@ public partial class SnapshotType
     }
 
     /// <remarks/>
+    public string archiveStatus
+    {
+        get
+        {
+            return this.archiveStatusField;
+        }
+        set
+        {
+            this.archiveStatusField = value;
+        }
+    }
+
+    /// <remarks/>
     public SnapshotServerConfigType serverConfig
     {
         get
@@ -2432,6 +2448,17 @@ public partial class SnapshotType
         set
         {
             this.replicaField = value;
+        }
+    }
+
+
+    /// <remarks/>
+    [Obsolete("archived is deprecated, please use archiveStatus instead.")]
+    public bool archived
+    {
+        get
+        {
+            return !string.IsNullOrEmpty(archiveStatus) && (archiveStatus.ToUpper().Equals("ARCHIVED") || archiveStatus.ToUpper().Equals("DOWNLOAD_IN_PROGRESS"));
         }
     }
 }
