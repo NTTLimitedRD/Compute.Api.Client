@@ -48,6 +48,11 @@
 		public const string DescriptionField = "description";
 
 		/// <summary>
+		/// The "archiveStatus" field name.
+		/// </summary>
+		public const string ArchiveStatusField = "archiveStatus";
+
+		/// <summary>
 		/// Gets or sets the StartTimeBefore filter.
 		/// </summary>
 		public DateTimeOffset? StartTimeBefore
@@ -135,6 +140,15 @@
 		{
 			get { return GetFilter<string>(DescriptionField); }
 			set { SetFilter(DescriptionField, value); }
+		}
+
+		/// <summary>
+		/// Gets or sets the ArchiveStatus filter.
+		/// </summary>
+		public string ArchiveStatus
+		{
+			get { return GetFilter<string>(ArchiveStatusField); }
+			set { SetFilter(ArchiveStatusField, value); }
 		}
 	}
 }

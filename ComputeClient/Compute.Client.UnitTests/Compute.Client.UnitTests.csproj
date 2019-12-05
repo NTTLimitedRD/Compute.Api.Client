@@ -128,6 +128,7 @@
     <Content Include="SampleOutputs\InitiateFailoverResponse.xml" />
     <Content Include="SampleOutputs\ListHistoricalServerConfigurationResponse.xml" />
     <Content Include="SampleOutputs\ListServersResponse.xml" />
+    <Content Include="SampleOutputs\ListSnapshotFiltered.xml"/>
     <Content Include="SampleOutputs\ListSnapshotServicePlansResponse.xml" />
     <Content Include="SampleOutputs\ListSnapshotServicePlansWithFilterResponse.xml" />
     <Content Include="SampleOutputs\NotifyNicIpChangeResponse.xml" />
@@ -145,6 +146,7 @@
     <Content Include="SampleOutputs\GetConsistencyGroupsResponse.xml" />
     <Content Include="SampleOutputs\StopPreviewSnapshotResponse.xml" />
     <Content Include="SampleOutputs\ExpandJournalResponse.xml" />
+    <Content Include="SampleOutputs\ListSnapshots.xml" />
     <None Include="SampleOutputs\GetMonitoringUsageReportResponse.csv" />
     <Content Include="SampleOutputs\GetAntiAffinityRulesResponse.xml" />
     <Content Include="SampleOutputs\ListDefaultHealthMonitorsResponse.xml" />
